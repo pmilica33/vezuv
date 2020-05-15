@@ -14,5 +14,5 @@ $(".number").each(function () {
 
 $("#toggler-button").click(() => {
   $("#navbar")[0].classList.toggle("navbar-toggler-clicked");
-  $('#navbar').removeClass("bg-transparent");
+  $('#navbar')[0].classList.toggle("bg-transparent");
 })

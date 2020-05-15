@@ -652,9 +652,12 @@ mark,
   content: "\2014\00A0";
 }
 
-.navbar-toggler-clicked {
-  background-color: white !important;
-  border-bottom: 1px solid;
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  .navbar-toggler-clicked {
+
+    background-color: white !important;
+    border-bottom: 1px solid;
+  }
 
 }
 

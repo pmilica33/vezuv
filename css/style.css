@@ -652,7 +652,7 @@ mark,
   content: "\2014\00A0";
 }
 
-@media only screen and (min-width: 768px) and (max-width: 904px) {
+@media only screen and (max-width: 904px) {
   .navbar-toggler-clicked {
 
     background-color: white !important;

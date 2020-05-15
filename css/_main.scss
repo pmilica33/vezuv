@@ -1,0 +1,148 @@
+@mixin respond-to($media) {
+    @if $media==handhelds {
+        @media only screen and (max-width: 479px) {
+            @content;
+        }
+    }
+
+    @else if $media==wide-handhelds {
+        @media only screen and (min-width: 480px) and (max-width: 767px) {
+            @content;
+        }
+    }
+
+    @else if $media==tablets {
+        @media only screen and (min-width: 768px) and (max-width: 904px) {
+            @content;
+        }
+    }
+}
+
+.p-text-white {
+    color: #fff;
+    opacity: 1;
+}
+
+.auto-85 {
+    width: 85%;
+    margin: auto;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.grid-text {
+    padding: 0 20px !important;
+    display: grid;
+    grid-template-columns: 1fr (minmax(auto, 26em))(minmax(auto, 26em)) 1fr !important;
+
+    .grid-text-section {
+        grid-column: 2/4;
+    }
+}
+
+.gap-20 {
+    grid-gap: 20px;
+}
+
+p {
+    @include respond-to(handhelds) {
+        font-size: 0.75em !important;
+    }
+
+    @include respond-to(wide-handhelds) {
+        font-size: 1em !important;
+    }
+
+    @include respond-to(tablets) {}
+}
+
+h1 {
+    @include respond-to(handhelds) {
+        font-size: 1.5em !important;
+    }
+
+    @include respond-to(wide-handhelds) {
+        font-size: 2.5em !important;
+    }
+
+    @include respond-to(tablets) {}
+}
+
+.background {
+    background-image: url(../images/grb.svg);
+    background-position: center;
+    height: 16vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+}
+
+@mixin grid-2-2() {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 1fr 1fr;
+}
+
+.grid-media {
+    @include respond-to(tablets) {
+        @include grid-2-2();
+    }
+
+    @include respond-to(wide-handhelds) {
+        @include grid-2-2();
+
+    }
+
+    @include respond-to(handhelds) {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.kontakt {
+    @include respond-to(tablets) {
+        min-width: 50% !important;
+    }
+}
+
+.owl-stage-outer {
+    height: 130vh;
+
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.volcano {
+    @include respond-to(handhelds) {
+        display: none !important;
+
+    }
+
+    @include respond-to(wide-handhelds) {
+        display: none !important;
+
+    }
+
+    @include respond-to(tablets) {
+        display: none !important;
+    }
+}

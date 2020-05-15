@@ -1,0 +1,93 @@
+@import 'main';
+
+.owl-stage-outer,
+.owl-stage,
+.owl-item,
+.item-video {
+    height: 100% !important;
+}
+
+.owl-theme {
+
+    .owl-nav {
+
+        .owl-prev,
+        .owl-next {
+            transition: all, .2s, ease;
+        }
+
+        .owl-prev {
+            transform: translateY(-50%);
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            height: 44px;
+            margin-top: -22px;
+            z-index: 10;
+            color: #b98757;
+            font-size: 1rem;
+
+            @include respond-to(handhelds) {
+                font-size: 0.6em !important;
+            }
+
+            @include respond-to(wide-handhelds) {
+                font-size: .7em !important;
+            }
+
+            @include respond-to(tablets) {
+                font-size: .8rem;
+
+            }
+
+            &:hover {
+                background: none !important;
+            }
+        }
+
+        .owl-next {
+            transform: translateY(-50%);
+
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            height: 44px;
+            margin-top: -22px;
+            z-index: 10;
+            color: #b98757;
+            font-size: 1rem;
+
+            @include respond-to(handhelds) {
+                font-size: 0.6em !important;
+            }
+
+            @include respond-to(wide-handhelds) {
+                font-size: .7em !important;
+            }
+
+            @include respond-to(tablets) {
+                font-size: .8rem;
+
+            }
+
+            &:hover {
+                background: none !important;
+            }
+        }
+    }
+}
+
+.owl-dots {
+    position: absolute;
+    bottom: 2vh;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: .6em;
+    height: .6em;
+}

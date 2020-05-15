@@ -1,0 +1,91 @@
+{
+  "people": [{
+      "id": "3",
+      "name": "Jovan Jovanovic",
+      "picture": "./images/45dd9f8dc35843eab5ac527b644548ed.png",
+      "description": "Direktor operacija"
+    },
+    {
+      "id": "1",
+      "name": "Marko Marković",
+      "picture": "./images/5a2164878f3ba4.1875659315121378635867.png",
+      "description": "Izvrsni direktor"
+    },
+    {
+      "id": "2",
+      "name": "Tamara Petrovic",
+      "picture": "./images/a11e19e02b83f13167342d783b56a526.png",
+      "description": "Finansijski direktor"
+    },
+    {
+      "id": "2",
+      "name": "Tamara Petrovic",
+      "picture": "./images/a11e19e02b83f13167342d783b56a526.png",
+      "description": "Finansijski direktor"
+    },
+    {
+      "id": "1",
+      "name": "Marko Marković",
+      "picture": "./images/5a2164878f3ba4.1875659315121378635867.png",
+      "description": "Izvrsni direktor"
+    },
+    {
+      "id": "3",
+      "name": "Jovan Jovanovic",
+      "picture": "./images/45dd9f8dc35843eab5ac527b644548ed.png",
+      "description": "Direktor operacija"
+    },
+    {
+      "id": "3",
+      "name": "Jovan Jovanovic",
+      "picture": "./images/45dd9f8dc35843eab5ac527b644548ed.png",
+      "description": "Direktor operacija"
+    },
+    {
+      "id": "1",
+      "name": "Marko Marković",
+      "picture": "./images/5a2164878f3ba4.1875659315121378635867.png",
+      "description": "Izvrsni direktor"
+    },
+    {
+      "id": "2",
+      "name": "Tamara Petrovic",
+      "picture": "./images/a11e19e02b83f13167342d783b56a526.png",
+      "description": "Finansijski direktor"
+    }
+  ],
+  "aktuelnosti": [{
+      "month": "mar",
+      "day": "30",
+      "year": "2019",
+      "id": "1",
+      "picture": "./images/16e06955d91671615475d960f70371af.png",
+      "description": "Authentic Gaming potpisuje ugovor da postane Volcano bet ekskluzivni..."
+    },
+    {
+      "month": "jul",
+      "day": "12",
+      "year": "2018",
+      "id": "2",
+      "picture": "./images/novosti-07-12-2018-5c0a8ac034fa7.png",
+      "description": "Kompanija Vezuv zasadila je 16 novih sadnica preko aplikacije Moje Drvo "
+    },
+    {
+      "month": "jul",
+      "day": "24",
+      "year": "2018",
+      "id": "3",
+      "picture": "./images/novosti-21-11-2018-5bf534a4f30ec.png",
+      "description": "Fondacija „Budi human“: platili liječenje za šest mališana u vrijedn..."
+    },
+    {
+      "month": "jul",
+      "day": "09",
+      "year": "2018",
+      "id": "4",
+      "picture": "./images/novosti-21-11-2018-5bf532b3bcc8d.png",
+      "description": "Stipendija Nini Bošković za master studije na Oksfordu 16.000 eura "
+    }
+  ]
+
+}

@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Avenir Medium";
+    src: url('../font/Avenir/Avenir-Medium.woff');
+}
+
+@import './main';
+@import '../node_modules/bootstrap-scss/bootstrap.scss';
+@import './variables';
+
+@import './body';
+
+@import './nav';
+@import './owl';
+
+// $owl-image-path: "node_modules/owl.carousel/src/img/";
+
+@import '../node_modules/owl.carousel/src/scss/owl.carousel.scss';
+@import '../node_modules/owl.carousel/src/scss/owl.theme.default.scss';
+@import './button-transparent';
+@import './footer-vezuv';

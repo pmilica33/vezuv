@@ -1,0 +1,7 @@
+@import './main';
+
+.kontakt {
+    @include respond-to(tablets) {
+        min-width: 50% !important;
+    }
+}

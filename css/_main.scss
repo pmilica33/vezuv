@@ -11,6 +11,12 @@
         }
     }
 
+    @else if $media==max-wide-handhelds {
+        @media only screen and (max-width: 767px) {
+            @content;
+        }
+    }
+
     @else if $media==tablets {
         @media only screen and (min-width: 768px) and (max-width: 904px) {
             @content;
@@ -37,6 +43,11 @@
 
 .auto-85 {
     width: 85%;
+    margin: auto;
+}
+
+.auto-70 {
+    width: 70%;
     margin: auto;
 }
 
@@ -93,6 +104,10 @@ h1 {
     }
 
     @include respond-to(tablets) {}
+}
+
+font-size-p-76 {
+    font-size: 0.76em !important;
 }
 
 .background {
@@ -173,16 +188,32 @@ h1 {
 
 }
 
+.lijevo-desno {
+    margin-top: 7rem;
+
+    @include respond-to(max-wide-handhelds) {
+        flex-direction: column;
+
+        .desno {
+            align-items: center;
+            margin: 2rem 0px 3rem 0px !important;
+        }
+
+        .lijevo {
+            margin-left: 0px !important;
+            margin-top: 3rem;
+        }
+    }
+
+
+}
+
 .lijevo,
 .desno {
     flex: 1;
 }
 
-.natpis {
-    transform: translateX(-3vw);
-}
-
-.natpis::before {
+@mixin natpis-mixin() {
     content: "";
     display: flex;
     align-items: center;
@@ -190,8 +221,24 @@ h1 {
     margin-bottom: 5px;
     width: 50px;
     height: 1px;
-    background-color: #222222;
     margin-right: 6px;
+
+
+}
+
+.natpis {
+    transform: translateX(-3vw);
+}
+
+.natpis::before {
+    @include natpis-mixin();
+    background-color: #222222;
+}
+
+.natpis-white::before {
+    @include natpis-mixin();
+    background-color: #fff !important;
+
 }
 
 .text-volcano {
@@ -218,6 +265,10 @@ h1 {
     font-size: 1em;
 }
 
+.bold-500 {
+    font-weight: 500;
+}
+
 .lorem {
     font-size: 0.9em;
     color: #4f4f62;
@@ -240,11 +291,13 @@ h1 {
 
 }
 
-@media only screen and (max-width: 1199px) {
-    .navbar-toggler-clicked {
+.title {
+    font-weight: 500;
+    line-height: 1.37;
+    font-size: 3rem;
+}
 
-        background-color: white !important;
-        border-bottom: 1px solid;
-    }
-
+//Numbers
+.numbers .card-number:nth-child(even) {
+    background: #f5f5f5;
 }

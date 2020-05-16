@@ -12,6 +12,28 @@
     min-width: 50px;
 }
 
+.img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.footer-vezuv {
+    overflow: hidden;
+    position: relative;
+    height: 50vh;
+}
+
+.left {
+    transform: translateX(-50%);
+}
+
+
+.right {
+    transform: translateX(50%);
+}
+
+
 .kontakt-text {
     opacity: 0.73;
     font-size: 1em;

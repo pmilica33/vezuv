@@ -1,0 +1,9 @@
+.path {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    clip-path: polygon(0 0, 74% 0, 100% 100%, 0% 100%);
+    background-color: rgba(0, 0, 0, 0.35);
+    width: 50%;
+}

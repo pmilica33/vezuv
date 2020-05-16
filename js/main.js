@@ -12,7 +12,19 @@ $(".number").each(function () {
     });
 });
 
+//Navbar
 $("#toggler-button").click(() => {
   $("#navbar")[0].classList.toggle("navbar-toggler-clicked");
   $('#navbar')[0].classList.toggle("bg-transparent");
 })
+
+// $(document).ready(function () {
+//   $(".navbar-nav .nav-item").bind("click", function (event) {
+//     event.preventDefault();
+//     var clickedItem = $(this);
+//     $(".mr-auto .nav-item").each(function () {
+//       $(this).removeClass("active");
+//     });
+//     clickedItem.addClass("active");
+//   });
+// });

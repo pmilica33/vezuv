@@ -12361,14 +12361,38 @@ nav .active {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 904px) {
-  .kontakt {
-    min-width: 50% !important;
-  }
+.kontakt {
+  width: 40%;
+  min-width: 200px;
 }
 
 .footer-logo {
   width: 7vw;
   min-width: 50px;
+}
+
+.kontakt-text {
+  opacity: 0.73;
+  font-size: 1em;
+  text-align: center;
+  color: #222222;
+}
+
+@media only screen and (max-width: 479px) {
+  .kontakt-text {
+    font-size: 0.7em !important;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .kontakt-text {
+    font-size: 0.8em !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  .kontakt-text {
+    font-size: 0.9em !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

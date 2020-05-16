@@ -1,12 +1,33 @@
 @import './main';
 
 .kontakt {
-    @include respond-to(tablets) {
-        min-width: 50% !important;
-    }
+    width: 40%;
+    min-width: 200px;
+
+
 }
 
 .footer-logo {
     width: 7vw;
     min-width: 50px;
+}
+
+.kontakt-text {
+    opacity: 0.73;
+    font-size: 1em;
+    text-align: center;
+    color: #222222;
+
+    @include respond-to(handhelds) {
+        font-size: 0.7em !important;
+    }
+
+    @include respond-to(wide-handhelds) {
+        font-size: 0.8em !important;
+    }
+
+    @include respond-to(tablets) {
+        font-size: 0.9em !important;
+
+    }
 }

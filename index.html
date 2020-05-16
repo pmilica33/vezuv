@@ -36,9 +36,6 @@
       font-size: 3rem;
     }
 
-    .opacity {
-      opacity: 0.73;
-    }
 
     .numbers .card-number:nth-child(even) {
       background: #f5f5f5;
@@ -90,6 +87,7 @@
       text-align: center;
     }
 
+
     .cards-a p {
       margin-bottom: 0 !important;
     }
@@ -138,6 +136,8 @@
 
     .footer-vezuv {
       overflow: hidden;
+      position: relative;
+      height: 50vh;
     }
 
     .right {
@@ -178,10 +178,6 @@
 
     .volcano img {
       width: 10vw !important;
-    }
-
-    .left-right {
-      height: 40vh;
     }
   </style>
 </head>
@@ -254,7 +250,7 @@
     <div class="mx-auto text-center w-6 grid-text">
       <div class="grid-text-section">
         <h1 class="title my-5">VEZUV</h1>
-        <p class="opacity">
+        <p class="opacity-7">
           Vezuv je osnovan 1999. godine sa primarnom djelatnošću organizacije
           različitih oblika igara na sreću. Komapnija je u svom stalnom
           razvoju , usavršavanju I modernizovanju sistema kontinuirano
@@ -326,19 +322,52 @@
 
 
   <footer>
-    <div class="auto-85 d-flex left-right">
-      <!-- <div class="left">
-        <div>VEZUV BREND</div>
-        <div><img src="images/volcano@3x.png" alt="" srcset=""></div>
+    <div class="auto-85 d-flex left-right  mb-5">
+
+      <div class="d-flex justify-content-center lijevo flex-column align-items-center">
+        <div class="natpis mb-5">VEZUV BREND</div>
+        <div class="volcano-img"><img src="images/volcano@3x.png" alt="" srcset=""></div>
       </div>
-      <div></div> -->
+
+      <div class="desno my-auto flex-column d-flex">
+        <div class="gore d-inline-flex">
+          <div class="live"><img src="images\Group 179.svg" alt="" class="img-fluid"></div>
+          <div class="d-flex flex-column mt-2 ml-4">
+            <div class="text-volcano">VOLCANO</div>
+            <div class="betting-casino">Betting, Casino, Automat klub, Tombola</div>
+          </div>
+        </div>
+        <div class="dolje mt-3">
+          <p class="lorem opacity-7">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+            tempor
+            invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+
+          </p>
+
+        </div>
+        <div class="button-transparent border-black mt-3">
+          <a href="" class="d-flex justify-content-around">Saznaj više<i
+              class="fas fa-arrow-right white mt-2 fa-xs"></i></a>
+        </div>
+
+
+      </div>
     </div>
-    <div class="w-100 footer-vezuv d-flex flex-row">
+
+
+    <!-- Footer -->
+    <div class="w-100 footer-vezuv d-flex flex-row ">
       <div class="img">
         <img src="images/footer-logo.png" alt="" srcset="" class="left" />
       </div>
       <div class="text-center kontakt d-fex flex-column my-auto" style="width: 40%;">
-        <img src="images\Group 39.png" alt="" class="align-self-center" />
+        <img src="images\Group 39.png" alt="" class="align-self-center footer-logo" />
         <div class="mt-2">VEZUV DOO</div>
         <div>Trg Nezavisnosti bb</div>
         <div>81000, Podgorica, Crna Gora</div>

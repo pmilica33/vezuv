@@ -16,6 +16,18 @@
             @content;
         }
     }
+
+    @else if $media==max-tablet {
+        @media only screen and (max-width: 904px) {
+            @content;
+        }
+    }
+
+    @else if $media==navbar {
+        @media only screen and (max-width: 1199px) and (min-width: 768px) {
+            @content;
+        }
+    }
 }
 
 .p-text-white {
@@ -65,7 +77,7 @@ p {
     }
 
     @include respond-to(wide-handhelds) {
-        font-size: 1em !important;
+        font-size: 0.9em !important;
     }
 
     @include respond-to(tablets) {}
@@ -145,4 +157,94 @@ h1 {
     @include respond-to(tablets) {
         display: none !important;
     }
+}
+
+.left-right {
+    margin-top: 7rem;
+
+    @include respond-to(max-tablet) {
+        flex-direction: column;
+
+        .desno {
+            align-items: center;
+            margin-top: 5rem !important;
+        }
+    }
+
+}
+
+.lijevo,
+.desno {
+    flex: 1;
+}
+
+.natpis {
+    transform: translateX(-3vw);
+}
+
+.natpis::before {
+    content: "";
+    display: flex;
+    align-items: center;
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 50px;
+    height: 1px;
+    background-color: #222222;
+    margin-right: 6px;
+}
+
+.text-volcano {
+    font-size: 2.25em;
+    color: #222222;
+
+    @include respond-to(handhelds) {
+        font-size: 1.8em !important;
+
+    }
+
+    @include respond-to(wide-handhelds) {
+        font-size: 1.9em !important;
+    }
+
+    @include respond-to(tablets) {
+        font-size: 2em !important;
+    }
+}
+
+.betting-casino {
+    font-weight: 500;
+    color: #222222;
+    font-size: 1em;
+}
+
+.lorem {
+    font-size: 0.9em;
+    color: #4f4f62;
+    font-weight: 500;
+
+}
+
+.opacity-7 {
+    opacity: 0.73;
+}
+
+.volcano-img img {
+    width: 20vw;
+    min-width: 200px;
+}
+
+.live {
+    width: 6.5vw;
+    min-width: 70px;
+
+}
+
+@media only screen and (max-width: 1199px) {
+    .navbar-toggler-clicked {
+
+        background-color: white !important;
+        border-bottom: 1px solid;
+    }
+
 }

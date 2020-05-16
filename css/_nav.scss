@@ -55,7 +55,7 @@ nav {
 
             }
 
-            @include respond-to(tablets) {
+            @include respond-to(navbar) {
                 font-size: 0.7rem !important;
                 color: black !important;
                 background-color: white;

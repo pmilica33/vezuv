@@ -1,7 +1,7 @@
  @import 'variables';
 
  .button-transparent {
-     padding: 10px 0;
+     padding: 5px 0;
      text-align: center;
      width: 11rem;
      border-radius: 4px;
@@ -27,6 +27,22 @@
 
      &:hover .fas {
          transform: translateX(8px);
+     }
+
+ }
+
+ .border-black {
+     border: 1px solid #4f4f62 !important;
+
+     a {
+         color: #4f4f62 !important;
+         font-size: 1.12em;
+
+     }
+
+     &:hover a {
+         color: black !important;
+
      }
 
  }

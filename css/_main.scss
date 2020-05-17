@@ -125,6 +125,14 @@ font-size-p-76 {
     background-size: contain;
     background-repeat: no-repeat;
     align-items: center;
+
+    img {
+        @include respond-to(max-wide-handhelds) {
+
+            width: 22vw;
+            min-width: 130px;
+        }
+    }
 }
 
 @mixin grid-2-2() {

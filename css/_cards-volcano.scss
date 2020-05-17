@@ -1,0 +1,58 @@
+@import './main';
+
+/* Cards */
+.box-volcano {
+    border-radius: 8px;
+    box-shadow: 0 3px 22px 0 rgba(0, 0, 0, 0.14);
+    background-color: white;
+    width: 80%;
+}
+
+.slika {
+    width: 80%;
+
+    img {
+        width: 100%;
+    }
+
+}
+
+
+
+.kartice {
+
+    &>div:nth-child(1) .slika img {
+
+        filter: brightness(90%);
+    }
+
+    &>div:last-child .naslov {
+
+        color: #dea149;
+    }
+
+    &>div:nth-child(odd) {
+
+        .box-volcano {
+            transform: translateX(-20%);
+        }
+    }
+
+    &>div:nth-child(even) {
+
+        margin-left: auto;
+
+        .box-volcano {
+            transform: translateX(20%);
+        }
+
+    }
+}
+
+.naslov {
+    font-size: 2.18em;
+    color: #e50019;
+    font-weight: 500;
+
+
+}

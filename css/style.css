@@ -75,7 +75,19 @@
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   h1 {
-    font-size: 2.5em !important;
+    font-size: 2em !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  h1 {
+    font-size: 2em !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 768px) {
+  h1 {
+    font-size: 2em !important;
   }
 }
 
@@ -222,7 +234,6 @@ font-size-p-76 {
   width: 50px;
   height: 1px;
   margin-right: 6px;
-  letter-spacing: 9px;
   background-color: #222222;
 }
 
@@ -239,29 +250,32 @@ font-size-p-76 {
   width: 50px;
   height: 1px;
   margin-right: 6px;
-  letter-spacing: 9px;
   background-color: #fff !important;
 }
 
-.text-volcano {
+.text-volcano,
+.pomjesaj {
   font-size: 2.25em;
   color: #222222;
 }
 
 @media only screen and (max-width: 479px) {
-  .text-volcano {
+  .text-volcano,
+  .pomjesaj {
     font-size: 1.8em !important;
   }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .text-volcano {
+  .text-volcano,
+  .pomjesaj {
     font-size: 1.9em !important;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 904px) {
-  .text-volcano {
+  .text-volcano,
+  .pomjesaj {
     font-size: 2em !important;
   }
 }
@@ -304,6 +318,16 @@ font-size-p-76 {
 
 .numbers .card-number:nth-child(even) {
   background: #f5f5f5;
+}
+
+.max-width-naslov {
+  max-width: 400px;
+}
+
+@media only screen and (max-width: 904px) {
+  .max-width-naslov .max-width-naslov {
+    max-width: 300px;
+  }
 }
 
 /*!
@@ -11162,7 +11186,19 @@ a {
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   h1 {
-    font-size: 2.5em !important;
+    font-size: 2em !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  h1 {
+    font-size: 2em !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 768px) {
+  h1 {
+    font-size: 2em !important;
   }
 }
 
@@ -11309,7 +11345,6 @@ font-size-p-76 {
   width: 50px;
   height: 1px;
   margin-right: 6px;
-  letter-spacing: 9px;
   background-color: #222222;
 }
 
@@ -11326,29 +11361,32 @@ font-size-p-76 {
   width: 50px;
   height: 1px;
   margin-right: 6px;
-  letter-spacing: 9px;
   background-color: #fff !important;
 }
 
-.text-volcano {
+.text-volcano,
+.pomjesaj {
   font-size: 2.25em;
   color: #222222;
 }
 
 @media only screen and (max-width: 479px) {
-  .text-volcano {
+  .text-volcano,
+  .pomjesaj {
     font-size: 1.8em !important;
   }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .text-volcano {
+  .text-volcano,
+  .pomjesaj {
     font-size: 1.9em !important;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 904px) {
-  .text-volcano {
+  .text-volcano,
+  .pomjesaj {
     font-size: 2em !important;
   }
 }
@@ -11391,6 +11429,16 @@ font-size-p-76 {
 
 .numbers .card-number:nth-child(even) {
   background: #f5f5f5;
+}
+
+.max-width-naslov {
+  max-width: 400px;
+}
+
+@media only screen and (max-width: 904px) {
+  .max-width-naslov .max-width-naslov {
+    max-width: 300px;
+  }
 }
 
 .navbar-toggler {
@@ -11602,7 +11650,19 @@ nav .active {
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   h1 {
-    font-size: 2.5em !important;
+    font-size: 2em !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  h1 {
+    font-size: 2em !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 768px) {
+  h1 {
+    font-size: 2em !important;
   }
 }
 
@@ -11749,7 +11809,6 @@ font-size-p-76 {
   width: 50px;
   height: 1px;
   margin-right: 6px;
-  letter-spacing: 9px;
   background-color: #222222;
 }
 
@@ -11766,29 +11825,32 @@ font-size-p-76 {
   width: 50px;
   height: 1px;
   margin-right: 6px;
-  letter-spacing: 9px;
   background-color: #fff !important;
 }
 
-.text-volcano {
+.text-volcano,
+.pomjesaj {
   font-size: 2.25em;
   color: #222222;
 }
 
 @media only screen and (max-width: 479px) {
-  .text-volcano {
+  .text-volcano,
+  .pomjesaj {
     font-size: 1.8em !important;
   }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .text-volcano {
+  .text-volcano,
+  .pomjesaj {
     font-size: 1.9em !important;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 904px) {
-  .text-volcano {
+  .text-volcano,
+  .pomjesaj {
     font-size: 2em !important;
   }
 }
@@ -11831,6 +11893,16 @@ font-size-p-76 {
 
 .numbers .card-number:nth-child(even) {
   background: #f5f5f5;
+}
+
+.max-width-naslov {
+  max-width: 400px;
+}
+
+@media only screen and (max-width: 904px) {
+  .max-width-naslov .max-width-naslov {
+    max-width: 300px;
+  }
 }
 
 .owl-stage-outer,
@@ -12365,7 +12437,19 @@ font-size-p-76 {
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   h1 {
-    font-size: 2.5em !important;
+    font-size: 2em !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  h1 {
+    font-size: 2em !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 768px) {
+  h1 {
+    font-size: 2em !important;
   }
 }
 
@@ -12512,7 +12596,6 @@ font-size-p-76 {
   width: 50px;
   height: 1px;
   margin-right: 6px;
-  letter-spacing: 9px;
   background-color: #222222;
 }
 
@@ -12529,29 +12612,32 @@ font-size-p-76 {
   width: 50px;
   height: 1px;
   margin-right: 6px;
-  letter-spacing: 9px;
   background-color: #fff !important;
 }
 
-.text-volcano {
+.text-volcano,
+.pomjesaj {
   font-size: 2.25em;
   color: #222222;
 }
 
 @media only screen and (max-width: 479px) {
-  .text-volcano {
+  .text-volcano,
+  .pomjesaj {
     font-size: 1.8em !important;
   }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .text-volcano {
+  .text-volcano,
+  .pomjesaj {
     font-size: 1.9em !important;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 904px) {
-  .text-volcano {
+  .text-volcano,
+  .pomjesaj {
     font-size: 2em !important;
   }
 }
@@ -12596,9 +12682,31 @@ font-size-p-76 {
   background: #f5f5f5;
 }
 
+.max-width-naslov {
+  max-width: 400px;
+}
+
+@media only screen and (max-width: 904px) {
+  .max-width-naslov .max-width-naslov {
+    max-width: 300px;
+  }
+}
+
 .kontakt {
   width: 40%;
   min-width: 200px;
+}
+
+@media only screen and (max-width: 479px) {
+  .kontakt {
+    margin-bottom: 25px !important;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .kontakt {
+    margin-bottom: 30px !important;
+  }
 }
 
 .footer-logo {
@@ -12654,6 +12762,333 @@ font-size-p-76 {
   }
 }
 
+.p-text-white {
+  color: #fff;
+  opacity: 1;
+}
+
+.auto-85 {
+  width: 85%;
+  margin: auto;
+}
+
+.auto-70 {
+  width: 70%;
+  margin: auto;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.grid-4 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.grid-text {
+  padding: 0 20px !important;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr minmax(auto, 26em) minmax(auto, 26em) 1fr !important;
+      grid-template-columns: 1fr minmax(auto, 26em) minmax(auto, 26em) 1fr !important;
+}
+
+.grid-text .grid-text-section {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+}
+
+.gap-20 {
+  grid-gap: 20px;
+}
+
+@media only screen and (max-width: 479px) {
+  p {
+    font-size: 0.75em !important;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  p {
+    font-size: 0.9em !important;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  h1 {
+    font-size: 1.5em !important;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  h1 {
+    font-size: 2em !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  h1 {
+    font-size: 2em !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 768px) {
+  h1 {
+    font-size: 2em !important;
+  }
+}
+
+font-size-p-76 {
+  font-size: 0.76em !important;
+}
+
+.background {
+  background-image: url(../images/grb.svg);
+  background-position: center;
+  height: 16vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  .grid-media {
+    -ms-grid-columns: 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .grid-media {
+    -ms-grid-columns: 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .grid-media {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  .kontakt {
+    min-width: 50% !important;
+  }
+}
+
+.owl-stage-outer {
+  height: 130vh;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+@media only screen and (max-width: 479px) {
+  .volcano {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .volcano {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  .volcano {
+    display: none !important;
+  }
+}
+
+.left-right {
+  margin-top: 7rem;
+}
+
+@media only screen and (max-width: 904px) {
+  .left-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .left-right .desno {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 5rem !important;
+  }
+}
+
+.lijevo-desno {
+  margin-top: 7rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .lijevo-desno {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .lijevo-desno .desno {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 2rem 0px 3rem 0px !important;
+  }
+  .lijevo-desno .lijevo {
+    margin-left: 0px !important;
+    margin-top: 3rem;
+  }
+}
+
+.lijevo,
+.desno {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.natpis {
+  -webkit-transform: translateX(-3vw);
+          transform: translateX(-3vw);
+}
+
+.natpis::before {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: inline-block;
+  margin-bottom: 5px;
+  width: 50px;
+  height: 1px;
+  margin-right: 6px;
+  background-color: #222222;
+}
+
+.natpis-white::before {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: inline-block;
+  margin-bottom: 5px;
+  width: 50px;
+  height: 1px;
+  margin-right: 6px;
+  background-color: #fff !important;
+}
+
+.text-volcano,
+.pomjesaj {
+  font-size: 2.25em;
+  color: #222222;
+}
+
+@media only screen and (max-width: 479px) {
+  .text-volcano,
+  .pomjesaj {
+    font-size: 1.8em !important;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .text-volcano,
+  .pomjesaj {
+    font-size: 1.9em !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  .text-volcano,
+  .pomjesaj {
+    font-size: 2em !important;
+  }
+}
+
+.betting-casino {
+  font-weight: 500;
+  color: #222222;
+  font-size: 1em;
+}
+
+.bold-500 {
+  font-weight: 500;
+}
+
+.lorem {
+  font-size: 0.9em;
+  color: #4f4f62;
+  font-weight: 500;
+}
+
+.opacity-7 {
+  opacity: 0.73;
+}
+
+.volcano-img img {
+  width: 20vw;
+  min-width: 200px;
+}
+
+.live {
+  width: 6.5vw;
+  min-width: 70px;
+}
+
+.title {
+  font-weight: 500;
+  line-height: 1.37;
+  font-size: 3rem;
+}
+
+.numbers .card-number:nth-child(even) {
+  background: #f5f5f5;
+}
+
+.max-width-naslov {
+  max-width: 400px;
+}
+
+@media only screen and (max-width: 904px) {
+  .max-width-naslov .max-width-naslov {
+    max-width: 300px;
+  }
+}
+
 .path {
   position: absolute;
   top: 0;
@@ -12663,5 +13098,372 @@ font-size-p-76 {
           clip-path: polygon(0 0, 74% 0, 100% 100%, 0% 100%);
   background-color: rgba(0, 0, 0, 0.35);
   width: 50%;
+}
+
+@media only screen and (max-width: 852px) {
+  .path {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .risk,
+  .free50 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 634px) {
+  .path {
+    -webkit-clip-path: none;
+            clip-path: none;
+    width: 100% !important;
+    position: relative !important;
+    padding: 50px 0;
+    height: 100%;
+  }
+  .two-in-one {
+    display: none;
+  }
+  .cover-volcano {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto !important;
+  }
+}
+
+.p-text-white {
+  color: #fff;
+  opacity: 1;
+}
+
+.auto-85 {
+  width: 85%;
+  margin: auto;
+}
+
+.auto-70 {
+  width: 70%;
+  margin: auto;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.grid-4 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.grid-text {
+  padding: 0 20px !important;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr minmax(auto, 26em) minmax(auto, 26em) 1fr !important;
+      grid-template-columns: 1fr minmax(auto, 26em) minmax(auto, 26em) 1fr !important;
+}
+
+.grid-text .grid-text-section {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+}
+
+.gap-20 {
+  grid-gap: 20px;
+}
+
+@media only screen and (max-width: 479px) {
+  p {
+    font-size: 0.75em !important;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  p {
+    font-size: 0.9em !important;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  h1 {
+    font-size: 1.5em !important;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  h1 {
+    font-size: 2em !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  h1 {
+    font-size: 2em !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 768px) {
+  h1 {
+    font-size: 2em !important;
+  }
+}
+
+font-size-p-76 {
+  font-size: 0.76em !important;
+}
+
+.background {
+  background-image: url(../images/grb.svg);
+  background-position: center;
+  height: 16vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  .grid-media {
+    -ms-grid-columns: 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .grid-media {
+    -ms-grid-columns: 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .grid-media {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  .kontakt {
+    min-width: 50% !important;
+  }
+}
+
+.owl-stage-outer {
+  height: 130vh;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+@media only screen and (max-width: 479px) {
+  .volcano {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .volcano {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  .volcano {
+    display: none !important;
+  }
+}
+
+.left-right {
+  margin-top: 7rem;
+}
+
+@media only screen and (max-width: 904px) {
+  .left-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .left-right .desno {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 5rem !important;
+  }
+}
+
+.lijevo-desno {
+  margin-top: 7rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .lijevo-desno {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .lijevo-desno .desno {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 2rem 0px 3rem 0px !important;
+  }
+  .lijevo-desno .lijevo {
+    margin-left: 0px !important;
+    margin-top: 3rem;
+  }
+}
+
+.lijevo,
+.desno {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.natpis {
+  -webkit-transform: translateX(-3vw);
+          transform: translateX(-3vw);
+}
+
+.natpis::before {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: inline-block;
+  margin-bottom: 5px;
+  width: 50px;
+  height: 1px;
+  margin-right: 6px;
+  background-color: #222222;
+}
+
+.natpis-white::before {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: inline-block;
+  margin-bottom: 5px;
+  width: 50px;
+  height: 1px;
+  margin-right: 6px;
+  background-color: #fff !important;
+}
+
+.text-volcano,
+.pomjesaj {
+  font-size: 2.25em;
+  color: #222222;
+}
+
+@media only screen and (max-width: 479px) {
+  .text-volcano,
+  .pomjesaj {
+    font-size: 1.8em !important;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .text-volcano,
+  .pomjesaj {
+    font-size: 1.9em !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 904px) {
+  .text-volcano,
+  .pomjesaj {
+    font-size: 2em !important;
+  }
+}
+
+.betting-casino {
+  font-weight: 500;
+  color: #222222;
+  font-size: 1em;
+}
+
+.bold-500 {
+  font-weight: 500;
+}
+
+.lorem {
+  font-size: 0.9em;
+  color: #4f4f62;
+  font-weight: 500;
+}
+
+.opacity-7 {
+  opacity: 0.73;
+}
+
+.volcano-img img {
+  width: 20vw;
+  min-width: 200px;
+}
+
+.live {
+  width: 6.5vw;
+  min-width: 70px;
+}
+
+.title {
+  font-weight: 500;
+  line-height: 1.37;
+  font-size: 3rem;
+}
+
+.numbers .card-number:nth-child(even) {
+  background: #f5f5f5;
+}
+
+.max-width-naslov {
+  max-width: 400px;
+}
+
+@media only screen and (max-width: 904px) {
+  .max-width-naslov .max-width-naslov {
+    max-width: 300px;
+  }
+}
+
+.pomjesaj {
+  font-size: 2em;
 }
 /*# sourceMappingURL=style.css.map */

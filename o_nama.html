@@ -10,6 +10,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/nice-select.css" />
     <style>
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 3rem;
+            font-size: 0.9em;
+            color: #4f4f62;
+        }
+
+        @media screen and (max-width: 720px) {
+            .footer-bottom {
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .footer-bottom div:last-child {
+                padding: 0 40%;
+                flex-direction: column;
+            }
+
+            .footer-vezuv {
+                height: auto !important;
+            }
+        }
+
         .cover-o-nama {
             background-image: url("images/montenegro.jpg"), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0,
                         0.3));
@@ -21,9 +45,6 @@
             flex-direction: column;
         }
 
-        .max-width-naslov {
-            max-width: 400px;
-        }
 
         .misija {
             width: 100%;
@@ -95,10 +116,10 @@
 
     <!-- Cover o nama -->
     <div class="cover-o-nama">
-        <div class="path d-flex justify-content-center flex-column ">
+        <div class="path d-flex justify-content-center flex-column  pt-5">
             <div class="auto-70">
-                <div class="natpis-white mb-5 text-white">O NAMA</div>
-                <h1 class="title my-5  bold bold-500 text-white max-width-naslov">20 GODINA
+                <div class="natpis-white mb-5 text-white mt-3">O NAMA</div>
+                <h1 class="title my-5  bold bold-500 text-white max-width-naslov pr-4">20 GODINA
                     UŽIVO SA VAMA</h1>
                 <p class=" text-white opacity-7 ">Vezuv je osnovan 1999. godine sa primarnom djelatnošću
                     organizacije
@@ -182,11 +203,11 @@
 
 
     <!-- Footer -->
-    <div class="w-100 footer-vezuv d-flex flex-row ">
+    <div class="w-100 footer-vezuv d-flex flex-row justify-content-between">
         <div class="img">
             <img src="images/footer-logo.png" alt="" srcset="" class="left" />
         </div>
-        <div class="text-center kontakt d-fex flex-column my-auto" style="width: 40%;">
+        <div class="text-center kontakt d-fex flex-column my-auto justify-content-between" style="width: 40%;">
             <img src="images\Group 39.png" alt="" class="align-self-center footer-logo" />
             <div class="kontakt-text mt-3">
                 <div class="mt-2 bold">VEZUV DOO</div>
@@ -198,10 +219,20 @@
         <div class="img d-flex">
             <img src="images/footer-logo.png" alt="" srcset="" class="right ml-auto" />
         </div>
+
     </div>
 
-
-    <!-- Script -->
+    <div class="footer-bottom">
+        <div>© Copyright Vezuv d.o.o. 2019</div>
+        <div class="d-flex">
+            <div>Designed by</div>
+            <a href="https://amplitudo.me" target="_blank">
+                <img src="images/AmplitudoLogo.svg" style="max-width: 95px;" class="img-fluid mb-3 pb-1 w-100"
+                    alt="Amplitudo Logo"> </a>
+        </div>
+    </div>
+    <!-- Script
+                -->
 
     <script src="js/popper.min.js"></script>
     <script src="js/jquery.min.js"></script>

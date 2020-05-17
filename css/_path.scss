@@ -19,6 +19,25 @@
     }
 }
 
+svg {
+    width: 60%;
+    height: 100%;
+
+}
+
+text {
+    transform: translateX(-200px);
+    fill: white;
+}
+
+.cosak-back text {
+    text {
+        transform: translateX(50px);
+        fill: white;
+    }
+}
+
+
 @media only screen and (max-width: 650px) {
 
     .risk,

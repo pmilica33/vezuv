@@ -6,6 +6,11 @@
     box-shadow: 0 3px 22px 0 rgba(0, 0, 0, 0.14);
     background-color: white;
     width: 80%;
+
+    @include respond-to(handhelds) {
+        padding: 20px !important;
+    }
+
 }
 
 .slika {
@@ -33,19 +38,57 @@
 
     &>div:nth-child(odd) {
 
+        @include respond-to(max-tablet) {
+            flex-direction: column !important;
+        }
+
         .box-volcano {
             transform: translateX(-20%);
+
+            @include respond-to(max-navbar) {
+                transform: unset !important;
+            }
+
         }
+
+        .slika .cosak {
+            width: 40%;
+
+            left: 2%;
+            top: 2%;
+            z-index: 5;
+
+        }
+
     }
 
     &>div:nth-child(even) {
+        @include respond-to(max-navbar) {
+            flex-direction: column !important;
+
+            .box-volcano {
+                transform: unset !important;
+            }
+
+            &>div:first-child {
+                order: 2;
+            }
+        }
 
         margin-left: auto;
 
         .box-volcano {
+            z-index: 4;
             transform: translateX(20%);
         }
 
+        .slika .cosak {
+            width: 40%;
+            right: 2%;
+            top: 2%;
+            z-index: 5;
+
+        }
     }
 }
 

@@ -28,3 +28,17 @@ $("#toggler-button").click(() => {
 //     clickedItem.addClass("active");
 //   });
 // });
+
+let nav = $(".navbar");
+let oTop = $('#header-text-section').offset().top;
+$(window).scroll(function () {
+
+  if (nav.offset().top + nav.outerHeight(true) > oTop || $(document).width() < 1199) {
+    whiteNav();
+  } else {
+    nav.removeClass("white-nav");
+    $("#logo-image").attr("src", "img/LogoWhite.svg");
+    $("#millenial-image").attr("src", "img/MillenialWhite.svg");
+    nav.addClass("animatedFadeNav");
+  }
+});

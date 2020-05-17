@@ -1,332 +1,309 @@
 @mixin respond-to($media) {
-    @if $media==handhelds {
-        @media only screen and (max-width: 479px) {
-            @content;
-        }
+  @if $media==handhelds {
+    @media only screen and (max-width: 479px) {
+      @content;
     }
-
-    @else if $media==wide-handhelds {
-        @media only screen and (min-width: 480px) and (max-width: 767px) {
-            @content;
-        }
+  } @else if $media==wide-handhelds {
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+      @content;
     }
-
-    @else if $media==max-wide-handhelds {
-        @media only screen and (max-width: 767px) {
-            @content;
-        }
+  } @else if $media==max-wide-handhelds {
+    @media only screen and (max-width: 767px) {
+      @content;
     }
-
-    @else if $media==tablets {
-        @media only screen and (min-width: 768px) and (max-width: 904px) {
-            @content;
-        }
+  } @else if $media==tablets {
+    @media only screen and (min-width: 768px) and (max-width: 904px) {
+      @content;
     }
-
-    @else if $media==max-tablet {
-        @media only screen and (max-width: 904px) {
-            @content;
-        }
+  } @else if $media==max-tablet {
+    @media only screen and (max-width: 904px) {
+      @content;
     }
-
-    @else if $media==navbar {
-        @media only screen and (max-width: 1199px) and (min-width: 768px) {
-            @content;
-        }
+  } @else if $media==navbar {
+    @media only screen and (max-width: 1199px) and (min-width: 768px) {
+      @content;
     }
+  } @else if $media==max-navbar {
+    @media only screen and (max-width: 1199px) {
+      @content;
+    }
+  }
 }
 
 .p-text-white {
-    color: #fff;
-    opacity: 1;
+  color: #fff;
+  opacity: 1;
 }
 
 .auto-85 {
-    width: 85%;
-    margin: auto;
+  width: 85%;
+  margin: auto;
 }
 
 .auto-70 {
-    width: 70%;
-    margin: auto;
+  width: 70%;
+  margin: auto;
 }
 
 .text-upper {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .bold {
-    font-weight: 900;
+  font-weight: 900;
 }
 
 .grid-4 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .w-100 {
-    width: 100%;
+  width: 100%;
 }
 
 .grid-text {
-    padding: 0 20px !important;
-    display: grid;
-    grid-template-columns: 1fr (minmax(auto, 26em))(minmax(auto, 26em)) 1fr !important;
+  padding: 0 20px !important;
+  display: grid;
+  grid-template-columns: 1fr (minmax(auto, 26em)) (minmax(auto, 26em)) 1fr !important;
 
-    .grid-text-section {
-        grid-column: 2/4;
-    }
+  .grid-text-section {
+    grid-column: 2/4;
+  }
 }
 
 .gap-20 {
-    grid-gap: 20px;
+  grid-gap: 20px;
 }
 
 p {
-    @include respond-to(handhelds) {
-        font-size: 0.75em !important;
-    }
+  @include respond-to(handhelds) {
+    font-size: 0.75em !important;
+  }
 
-    @include respond-to(wide-handhelds) {
-        font-size: 0.9em !important;
-    }
+  @include respond-to(wide-handhelds) {
+    font-size: 0.9em !important;
+  }
 
-    @include respond-to(tablets) {}
+  @include respond-to(tablets) {
+  }
 }
 
 h1 {
-    @include respond-to(handhelds) {
-        font-size: 1.5em !important;
-    }
+  @include respond-to(handhelds) {
+    font-size: 1.5em !important;
+  }
 
-    @include respond-to(wide-handhelds) {
-        font-size: 2em !important;
-    }
+  @include respond-to(wide-handhelds) {
+    font-size: 2em !important;
+  }
 
-    @include respond-to(tablets) {
-        font-size: 2em !important;
+  @include respond-to(tablets) {
+    font-size: 2em !important;
+  }
 
-    }
-
-    @include respond-to(navbar) {
-        font-size: 2em !important;
-
-    }
+  @include respond-to(navbar) {
+    font-size: 2em !important;
+  }
 }
 
 font-size-p-76 {
-    font-size: 0.76em !important;
+  font-size: 0.76em !important;
 }
 
 .background {
-    background-image: url(../images/grb.svg);
-    background-position: center;
-    height: 16vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    align-items: center;
+  background-image: url(../images/grb.svg);
+  background-position: center;
+  height: 16vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-items: center;
 
-    img {
-        @include respond-to(max-wide-handhelds) {
-
-            width: 22vw;
-            min-width: 130px;
-        }
+  img {
+    @include respond-to(max-wide-handhelds) {
+      width: 22vw;
+      min-width: 130px;
     }
+  }
 }
 
 @mixin grid-2-2() {
-    grid-template-columns: 1fr 1fr !important;
-    grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: 1fr 1fr;
 }
 
 .grid-media {
-    @include respond-to(tablets) {
-        @include grid-2-2();
-    }
+  @include respond-to(tablets) {
+    @include grid-2-2();
+  }
 
-    @include respond-to(wide-handhelds) {
-        @include grid-2-2();
+  @include respond-to(wide-handhelds) {
+    @include grid-2-2();
+  }
 
-    }
-
-    @include respond-to(handhelds) {
-        grid-template-columns: 1fr !important;
-    }
+  @include respond-to(handhelds) {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 .kontakt {
-    @include respond-to(tablets) {
-        min-width: 50% !important;
-    }
+  @include respond-to(tablets) {
+    min-width: 50% !important;
+  }
 }
 
 .owl-stage-outer {
-    height: 130vh;
-
+  height: 130vh;
 }
 
 .absolute {
-    position: absolute;
+  position: absolute;
 }
 
 .relative {
-    position: relative;
+  position: relative;
 }
 
 .volcano {
-    @include respond-to(handhelds) {
-        display: none !important;
+  @include respond-to(handhelds) {
+    display: none !important;
+  }
 
-    }
+  @include respond-to(wide-handhelds) {
+    display: none !important;
+  }
 
-    @include respond-to(wide-handhelds) {
-        display: none !important;
-
-    }
-
-    @include respond-to(tablets) {
-        display: none !important;
-    }
+  @include respond-to(tablets) {
+    display: none !important;
+  }
 }
 
 .left-right {
-    margin-top: 7rem;
+  margin-top: 7rem;
 
-    @include respond-to(max-tablet) {
-        flex-direction: column;
+  @include respond-to(max-tablet) {
+    flex-direction: column;
 
-        .desno {
-            align-items: center;
-            margin-top: 5rem !important;
-        }
+    .desno {
+      align-items: center;
+      margin-top: 5rem !important;
     }
-
+  }
 }
 
 .lijevo-desno {
-    margin-top: 7rem;
+  margin-top: 7rem;
 
-    @include respond-to(max-wide-handhelds) {
-        flex-direction: column;
+  @include respond-to(max-wide-handhelds) {
+    flex-direction: column;
 
-        .desno {
-            align-items: center;
-            margin: 2rem 0px 3rem 0px !important;
-        }
-
-        .lijevo {
-            margin-left: 0px !important;
-            margin-top: 3rem;
-        }
+    .desno {
+      align-items: center;
+      margin: 2rem 0px 3rem 0px !important;
     }
 
-
+    .lijevo {
+      margin-left: 0px !important;
+      margin-top: 3rem;
+    }
+  }
 }
 
 .lijevo,
 .desno {
-    flex: 1;
+  flex: 1;
 }
 
 @mixin natpis-mixin() {
-    content: "";
-    display: flex;
-    align-items: center;
-    display: inline-block;
-    margin-bottom: 5px;
-    width: 50px;
-    height: 1px;
-    margin-right: 6px;
-
-
+  content: "";
+  display: flex;
+  align-items: center;
+  display: inline-block;
+  margin-bottom: 5px;
+  width: 50px;
+  height: 1px;
+  margin-right: 6px;
 }
 
 .natpis {
-    transform: translateX(-3vw);
+  transform: translateX(-3vw);
 }
 
 .natpis::before {
-    @include natpis-mixin();
-    background-color: #222222;
+  @include natpis-mixin();
+  background-color: #222222;
 }
 
 .natpis-white::before {
-    @include natpis-mixin();
-    background-color: #fff !important;
-
+  @include natpis-mixin();
+  background-color: #fff !important;
 }
 
 .text-volcano,
 .pomjesaj {
-    font-size: 2.25em;
-    color: #222222;
+  font-size: 2.25em;
+  color: #222222;
 
-    @include respond-to(handhelds) {
-        font-size: 1.8em !important;
+  @include respond-to(handhelds) {
+    font-size: 1.8em !important;
+  }
 
-    }
+  @include respond-to(wide-handhelds) {
+    font-size: 1.9em !important;
+  }
 
-    @include respond-to(wide-handhelds) {
-        font-size: 1.9em !important;
-    }
-
-    @include respond-to(tablets) {
-        font-size: 2em !important;
-    }
+  @include respond-to(tablets) {
+    font-size: 2em !important;
+  }
 }
 
 .betting-casino {
-    font-weight: 500;
-    color: #222222;
-    font-size: 1em;
+  font-weight: 500;
+  color: #222222;
+  font-size: 1em;
 }
 
 .bold-500 {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .lorem {
-    font-size: 0.9em;
-    color: #4f4f62;
-    font-weight: 500;
-
+  font-size: 0.9em;
+  color: #4f4f62;
+  font-weight: 500;
 }
 
 .opacity-7 {
-    opacity: 0.73;
+  opacity: 0.73;
 }
 
 .volcano-img img {
-    width: 20vw;
-    min-width: 200px;
+  width: 20vw;
+  min-width: 200px;
 }
 
 .live {
-    width: 6.5vw;
-    min-width: 70px;
-
+  width: 6.5vw;
+  min-width: 70px;
 }
 
 .title {
-    font-weight: 500;
-    line-height: 1.37;
-    font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.37;
+  font-size: 3rem;
 }
 
 //Numbers
 .numbers .card-number:nth-child(even) {
-    background: #f5f5f5;
+  background: #f5f5f5;
 }
 
 .max-width-naslov {
-    max-width: 400px;
+  max-width: 400px;
 
-    @include respond-to(max-tablet) {
-
-        .max-width-naslov {
-            max-width: 300px;
-        }
+  @include respond-to(max-tablet) {
+    .max-width-naslov {
+      max-width: 300px;
     }
-
+  }
 }

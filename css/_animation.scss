@@ -1,0 +1,33 @@
+.animate-left {
+    position: relative;
+    animation: mymove 2s ease;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes mymove {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.animate-right {
+    position: relative;
+    animation: mymove-right 2s ease;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes mymove-right {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

@@ -13141,6 +13141,23 @@ font-size-p-76 {
   }
 }
 
+svg {
+  width: 60%;
+  height: 100%;
+}
+
+text {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+  fill: white;
+}
+
+.cosak-back text text {
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  fill: white;
+}
+
 @media only screen and (max-width: 650px) {
   .risk,
   .free50 {
@@ -13514,6 +13531,12 @@ font-size-p-76 {
   width: 80%;
 }
 
+@media only screen and (max-width: 479px) {
+  .box-volcano {
+    padding: 20px !important;
+  }
+}
+
 .slika {
   width: 80%;
 }
@@ -13531,23 +13554,132 @@ font-size-p-76 {
   color: #dea149;
 }
 
+@media only screen and (max-width: 904px) {
+  .kartice > div:nth-child(odd) {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+}
+
 .kartice > div:nth-child(odd) .box-volcano {
   -webkit-transform: translateX(-20%);
           transform: translateX(-20%);
+}
+
+@media only screen and (max-width: 1199px) {
+  .kartice > div:nth-child(odd) .box-volcano {
+    -webkit-transform: unset !important;
+            transform: unset !important;
+  }
+}
+
+.kartice > div:nth-child(odd) .slika .cosak {
+  width: 40%;
+  left: 2%;
+  top: 2%;
+  z-index: 5;
 }
 
 .kartice > div:nth-child(even) {
   margin-left: auto;
 }
 
+@media only screen and (max-width: 1199px) {
+  .kartice > div:nth-child(even) {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .kartice > div:nth-child(even) .box-volcano {
+    -webkit-transform: unset !important;
+            transform: unset !important;
+  }
+  .kartice > div:nth-child(even) > div:first-child {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 .kartice > div:nth-child(even) .box-volcano {
+  z-index: 4;
   -webkit-transform: translateX(20%);
           transform: translateX(20%);
+}
+
+.kartice > div:nth-child(even) .slika .cosak {
+  width: 40%;
+  right: 2%;
+  top: 2%;
+  z-index: 5;
 }
 
 .naslov {
   font-size: 2.18em;
   color: #e50019;
   font-weight: 500;
+}
+
+.animate-left {
+  position: relative;
+  -webkit-animation: mymove 2s ease;
+          animation: mymove 2s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes mymove {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes mymove {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.animate-right {
+  position: relative;
+  -webkit-animation: mymove-right 2s ease;
+          animation: mymove-right 2s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes mymove-right {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes mymove-right {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */

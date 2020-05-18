@@ -144,6 +144,14 @@
     .volcano img {
       width: 10vw !important;
     }
+
+    .card-aktuelnosti {
+      transition: transform .6s ease;
+    }
+
+    .card-aktuelnosti:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 
@@ -169,7 +177,7 @@
             <a class="nav-link" href="volcano.html">VOLCANO</a>
           </li>
           <li class="nav-item hoverLink">
-            <a class="nav-link" href="#">SPORT SUPPORT</a>
+            <a class="nav-link" href="sport-support.html">SPORT SUPPORT</a>
           </li>
           <li class="nav-item hoverLink">
             <a class="nav-link" href="#">DRUŠTVENA ODGOVORNOST</a>
@@ -230,7 +238,7 @@
     </div>
 
     <!-- Numbers -->
-    <div class="text-center mt-5">
+    <div class="text-center mt-5" id="numbers">
       <div class="numbers justify-content-center grid-4 grid-media">
         <div class="card-number">
           <img src="images/suitcase (1).png" class="pt-5 pb-3" alt="" srcset="" />
@@ -258,7 +266,20 @@
     <div class="misija mx-auto text-center">
       <h1 class="title">Misija & Vizija</h1>
       <div class="button-transparent">
-        <a href="" class="d-flex justify-content-around">Procitaj<i class="fas fa-arrow-right white mt-2 fa-xs"></i></a>
+        <a href="" class="d-flex justify-content-around align-items-center">Procitaj<svg
+            xmlns="http://www.w3.org/2000/svg" width="17.07" height="12" viewBox="0 0 17.07 12">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #fff
+                }
+              </style>
+            </defs>
+            <path id="left-arrow_2_"
+              d="M5.567 4.856a.605.605 0 1 1 .86.851l-4.361 4.362h14.392a.606.606 0 0 1 .611.6.613.613 0 0 1-.611.611H2.066l4.361 4.353a.617.617 0 0 1 0 .86.6.6 0 0 1-.86 0L.174 11.1a.607.607 0 0 1 0-.851z"
+              class="cls-1" data-name="left-arrow (2)" transform="rotate(180 8.534 8.338)" />
+          </svg>
+        </a>
       </div>
     </div>
 
@@ -273,8 +294,20 @@
     <div class="odgovornost mx-auto text-center mt-5">
       <h1 class="title">Društvena odgovornost</h1>
       <div class="button-transparent">
-        <a href="" class="d-flex justify-content-around">Deteljnije<i
-            class="fas fa-arrow-right white mt-2 fa-xs"></i></a>
+        <a href="" class="d-flex justify-content-around align-items-center">Deteljnije<svg
+            xmlns="http://www.w3.org/2000/svg" width="17.07" height="12" viewBox="0 0 17.07 12">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #fff
+                }
+              </style>
+            </defs>
+            <path id="left-arrow_2_"
+              d="M5.567 4.856a.605.605 0 1 1 .86.851l-4.361 4.362h14.392a.606.606 0 0 1 .611.6.613.613 0 0 1-.611.611H2.066l4.361 4.353a.617.617 0 0 1 0 .86.6.6 0 0 1-.86 0L.174 11.1a.607.607 0 0 1 0-.851z"
+              class="cls-1" data-name="left-arrow (2)" transform="rotate(180 8.534 8.338)" />
+          </svg>
+        </a>
       </div>
     </div>
     <!-- AKTUELNO -->
@@ -318,8 +351,20 @@
 
         </div>
         <div class="button-transparent border-black mt-3">
-          <a href="" class="d-flex justify-content-around">Saznaj više<i
-              class="fas fa-arrow-right white mt-2 fa-xs"></i></a>
+          <a href="" class="d-flex justify-content-around align-items-center">Saznaj više<svg
+              xmlns="http://www.w3.org/2000/svg" width="17.07" height="12" viewBox="0 0 17.07 12">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #fff
+                  }
+                </style>
+              </defs>
+              <path id="left-arrow_2_"
+                d="M5.567 4.856a.605.605 0 1 1 .86.851l-4.361 4.362h14.392a.606.606 0 0 1 .611.6.613.613 0 0 1-.611.611H2.066l4.361 4.353a.617.617 0 0 1 0 .86.6.6 0 0 1-.86 0L.174 11.1a.607.607 0 0 1 0-.851z"
+                class="cls-1" data-name="left-arrow (2)" transform="rotate(180 8.534 8.338)" />
+            </svg>
+          </a>
         </div>
 
 
@@ -328,11 +373,11 @@
 
 
     <!-- Footer -->
-    <div class="w-100 footer-vezuv d-flex flex-row ">
+    <div class="w-100 footer-vezuv d-flex flex-row justify-content-between">
       <div class="img">
         <img src="images/footer-logo.png" alt="" srcset="" class="left" />
       </div>
-      <div class="text-center kontakt d-fex flex-column my-auto" style="width: 40%;">
+      <div class="text-center kontakt d-fex flex-column my-auto justify-content-between" style="width: 40%;">
         <img src="images\Group 39.png" alt="" class="align-self-center footer-logo" />
         <div class="kontakt-text mt-3">
           <div class="mt-2 bold">VEZUV DOO</div>
@@ -345,78 +390,89 @@
         <img src="images/footer-logo.png" alt="" srcset="" class="right ml-auto" />
       </div>
     </div>
-  </footer>
 
-  <script src="js/popper.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/owl.carousel.js"></script>
-  <script src="js/jquery.nice-select.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+    <div class="footer-bottom">
+      <div>© Copyright Vezuv d.o.o. 2019</div>
+      <div class="d-flex">
+        <div>Designed by</div>
+        <a href="https://amplitudo.me" target="_blank">
+          <img src="images/AmplitudoLogo.svg" style="max-width: 95px;" class="img-fluid mb-3 pb-1 w-100"
+            alt="Amplitudo Logo"> </a>
+      </div>
+    </div>
+    <!-- Script
+                -->
 
-  <script>
-    // Owl
-    $(".owl-carousel").owlCarousel({
-      navigation: true, // Show next and prev buttons
-      slideSpeed: 300,
-      paginationSpeed: 400,
-      singleItem: true,
-      items: 1,
-      nav: true,
-      navText: [$(".prev"), $(".next")],
-      afterAction: function (current) {
-        current.find("video").get(0).play();
-      },
-    });
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.nice-select.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 
-
-
-
-    $(document).ready(() => {
-      // People
-
-      $.ajax({
-        url: "http://localhost:3000/people",
-        type: "GET",
-        success: function (data) {
-          console.log(data[0].id);
-          for (var i = 0; i < 10; i++) {
-            var card = getCard(data[i]);
-            $(".cards-people").append(card);
-          }
-        },
-        error: function () {
-          console.log("Error");
+    <script>
+      // Owl
+      $(".owl-carousel").owlCarousel({
+        navigation: true, // Show next and prev buttons
+        slideSpeed: 300,
+        paginationSpeed: 400,
+        singleItem: true,
+        items: 1,
+        nav: true,
+        navText: [$(".prev"), $(".next")],
+        afterAction: function (current) {
+          current.find("video").get(0).play();
         },
       });
 
-      function getCard(postObject) {
-        return `<div class="card-people">
+
+
+
+      $(document).ready(() => {
+        // People
+
+        $.ajax({
+          url: "http://localhost:3000/people",
+          type: "GET",
+          success: function (data) {
+            console.log(data[0].id);
+            for (var i = 0; i < 10; i++) {
+              var card = getCard(data[i]);
+              $(".cards-people").append(card);
+            }
+          },
+          error: function () {
+            console.log("Error");
+          },
+        });
+
+        function getCard(postObject) {
+          return `<div class="card-people">
           <img src="${postObject.picture}" alt="" srcset="" />
           <p class="name mt-3">${postObject.name}</p>
           <p class="description">${postObject.description}</p>
         </div>
       </div>`;
-      }
+        }
 
-      // Aktuelnosti
-      $.ajax({
-        url: "http://localhost:3000/aktuelnosti",
-        type: "GET",
-        success: function (data) {
-          console.log(data[0].id);
-          for (var i = 0; i < 5; i++) {
-            var card = getAktuelnost(data[i]);
-            $(".cards-aktuelnosti").append(card);
-          }
-        },
-        error: function () {
-          console.log("Error");
-        },
-      });
+        // Aktuelnosti
+        $.ajax({
+          url: "http://localhost:3000/aktuelnosti",
+          type: "GET",
+          success: function (data) {
+            console.log(data[0].id);
+            for (var i = 0; i < 5; i++) {
+              var card = getAktuelnost(data[i]);
+              $(".cards-aktuelnosti").append(card);
+            }
+          },
+          error: function () {
+            console.log("Error");
+          },
+        });
 
-      function getAktuelnost(postObject) {
-        return `
+        function getAktuelnost(postObject) {
+          return `
           <a href="">
       <div class="card-aktuelnosti w-100">
         <div class="aktuelno-img">
@@ -431,9 +487,9 @@
         <p class="description-aktuelno w-100 text-left mt-2 bold"> ${postObject.description}</p>
       </div>
     </a>`;
-      }
-    });
-  </script>
+        }
+      });
+    </script>
 </body>
 
 </html>

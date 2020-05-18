@@ -12790,6 +12790,38 @@ font-size-p-76 {
   }
 }
 
+.footer-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 3rem;
+  font-size: 0.9em;
+  color: #4f4f62;
+}
+
+@media screen and (max-width: 720px) {
+  .footer-bottom {
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-bottom div:last-child {
+    padding: 0 40%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-vezuv {
+    height: auto !important;
+  }
+}
+
 .p-text-white {
   color: #fff;
   opacity: 1;
@@ -13141,11 +13173,7 @@ font-size-p-76 {
   }
 }
 
-svg {
-  width: 60%;
-  height: 100%;
-}
-
+/*  ovo sam makao da znas */
 text {
   -webkit-transform: translateX(-200px);
           transform: translateX(-200px);
@@ -13623,6 +13651,10 @@ font-size-p-76 {
   font-weight: 500;
 }
 
+.sekcija-volcano {
+  opacity: 0;
+}
+
 .animate-left {
   position: relative;
   -webkit-animation: mymove 2s ease;
@@ -13633,10 +13665,12 @@ font-size-p-76 {
 
 @-webkit-keyframes mymove {
   from {
+    opacity: 0;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
   }
   to {
+    opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -13644,10 +13678,12 @@ font-size-p-76 {
 
 @keyframes mymove {
   from {
+    opacity: 0;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
   }
   to {
+    opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -13663,10 +13699,12 @@ font-size-p-76 {
 
 @-webkit-keyframes mymove-right {
   from {
+    opacity: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
   }
   to {
+    opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -13674,10 +13712,12 @@ font-size-p-76 {
 
 @keyframes mymove-right {
   from {
+    opacity: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
   }
   to {
+    opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }

@@ -63,3 +63,27 @@
 
 
 }
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+    font-size: 0.9em;
+    color: #4f4f62;
+}
+
+@media screen and (max-width: 720px) {
+    .footer-bottom {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .footer-bottom div:last-child {
+        padding: 0 40%;
+        flex-direction: column;
+    }
+
+    .footer-vezuv {
+        height: auto !important;
+    }
+}

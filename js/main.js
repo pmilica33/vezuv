@@ -29,16 +29,56 @@ $("#toggler-button").click(() => {
 //   });
 // });
 
-let nav = $(".navbar");
-let oTop = $('#header-text-section').offset().top;
-$(window).scroll(function () {
+// let nav = $(".navbar");
+// let oTop = $('#first-card').offset().top;
+// $(window).scroll(function () {
 
-  if (nav.offset().top + nav.outerHeight(true) > oTop || $(document).width() < 1199) {
-    whiteNav();
-  } else {
-    nav.removeClass("white-nav");
-    $("#logo-image").attr("src", "img/LogoWhite.svg");
-    $("#millenial-image").attr("src", "img/MillenialWhite.svg");
-    nav.addClass("animatedFadeNav");
+//   if (nav.offset().top + nav.outerHeight(true) > oTop) {
+//     $('#first-card').addClass("animate-left");
+//   } else {
+//     $('#first-card').removeClasss("animate-left");
+
+//   }
+// });
+
+$(window).scroll(function () {
+  var scrollBottom = $(window).scrollTop() + $(window).height();
+  let first = $("#first-card").offset().top;
+
+  if (scrollBottom > first) {
+    $("#first-card").addClass("animate-left");
+
+    executed = true;
+  }
+});
+
+$(window).scroll(function () {
+  var scrollBottom = $(window).scrollTop() + $(window).height();
+  let second = $("#second-card").offset().top;
+
+  if (scrollBottom > second) {
+    $("#second-card").addClass("animate-right");
+
+    executed = true;
+  }
+});
+$(window).scroll(function () {
+  var scrollBottom = $(window).scrollTop() + $(window).height();
+  let thrid = $("#thrid-card").offset().top;
+
+  if (scrollBottom > thrid) {
+    $("#thrid-card").addClass("animate-left");
+
+    executed = true;
+  }
+});
+$(window).scroll(function () {
+  var scrollBottom = $(window).scrollTop() + $(window).height();
+  let four = $("#four-card").offset().top;
+
+  if (scrollBottom > four) {
+    $("#four-card").addClass("animate-right");
+
+    executed = true;
   }
 });

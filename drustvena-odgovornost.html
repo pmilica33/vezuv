@@ -33,12 +33,6 @@
             }
         }
 
-        .title {
-            font-size: 2.5em !important;
-        }
-
-
-
         .max-width-naslov {
             max-width: 500px;
         }
@@ -52,9 +46,22 @@
             transform: scale(1.1);
         }
 
-        /* .text-lorem {
-            transform: translateX(-15%);
-        } */
+        @media only screen and (max-width: 1045px) {
+            .path {
+                width: 600px;
+            }
+        }
+
+        @media only screen and (max-width: 325px) {
+            .natpis-white {
+                margin-top: 100px !important;
+            }
+
+        }
+
+        .lijeve-slike img {
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -155,7 +162,7 @@
             <div class="auto-70 animate-left grid-text">
                 <div class="grid-text-section">
                     <div class="natpis-white mb-5 text-white mt-3">DRUSTVENA ODGOVORNOST</div>
-                    <h1 class="title my-5  bold bold-500 text-white max-width-naslov pr-4">LOREM ISPUM DOLOR
+                    <h1 class=" my-5  bold bold-500 text-white max-width-naslov pr-4">LOREM ISPUM DOLOR
                         SIT AMANET</h1>
                     <p class=" text-white opacity-7 ">Vezuv mnogo pažnje posvećuje ulaganju u društveno odgovorno
                         poslovanje
@@ -180,34 +187,96 @@
     <!-- Left-right -->
 
     <div class="d-flex align-items-center mt-5 container flex-column-volcano">
+
+        <!-- Gallary images -->
         <div class="lijeve-slike grid-3 pr-5 gap-10">
-            <img src="images/146@3x.png" alt="">
-            <img src="images/179.png" alt="">
-            <img src="images/300.png" alt="">
-            <img src="images/365.png" alt="">
-            <img src="images/386.png" alt="">
-            <img src="images/408.png" alt="">
+            <img src="images/146@3x.png" alt="" onclick="openModal();currentSlide(1)">
+            <img src="images/179.png" alt="" onclick="openModal();currentSlide(1)">
+            <img src="images/300.png" alt="" onclick="openModal();currentSlide(1)">
+            <img src="images/365.png" alt="" onclick="openModal();currentSlide(1)">
+            <img src="images/386.png" alt="" onclick="openModal();currentSlide(1)">
+            <img src="images/408.png" alt="" onclick="openModal();currentSlide(1)">
+
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="img1_wide.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="img2_wide.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="img3_wide.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="img4_wide.jpg" style="width:100%">
+                    </div>
+
+                    <!-- Next/previous controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!-- Caption text -->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+
+                    <!-- Thumbnail image controls -->
+                    <div class="column">
+                        <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
+                    </div>
+                </div>
+            </div>
 
         </div>
-        <div class=" opacity-7 pl-5 text-lorem ">
-            <p>
-                Do sada smo uspostavili i izgradili partnerske odnose sa raznim subjektima iz oblasti zdravstva,
-                obrazovanja i posebno sporta.
-            </p>
+        <div class=" opacity-7 pl-5 text-lorem  grid-text">
+            <div class="grid-text-section">
+                <p>
+                    Do sada smo uspostavili i izgradili partnerske odnose sa raznim subjektima iz oblasti zdravstva,
+                    obrazovanja i posebno sporta.
+                </p>
 
-            <p>
-                Fokus i jedan od glavnih pravaca Vezuv društveno odgovorno poslovanje jesu djeca , naši najmlađi heroji
-                . Svjesni smo da je ulaganje u njihovo srećno odrastanje zapravo investicija u bolju budućnost svakoga
-                od nas. Naša pažnja i podrška tokom godine bila je posebno usmjerena na Fondaciju “Budi Human “
-                potkrijepiti fotografijama
-                Vezuv je kroz svoj brend Volcano godinama unazad tradicionalni sponzor najznačajnijih sportskih događaja
-                kao i manifestacija širom Crne Gore.
-            </p>
-            <p>
-                Podrška nacionalnom sportu i sportistima a posebno mlađim generacijama naša kompanija je pružila kroz
-                svoj projekat “Volcano Sport Support“. Zahvaljujući ovom projektu mnogi mladi sportisti iz Crne Gore su
-                ostvarili svoje prve uspjehe i pobjede na domaćim i međunarodnim takmičenjima .
-            </p>
+                <p>
+                    Fokus i jedan od glavnih pravaca Vezuv društveno odgovorno poslovanje jesu djeca , naši najmlađi
+                    heroji
+                    . Svjesni smo da je ulaganje u njihovo srećno odrastanje zapravo investicija u bolju budućnost
+                    svakoga
+                    od nas. Naša pažnja i podrška tokom godine bila je posebno usmjerena na Fondaciju “Budi Human “
+                    potkrijepiti fotografijama
+                    Vezuv je kroz svoj brend Volcano godinama unazad tradicionalni sponzor najznačajnijih sportskih
+                    događaja
+                    kao i manifestacija širom Crne Gore.
+                </p>
+                <p>
+                    Podrška nacionalnom sportu i sportistima a posebno mlađim generacijama naša kompanija je pružila
+                    kroz
+                    svoj projekat “Volcano Sport Support“. Zahvaljujući ovom projektu mnogi mladi sportisti iz Crne
+                    Gore su
+                    ostvarili svoje prve uspjehe i pobjede na domaćim i međunarodnim takmičenjima .
+                </p>
+            </div>
+
 
 
         </div>

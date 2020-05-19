@@ -117,12 +117,14 @@
 }
 
 p {
+  font-size: .9rem;
+
   @include respond-to(handhelds) {
     font-size: 0.75em !important;
   }
 
   @include respond-to(wide-handhelds) {
-    font-size: 0.9em !important;
+    font-size: 0.8em !important;
   }
 
   @include respond-to(tablets) {}
@@ -237,9 +239,16 @@ font-size-p-76 {
 
   }
 
+  .lijeve-slike {
+    @include respond-to(max-navbar) {
+      justify-content: center;
+      padding-right: 0px !important;
+    }
+  }
+
   .grid-3 {
     @include respond-to(max-navbar) {
-      grid-template-columns: (minmax(200px, 15vw))(minmax(200px, 15vw)) (minmax(200px, 15vw));
+      grid-template-columns: (minmax(80px, 15vw))(minmax(80px, 15vw)) (minmax(80px, 15vw));
       width: 100%;
     }
   }
@@ -366,9 +375,6 @@ font-size-p-76 {
   font-size: 3rem;
 }
 
-p {
-  font-size: .9rem !important;
-}
 
 //Numbers
 .numbers .card-number:nth-child(even) {

@@ -3,27 +3,39 @@
     @media only screen and (max-width: 479px) {
       @content;
     }
-  } @else if $media==wide-handhelds {
+  }
+
+  @else if $media==wide-handhelds {
     @media only screen and (min-width: 480px) and (max-width: 767px) {
       @content;
     }
-  } @else if $media==max-wide-handhelds {
+  }
+
+  @else if $media==max-wide-handhelds {
     @media only screen and (max-width: 767px) {
       @content;
     }
-  } @else if $media==tablets {
+  }
+
+  @else if $media==tablets {
     @media only screen and (min-width: 768px) and (max-width: 904px) {
       @content;
     }
-  } @else if $media==max-tablet {
+  }
+
+  @else if $media==max-tablet {
     @media only screen and (max-width: 904px) {
       @content;
     }
-  } @else if $media==navbar {
+  }
+
+  @else if $media==navbar {
     @media only screen and (max-width: 1199px) and (min-width: 768px) {
       @content;
     }
-  } @else if $media==max-navbar {
+  }
+
+  @else if $media==max-navbar {
     @media only screen and (max-width: 1199px) {
       @content;
     }
@@ -45,6 +57,11 @@
   margin: auto;
 }
 
+.auto-75 {
+  width: 75%;
+  margin: auto;
+}
+
 .text-upper {
   text-transform: uppercase;
 }
@@ -58,8 +75,18 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.grid-3 {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 11vw 11vw 11vw;
+}
+
 .w-100 {
   width: 100%;
+}
+
+.text-lorem {
+  max-width: 600px;
 }
 
 .grid-text {
@@ -72,8 +99,21 @@
   }
 }
 
+.grid-text-cover {
+  display: grid;
+  grid-template-columns: 1fr (minmax(auto, 15em)) (minmax(auto, 15em)) 1fr !important;
+
+  .grid-text-section {
+    grid-column: 2/4;
+  }
+}
+
 .gap-20 {
   grid-gap: 20px;
+}
+
+.gap-10 {
+  grid-gap: 10px;
 }
 
 p {
@@ -85,8 +125,7 @@ p {
     font-size: 0.9em !important;
   }
 
-  @include respond-to(tablets) {
-  }
+  @include respond-to(tablets) {}
 }
 
 h1 {
@@ -191,6 +230,28 @@ font-size-p-76 {
   }
 }
 
+.flex-column-volcano {
+
+  @include respond-to(max-navbar) {
+    flex-direction: column;
+
+  }
+
+  .grid-3 {
+    @include respond-to(max-navbar) {
+      grid-template-columns: (minmax(200px, 15vw))(minmax(200px, 15vw)) (minmax(200px, 15vw));
+      width: 100%;
+    }
+  }
+
+  .text-lorem {
+    @include respond-to(max-navbar) {
+      max-width: 900px !important;
+      padding: 20px 0px !important;
+    }
+  }
+}
+
 .lijevo-desno {
   margin-top: 7rem;
 
@@ -223,6 +284,18 @@ font-size-p-76 {
   width: 50px;
   height: 1px;
   margin-right: 6px;
+
+}
+
+.natpis-white,
+.natpis {
+  line-height: 1.39;
+  letter-spacing: 9px;
+
+  @include respond-to(handhelds) {
+    font-size: .6em;
+  }
+
 }
 
 .natpis {
@@ -268,7 +341,7 @@ font-size-p-76 {
 }
 
 .lorem {
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #4f4f62;
   font-weight: 500;
 }
@@ -293,6 +366,10 @@ font-size-p-76 {
   font-size: 3rem;
 }
 
+p {
+  font-size: .9rem !important;
+}
+
 //Numbers
 .numbers .card-number:nth-child(even) {
   background: #f5f5f5;
@@ -306,4 +383,11 @@ font-size-p-76 {
       max-width: 300px;
     }
   }
+}
+
+.tekst-h1 {
+  @include respond-to(handhelds) {
+    font-size: 1.1em !important;
+  }
+
 }

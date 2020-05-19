@@ -6,17 +6,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link href="fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/nice-select.css" />
     <style>
         .cover-sport-support {
-            background-image: url("images\sport.png"), linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0,
+            background-image: url("images/sport.png"), linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0,
                         0.16) 58%);
             background-blend-mode: overlay;
             height: 80vh;
             background-size: cover;
             background-position: bottom;
+        }
+
+        @media only screen and (max-width: 1337px) {
+            .natpis-white {
+                letter-spacing: 4px !important;
+            }
+
+            .auto-70 {
+                width: 85% !important;
+            }
+        }
+
+        .support-sport {
+            bottom: 0;
+            left: 50%;
+            right: 0;
+            width: 22vw;
+            min-width: 150px;
+            transform: translate(-50%, 50%);
+        }
+
+        .support-sport img {
+            width: 100%;
+        }
+
+        .natpis-white {
+            margin-top: 10rem;
+        }
+
+        .grid-text {
+            margin-top: 6rem;
+
+        }
+
+        .actuelno-date {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.4);
+            width: 10%;
+            top: 5%;
+            left: 5%;
+            line-height: 1;
+            height: auto;
+            font-size: 0.81em;
+        }
+
+        .day {
+            font-size: 1.25em;
+        }
+
+        .aktuelno-img {
+            position: relative;
+            width: 60%;
+
+        }
+
+        .aktuelno-img img {
+            object-fit: cover;
+            height: 100%;
+        }
+
+        .description-aktuelno {
+            color: #222222;
+            line-height: 1.37;
+        }
+
+        .description {
+            font-size: 0.8em;
+            color: #909090;
+        }
+
+        .tekst-h1 {
+            color: #222222;
+            line-height: 1.37;
+            font-size: 24px;
+            font-weight: 900;
+
+        }
+
+        .box {
+            width: 40%;
+            border: solid 1px #cecece;
+            padding: 40px;
+        }
+
+        .card-aktuelnosti {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 1199px) {
+
+            .card-aktuelnosti {
+                flex-direction: column !important;
+                justify-content: center !important;
+            }
+
+            .aktuelno-img,
+            .box {
+
+                width: 100% !important;
+            }
+
+            @media only screen and (max-width: 479px) {
+
+                .button-transparent,
+                .box p,
+                .tekst-h1 {
+                    margin-top: 1rem !important;
+                }
+
+                .box {
+                    padding: 15px !important;
+                }
+            }
+
+
         }
     </style>
 </head>
@@ -46,7 +159,7 @@
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item hoverLink">
-                    <a class="nav-link" href="#">DRUŠTVENA ODGOVORNOST</a>
+                    <a class="nav-link" href="drustvena-odgovornost.html">DRUŠTVENA ODGOVORNOST</a>
                 </li>
                 <li class="nav-item hoverLink">
                     <a class="nav-link" href="#">AKTUELNO</a>
@@ -62,21 +175,32 @@
     </nav>
 
     <!-- Cover o nama -->
-    <div class="cover-sport-support">
-        <div class="path d-flex justify-content-center flex-column  pt-5">
+    <div class="cover-sport-support relative">
+        <div class="path ">
             <div class="auto-70 animate-left">
-                <div class="natpis-white mb-5 text-white mt-3">VOLCANO SPORT SUPPORT</div>
+                <div class="natpis-white  text-white ">VOLCANO SPORT SUPPORT</div>
             </div>
+        </div>
+        <div class="absolute support-sport"> <img src="images/support-sport.svg" alt="" srcset=""> </div>
+    </div>
+
+    <!-- Tekst -->
+    <div class="text-center w-6 grid-text d-flex justify-content-center">
+        <div class="grid-text-section">
+            <p class="opacity-7 text-lorem">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore
+                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+            </p>
         </div>
     </div>
 
 
 
-
-
-
-
-
+    <!-- Cards -->
+    <div class="aktuelnosti mt-5 auto-75"> </div>
 
 
 
@@ -109,6 +233,13 @@
                     alt="Amplitudo Logo"> </a>
         </div>
     </div>
+
+
+
+
+
+
+
     <!-- Script
                 -->
 
@@ -118,6 +249,60 @@
     <script src="js/jquery.nice-select.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        // Novosti
+        $.ajax({
+            url: "http://localhost:3000/volcano-support",
+            type: "GET",
+            success: function (data) {
+                console.log(data[0].id);
+                for (var i = 0; i < 4; i++) {
+                    var card = getAktuelnost(data[i]);
+                    $(".aktuelnosti").append(card);
+                }
+            },
+            error: function () {
+                console.log("Error");
+            },
+        });
+
+        function getAktuelnost(postObject) {
+            return `<div class="card-aktuelnosti w-100 d-flex flex-row mt-5 mb-5">
+                        <div class="aktuelno-img ">
+                            <img src="${postObject.picture}" alt="" srcset=""  class="w-100"/>
+                            <div
+                                class="actuelno-date text-upper d-flex flex-column justify-content-center align-items-center text-center">
+                                <div class="month p-text-white my-2">${postObject.month}</div>
+                                <div class="day p-text-white bold my-2">${postObject.day}</div>
+                                <div class="year p-text-white my-2">${postObject.year}</div>
+                            </div>
+                        </div>
+                        <div class="box d-flex flex-column justify-content-around" >
+                            <h1 class="tekst-h1 w-100 text-left  "> ${postObject.title}</h1>
+                            <p class="mt-5 ">${postObject.description}</p>
+                             <div class="button-transparent border-black mt-5">
+                                 <a href="" class="d-flex justify-content-around align-items-center">Pročitaj<svg
+                                         xmlns="http://www.w3.org/2000/svg" width="17.07" height="12"
+                                         viewBox="0 0 17.07 12">
+                                         <defs>
+                                             <style>
+                                                 .cls-1 {
+                                                     fill: #ffffff
+                                                 }
+                                             </style>
+                                         </defs>
+                                         <path id="left-arrow_2_"
+                                             d="M5.567 4.856a.605.605 0 1 1 .86.851l-4.361 4.362h14.392a.606.606 0 0 1 .611.6.613.613 0 0 1-.611.611H2.066l4.361 4.353a.617.617 0 0 1 0 .86.6.6 0 0 1-.86 0L.174 11.1a.607.607 0 0 1 0-.851z"
+                                             class="cls-1 black" data-name="left-arrow (2)"
+                                             transform="rotate(180 8.534 8.338)" />
+                                     </svg>
+                                 </a>
+                             </div>
+                        </div>
+                    </div>`;
+        }
+    </script>
 
 </body>
 

@@ -53,9 +53,7 @@
             right: 10%;
         }
 
-        .text-lorem {
-            max-width: 600px;
-        }
+
 
 
         .volcano-ikonica {
@@ -93,7 +91,7 @@
                     <a class="nav-link" href="sport-support.html">SPORT SUPPORT</a>
                 </li>
                 <li class="nav-item hoverLink">
-                    <a class="nav-link" href="#">DRUŠTVENA ODGOVORNOST</a>
+                    <a class="nav-link" href="drustvena-odgovornost.html">DRUŠTVENA ODGOVORNOST</a>
                 </li>
                 <li class="nav-item hoverLink">
                     <a class="nav-link" href="#">AKTUELNO</a>
@@ -122,8 +120,20 @@
 
                 </p>
                 <div class="button-transparent">
-                    <a href="" class="d-flex justify-content-around">Saznaj više<i
-                            class="fas fa-arrow-right white mt-2 fa-xs"></i></a>
+                    <a href="" class="d-flex justify-content-around align-items-center">Saznaj više<svg
+                            xmlns="http://www.w3.org/2000/svg" width="17.07" height="12" viewBox="0 0 17.07 12">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #fff
+                                    }
+                                </style>
+                            </defs>
+                            <path id="left-arrow_2_"
+                                d="M5.567 4.856a.605.605 0 1 1 .86.851l-4.361 4.362h14.392a.606.606 0 0 1 .611.6.613.613 0 0 1-.611.611H2.066l4.361 4.353a.617.617 0 0 1 0 .86.6.6 0 0 1-.86 0L.174 11.1a.607.607 0 0 1 0-.851z"
+                                class="cls-1" data-name="left-arrow (2)" transform="rotate(180 8.534 8.338)" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
@@ -307,6 +317,49 @@
     <script src="js/jquery.nice-select.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $(window).scroll(function () {
+            var scrollBottom = $(window).scrollTop() + $(window).height();
+            let first = $("#first-card").offset().top;
+
+            if (scrollBottom > first) {
+                $("#first-card").addClass("animate-left");
+
+                executed = true;
+            }
+        });
+
+        $(window).scroll(function () {
+            var scrollBottom = $(window).scrollTop() + $(window).height();
+            let second = $("#second-card").offset().top;
+
+            if (scrollBottom > second) {
+                $("#second-card").addClass("animate-right");
+
+                executed = true;
+            }
+        });
+        $(window).scroll(function () {
+            var scrollBottom = $(window).scrollTop() + $(window).height();
+            let thrid = $("#thrid-card").offset().top;
+
+            if (scrollBottom > thrid) {
+                $("#thrid-card").addClass("animate-left");
+
+                executed = true;
+            }
+        });
+        $(window).scroll(function () {
+            var scrollBottom = $(window).scrollTop() + $(window).height();
+            let four = $("#four-card").offset().top;
+
+            if (scrollBottom > four) {
+                $("#four-card").addClass("animate-right");
+
+                executed = true;
+            }
+        });
+    </script>
 
 </body>
 

@@ -13,19 +13,24 @@
          color: #fff;
          font-size: 1.12em;
 
+         svg path {
+             fill: #fff !important;
+         }
+
      }
 
      &:hover {
          background: white;
      }
 
-     &:hover a,
-     .fas {
+     &:hover a svg path,
+     &:hover a {
          color: $colorBlack !important;
+         fill: $colorBlack !important;
 
      }
 
-     &:hover .fas {
+     &:hover a svg {
          transform: translateX(8px);
      }
 
@@ -34,9 +39,15 @@
  .border-black {
      border: 1px solid #4f4f62 !important;
 
+
+
      a {
          color: #4f4f62 !important;
          font-size: 1.12em;
+
+         svg path {
+             fill: #4f4f62 !important;
+         }
 
 
      }
@@ -44,6 +55,10 @@
 
      &:hover a {
          color: black !important;
+
+         svg path {
+             fill: #000000 !important;
+         }
 
      }
 

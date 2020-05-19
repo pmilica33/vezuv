@@ -54,6 +54,7 @@
       "description": "Finansijski direktor"
     }
   ],
+
   "aktuelnosti": [{
       "month": "mar",
       "day": "30",
@@ -85,6 +86,36 @@
       "id": "4",
       "picture": "./images/novosti-21-11-2018-5bf532b3bcc8d.png",
       "description": "Stipendija Nini Bošković za master studije na Oksfordu 16.000 eura "
+    }
+  ],
+
+  "volcano-support": [{
+      "month": "apr",
+      "day": "02",
+      "year": "2019",
+      "id": "1",
+      "picture": "./images/174.png",
+      "title": "KK Volcano All Star na turniru u Atini ",
+      "description": "Mladi košarkaši našeg kluba “Volcano All Star” učestvovaće na međunarodnom turniru koji se od 4. do 7. aprila igra u Atini.  Oni će imati priliku da igraju protiv bivših prvaka Evrope i jednim od najboljih Evropskih klubova Olimpijakosom i Panatinaikosom... "
+    },
+    {
+      "month": "sep",
+      "day": "18",
+      "year": "2017",
+      "id": "2",
+      "picture": "./images/kosarka11-2.png",
+      "title": "Ekipa Nervno šampion FIBA U18  3 x3 turnira(VIDEO) ",
+      "description": "Košarkaški klub All Star 2014 iz Podgorice u saradnji sa Volcanom u sklopu kampanje   Volcano Sport Support organizovao je prvi FIBA U18 turnir 3 x3. "
+    },
+    {
+      "month": "sep",
+      "day": "15",
+      "year": "2017",
+      "id": "3",
+      "picture": "./images/nedelja.png",
+      "title": "Ekipa Nervno šampion FIBA U18  3 x3 turnira(VIDEO) ",
+
+      "description": "Košarkaški klub All Star 2014 iz Podgorice, zajedno sa Volcanom u sklopu kampanje   Volcano Sport Support organizuje prvi FIBA U18 turnir 3 x3.</br></br>Dan košarke biće organizovan na Trgu Nezavisnosti sa početkom od 12 sati kada će biti i održan javni trening košarkaškog kluba All Star 2014. "
     }
   ]
 

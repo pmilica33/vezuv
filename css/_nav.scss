@@ -43,7 +43,7 @@ nav {
             color: #ece8e8 !important;
 
             @include respond-to(handhelds) {
-                font-size: 0.5rem !important;
+                font-size: 0.6rem !important;
                 color: black !important;
                 background-color: white;
             }

@@ -16,8 +16,9 @@
     height: 1em;
 }
 
-.navbar-brand img {
+.navbar-brand svg {
     min-width: 70px !important;
+    width: 100%;
 }
 
 // .show {
@@ -132,6 +133,11 @@ nav {
     .navbar-toggler-clicked {
         background-color: white !important;
         border-bottom: 1px solid;
+
+        .navbar-brand svg .cls-1 {
+            fill: black;
+        }
+
     }
 
 }

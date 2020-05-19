@@ -418,6 +418,10 @@ p {
   }
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -11617,6 +11621,10 @@ p {
   }
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 .navbar-toggler {
   padding: 0.15rem 0.55rem;
 }
@@ -11626,8 +11634,9 @@ p {
   height: 1em;
 }
 
-.navbar-brand img {
+.navbar-brand svg {
   min-width: 70px !important;
+  width: 100%;
 }
 
 nav .nav-item {
@@ -11751,6 +11760,9 @@ nav .active {
   .navbar-toggler-clicked {
     background-color: white !important;
     border-bottom: 1px solid;
+  }
+  .navbar-toggler-clicked .navbar-brand svg .cls-1 {
+    fill: black;
   }
 }
 
@@ -12167,6 +12179,10 @@ p {
   .tekst-h1 {
     font-size: 1.1em !important;
   }
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 .owl-stage-outer,
@@ -13057,6 +13073,10 @@ p {
   }
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 .kontakt {
   width: 40%;
   min-width: 200px;
@@ -13574,6 +13594,10 @@ p {
   }
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 .path {
   position: absolute;
   top: 0;
@@ -14047,6 +14071,10 @@ p {
   .tekst-h1 {
     font-size: 1.1em !important;
   }
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 /* Cards */

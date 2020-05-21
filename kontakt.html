@@ -4,17 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O nama</title>
+    <title>Kontakt</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link href="fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/nice-select.css" />
     <style>
         .cover-o-nama {
-            background-image: url("images/montenegro.jpg"), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0,
+            background-image: url("images/kontakt-cover.png"), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0,
                         0.3));
             background-blend-mode: overlay;
-            height: 100vh;
+            height: 80vh;
             background-size: cover;
             background-position: center;
             display: flex;
@@ -22,31 +20,46 @@
             position: relative;
         }
 
-
-        .misija {
-            width: 100%;
-            background-image: url("images/misija-i-vizija.png");
-            display: flex;
-            background-position: center;
-            align-items: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+        .color {
+            color: #b98757;
         }
 
-        .desno {
-            margin: 50px 0px;
+        .button-transparent {
+            background-color: #b98757;
+            transition: transform .6s ease;
+
         }
 
-        .lijevo {
-            margin-left: 7rem;
+        .button-transparent:hover {
+            background-color: #b98757;
+            box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.178);
+            transform: scale(1.1);
+
         }
 
-        .desno img {
-            width: 20vw;
+
+        .button-transparent:hover a {
+            color: white !important;
         }
 
-        .natpis-white {
-            letter-spacing: 9px;
+        .button-transparent:hover a svg path {
+            fill: white !important;
+        }
+
+        form {
+            width: 70%;
+            margin: auto;
+        }
+
+        #message {
+            height: 100px;
+        }
+
+        @media (max-width: 992px) {
+            .margin-top {
+                margin-top: 3rem !important;
+            }
+
 
         }
     </style>
@@ -54,7 +67,7 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-xl navbar-light bg-transparent" id="navbar">
+    <nav class="navbar navbar-expand-xl navbar-light bg-transparent " id="navbar">
         <a class="navbar-brand" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="166.173"
                 height="46.684" viewBox="0 0 166.173 46.684">
                 <defs>
@@ -112,121 +125,110 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item hoverLink ">
-                    <a class="nav-link" href="index.html">POČETNA<span class="sr-only">(current)</span> </a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="o_nama.html">O NAMA</a>
+                    <a class="nav-link" href="index.html">POČETNA</a>
                 </li>
                 <li class="nav-item hoverLink">
-                    <a class="nav-link" href="volcano.html">VOLCANO</a>
+                    <a class="nav-link" href="o_nama.html">O NAMA</a>
+                </li>
+                <li class="nav-item  hoverLink">
+                    <a class="nav-link" href="volcano.html">VOLCANO </a>
                 </li>
                 <li class="nav-item hoverLink">
                     <a class="nav-link" href="sport-support.html">SPORT SUPPORT</a>
                 </li>
-                <li class="nav-item hoverLink">
+                <li class="nav-item   hoverLink">
                     <a class="nav-link" href="drustvena-odgovornost.html">DRUŠTVENA ODGOVORNOST</a>
                 </li>
                 <li class="nav-item hoverLink">
                     <a class="nav-link" href="aktuelno.html">AKTUELNO</a>
                 </li>
-                <li class="nav-item hoverLink">
+                <li class="nav-item hoverLink ">
                     <a class="nav-link" href="karijera.html">KARIJERA</a>
                 </li>
-                <li class="nav-item hoverLink">
-                    <a class="nav-link" href="kontakt.html">KONTAKT</a>
+                <li class="nav-item  active">
+                    <a class="nav-link" href="kontakt.html">KONTAKT<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
     </nav>
-
-    <!-- Cover o nama -->
+    <!-- Cover  -->
     <div class="cover-o-nama">
         <div class="path d-flex justify-content-center flex-column  pt-5">
-            <div class="auto-70 animate-left">
-                <div class="natpis-white mb-5 text-white mt-3">O NAMA</div>
-                <h1 class="title my-5  bold bold-500 text-white max-width-naslov pr-4">20 GODINA
-                    UŽIVO SA VAMA</h1>
-                <p class=" text-white opacity-7 ">Vezuv je osnovan 1999. godine sa primarnom djelatnošću
-                    organizacije
-                    različitih oblika
-                    igara na sreću.
-                    Komapnija je u svom stalnom razvoju , usavršavanju I modernizovanju sistema kontinuirano
-                    unapređivala
-                    kvalitet svojih usluga . U momentu stvaranja biznisa, bilo je nevjerovatno očekivati rezultate sa
-                    kojima
-                    danas raspolažemo.</p>
-                <p class="text-white mt-2 opacity-7 ">
-                    20 godina kasnije, Vezuv je među najuspješnijim kompanijama u Crnoj Gori, lider u oblasti
-                    priređivanja
-                    igara na sreću u Crnoj Gori ,koja zapošljava više stotina ljudi. Vezuvova priča je dokaz da
-                    hrabrost i
-                    odvažnost uvijek daju rezultate.
-                </p>
+            <div class="auto-85 animate-left grid-text">
+                <div class="grid-text-section">
+                    <div class="natpis-white mb-5 text-white mt-3">KONTAKT</div>
+                    <h1 class=" my-5  bold bold-500 text-white max-width-naslov pr-4">20 GODINA
+                        UŽIVO SA VAMA</h1>
 
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="auto-85">
+        <div class="row mt-5">
+
+            <div class="col-lg-5 d-flex flex-column text-align-center-md">
+                <h1>VEZUV DOO</h1>
+                <p class="color bold">Ukoliko imate pitanje ili sugestiju, budite slobodni da nas
+                    kontaktirate, a mi ćemo odgovoriti u najbržem roku.</p>
+                <div class="opacity-7">Trg Nezavisnosti bb</div>
+                <div class="opacity-7">81000, Podgorica, Crna Gora</div>
+                <div class="opacity-7">+382 20 210 146</div>
+
+            </div>
+
+
+
+            <!-- Form -->
+            <div class="col-lg-7 margin-top">
+                <form class="d-flex flex-column">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name-surname">Ime i prezime</label>
+                            <input type="text" class="form-control" id="name-surname">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">eMmail</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Vaša poruka</label>
+                        <input type="text" class="form-control" id="message">
+                    </div>
+
+                    <button class="button-transparent ml-auto" id="send-contact" type="button">
+                        <a href="" class="d-flex justify-content-around align-items-center">Procitaj<svg
+                                xmlns="http://www.w3.org/2000/svg" width="17.07" height="12" viewBox="0 0 17.07 12">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #fff
+                                        }
+                                    </style>
+                                </defs>
+                                <path id="left-arrow_2_"
+                                    d="M5.567 4.856a.605.605 0 1 1 .86.851l-4.361 4.362h14.392a.606.606 0 0 1 .611.6.613.613 0 0 1-.611.611H2.066l4.361 4.353a.617.617 0 0 1 0 .86.6.6 0 0 1-.86 0L.174 11.1a.607.607 0 0 1 0-.851z"
+                                    class="cls-1" data-name="left-arrow (2)" transform="rotate(180 8.534 8.338)" />
+                            </svg>
+                        </a>
+                    </button>
+                </form>
             </div>
         </div>
     </div>
 
 
 
-    <!-- Misija i vizija -->
-    <div class=" w-6 background mt-5 d-flex justify-content-center mb-5">
-        <h1 class="title">Misija & vizija</h1>
-    </div>
-
-    <!-- Misija background -->
-    <div class="misija d-flex my-auto lijevo-desno grid-text">
-        <div class="lijevo grid-text-section mt-5 mb-5">
-            <p class="text-white opacity-7">
-                Svoju misiju Vezuv uspješno ostvaruje već 20 godina, uz punu odgovornost kako prema korisnicima, prema
-                svojim zaposlenima tako i prema društvu. Misija naše kompanije je ne samo da odgovori na potrebe svojih
-                potrošača već i da konstantno stremi ka višem kvalitetu i odgovornom načinu ophođenja prema učesnicima
-                igara na sreću , naročito prema maloljetnicima.
-            </p>
-            <p class="mt-2 text-white opacity-7"> Vezuvova vizija i neprikosnoven cilj je da posluje odgovorno.</p>
-        </div>
-
-        <div class="desno d-flex justify-content-center">
-            <img src="images/desno.svg" alt="" srcset="">
-
-        </div>
-
-    </div>
-    <!-- Brojke -->
-    <div class="mx-auto text-center w-6 background mt-5 d-flex justify-content-center">
-        <h1 class="title">Brojke</h1>
-    </div>
 
 
-    <!-- Numbers -->
-    <div class="text-center mt-5 mb-5">
-        <div class="numbers justify-content-center grid-4 grid-media">
-            <div class="card-number">
-                <img src="images/suitcase (1).png" class="pt-5 pb-3" alt="" srcset="" />
-                <h1 class="number">967</h1>
-                <p class="pb-5 pt-1">ZAPOSLENIH</p>
-            </div>
-            <div class="card-number">
-                <img src="images/suitcase (1).png" class="pt-5 pb-3" alt="" srcset="" />
-                <h1 class="number">450</h1>
-                <p class="pb-5 pt-1">UPLATNIH MJESTA</p>
-            </div>
-            <div class="card-number">
-                <img src="images/suitcase (1).png" class="pt-5 pb-3" alt="" srcset="" />
-                <h1 class="number">34</h1>
-                <p class="pb-5 pt-1">LOKALA</p>
-            </div>
-            <div class="card-number">
-                <img src="images/suitcase (1).png" class="pt-5 pb-3" alt="" srcset="" />
-                <h1 class="number">680</h1>
-                <p class="pb-5 pt-1">TERMINALA</p>
-            </div>
-        </div>
-    </div>
+
 
 
     <!-- Footer -->
-    <div class="w-100 footer-vezuv d-flex flex-row justify-content-between">
+    <div class="w-100 footer-vezuv d-flex flex-row justify-content-between mt-5">
         <div class="img">
             <img src="images/footer-logo.png" alt="" srcset="" class="left" />
         </div>
@@ -249,19 +251,25 @@
         <div class="d-flex">
             <div>Designed by</div>
             <a href="https://amplitudo.me" target="_blank">
-                <img src="images/AmplitudoLogo.svg" style="max-width: 95px;" class="img-fluid mb-3 pb-1 w-100"
-                    alt="Amplitudo Logo"> </a>
+                <img src="images/AmplitudoLogo.svg" style="max-width: 95px;" class=" mb-3 pb-1 w-100"
+                    alt="Amplitudo Logo">
+            </a>
         </div>
     </div>
-    <!-- Script
-                -->
+
+
+    <!-- Script -->
+
 
     <script src="js/popper.min.js"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.nice-select.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+
 </body>
 
 </html>

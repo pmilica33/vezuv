@@ -4,55 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aktuelno</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/nice-select.css" />
+
     <style>
-        .cover-sport-support {
-            background-image: url("images/sport.png"), linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0,
-                        0.16) 58%);
-            background-blend-mode: overlay;
-            height: 80vh;
-            background-size: cover;
-            background-position: bottom;
-        }
-
-        @media only screen and (max-width: 1337px) {
-            .natpis-white {
-                letter-spacing: 4px !important;
-            }
-
-            .auto-70 {
-                width: 85% !important;
-            }
-        }
-
-        .support-sport {
-            bottom: 0;
-            left: 50%;
-            right: 0;
-            width: 22vw;
-            min-width: 150px;
-            transform: translate(-50%, 50%);
-        }
-
-        .support-sport img {
-            width: 100%;
-        }
-
-        .natpis-white {
-            margin-top: 10rem;
-        }
-
-        .grid-text {
-            margin-top: 6rem;
-
-        }
-
         .actuelno-date {
             position: absolute;
             background: rgba(0, 0, 0, 0.4);
-            width: 10%;
+            width: 20%;
             top: 5%;
             left: 5%;
             line-height: 1;
@@ -66,13 +26,6 @@
 
         .aktuelno-img {
             position: relative;
-            width: 60%;
-
-        }
-
-        .aktuelno-img img {
-            object-fit: cover;
-            height: 100%;
         }
 
         .description-aktuelno {
@@ -80,12 +33,28 @@
             line-height: 1.37;
         }
 
-        .description {
+        .aktuelnosti .aktuelno-img {
+            position: relative;
+            width: 60%;
+
+        }
+
+        .aktuelnosti .aktuelno-img img {
+            object-fit: cover;
+            height: 100%;
+        }
+
+        .aktuelnosti .description-aktuelno {
+            color: #222222;
+            line-height: 1.37;
+        }
+
+        .aktuelnosti .description {
             font-size: 0.8em;
             color: #909090;
         }
 
-        .tekst-h1 {
+        .aktuelnosti .tekst-h1 {
             color: #222222;
             line-height: 1.37;
             font-size: 24px;
@@ -93,24 +62,24 @@
 
         }
 
-        .box {
+        .aktuelnosti .box {
             width: 40%;
             border: solid 1px #cecece;
             padding: 40px;
         }
 
-        .card-aktuelnosti {
+        .aktuelnosti .card-aktuelnosti {
             width: 100%;
         }
 
         @media only screen and (max-width: 1199px) {
 
-            .card-aktuelnosti {
+            .aktuelnosti .card-aktuelnosti {
                 flex-direction: column !important;
                 justify-content: center !important;
             }
 
-            .aktuelno-img,
+            .aktuelnosti .aktuelno-img,
             .box {
 
                 width: 100% !important;
@@ -119,24 +88,83 @@
             @media only screen and (max-width: 479px) {
 
                 .button-transparent,
-                .box p,
-                .tekst-h1 {
+                .aktuelnosti .box p,
+                .aktuelnosti .tekst-h1 {
                     margin-top: 1rem !important;
                 }
 
-                .box {
+                .aktuelnosti .box {
                     padding: 15px !important;
                 }
             }
 
 
         }
+
+        .button-download {
+            box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
+            border: none;
+            position: relative;
+            cursor: pointer;
+            border-radius: 8px;
+            justify-content: space-between;
+
+
+        }
+
+        .preuzimanja {
+            font-size: 1em;
+            color: #b7b7b7;
+            display: flex;
+            margin: auto;
+        }
+
+
+
+        .button-download .down::before {
+            border-left: 1px solid #b7b7b7;
+            height: 50%;
+            position: absolute;
+            content: "";
+            width: 30%;
+            z-index: 1;
+            top: 50%;
+            bottom: 0;
+            transform: translateY(-50%);
+        }
+
+        .preuzimanja,
+        .button-download {
+            margin: auto 5px;
+        }
+
+        .natpis {
+            display: flex;
+            align-items: center;
+        }
+
+        @media only screen and (max-width: 1038px) {
+            .dugmad {
+                flex-direction: column !important;
+            }
+        }
+
+        @media only screen and (max-width: 644px) {
+            .mediji-preuzimanja {
+                flex-direction: column !important;
+            }
+        }
     </style>
+
+
+
+
+
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-xl navbar-light bg-transparent" id="navbar">
+    <nav class="navbar navbar-expand-xl navbar-light white-nav " id="navbar">
         <a class="navbar-brand" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="166.173"
                 height="46.684" viewBox="0 0 166.173 46.684">
                 <defs>
@@ -202,15 +230,14 @@
                 <li class="nav-item  hoverLink">
                     <a class="nav-link" href="volcano.html">VOLCANO </a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="sport-support.html">SPORT SUPPORT<span
-                            class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item hoverLink">
+                    <a class="nav-link" href="sport-support.html">SPORT SUPPORT</a>
+                </li>
+                <li class="nav-item   hoverLink">
                     <a class="nav-link" href="drustvena-odgovornost.html">DRUŠTVENA ODGOVORNOST</a>
                 </li>
-                <li class="nav-item hoverLink">
-                    <a class="nav-link" href="aktuelno.html">AKTUELNO</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="aktuelno.html">AKTUELNO<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item hoverLink">
                     <a class="nav-link" href="karijera.html">KARIJERA</a>
@@ -222,39 +249,55 @@
         </div>
     </nav>
 
-    <!-- Cover o nama -->
-    <div class="cover-sport-support relative">
-        <div class="path ">
-            <div class="auto-70 animate-left">
-                <div class="natpis-white  text-white ">VOLCANO SPORT SUPPORT</div>
+    <!-- Header     -->
+    <div class="container-fluid">
+        <div class="auto-85 d-flex mt-5 mediji-preuzimanja">
+            <div class="  natpis ml-5">MEDIJI</div>
+
+            <p class="ml-auto preuzimanja">Preuzimanja:</p>
+            <div class="d-flex flex-row dugmad">
+                <button class="button-download py-2 px-2 d-flex flex-row btn" type="button"
+                    onclick="window.open('images/volcano@3x.png')">
+                    <div class="mx-3">Vezuv logo</div>
+                    <div class="down"><img src="images/ic_file_download_24px.svg" alt="" srcset="" class="mx-3"></div>
+                </button>
+                <button class="button-download py-2 px-2 d-flex flex-row btn" type="button"
+                    onclick="window.open('images/volcano@3x.png')">
+                    <div class="mx-3">Volcano logo</div>
+                    <div class="down"><img src="images/ic_file_download_24px.svg" alt="" srcset="" class="mx-3"></div>
+                </button>
+                <button class="button-download py-2 px-2 d-flex flex-row btn" type="button"
+                    onclick="window.open('images/volcano@3x.png')">
+                    <div class="mx-3">Volcano KGS</div>
+                    <div class="down"><img src="images/ic_file_download_24px.svg" alt="" srcset="" class="mx-3"></div>
+                </button>
             </div>
+
+
         </div>
-        <div class="absolute support-sport"> <img src="images/support-sport.svg" alt="" srcset=""> </div>
-    </div>
 
-    <!-- Tekst -->
-    <div class="text-center w-6 grid-text d-flex justify-content-center">
-        <div class="grid-text-section">
-            <p class="opacity-7 text-lorem">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore
-                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-            </p>
+
+        <!-- First -->
+
+        <div class="auto-85">
+            <div class="aktuelnosti mt-5 "></div>
         </div>
+
+
+
+
+        <!-- Cards -->
+        <div class="cards-aktuelnosti mt-5 grid-4 auto-85 gap-20 grid-media"></div>
+
+
+
     </div>
-
-
-
-    <!-- Cards -->
-    <div class="aktuelnosti mt-5 auto-75"> </div>
 
 
 
 
     <!-- Footer -->
-    <div class="w-100 footer-vezuv d-flex flex-row justify-content-between">
+    <div class="w-100 footer-vezuv d-flex flex-row justify-content-between mt-5">
         <div class="img">
             <img src="images/footer-logo.png" alt="" srcset="" class="left" />
         </div>
@@ -277,37 +320,79 @@
         <div class="d-flex">
             <div>Designed by</div>
             <a href="https://amplitudo.me" target="_blank">
-                <img src="images/AmplitudoLogo.svg" style="max-width: 95px;" class="img-fluid mb-3 pb-1 w-100"
+                <img src="images/AmplitudoLogo.svg" style="max-width: 95px;" class=" mb-3 pb-1 w-100"
                     alt="Amplitudo Logo"> </a>
         </div>
     </div>
 
 
 
-
-
-
-
-    <!-- Script
-                -->
-
+    <!-- Script -->
     <script src="js/popper.min.js"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.nice-select.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 
+
+
     <script>
-        // Novosti
+        //First card
         $.ajax({
-            url: "http://localhost:3000/volcano-support",
+            url: "http://localhost:3000/aktuelno",
+            type: "GET",
+            success: function (data) {
+                $(".aktuelnosti").append(`<div class="card-aktuelnosti  w-100 d-flex flex-row mt-5 mb-5"
+                    id="${data[0].id}">
+                    <div class="aktuelno-img ">
+                        <img src="${data[0].picture}" alt="" srcset="" class="w-100" />
+                        <div
+                            class="actuelno-date text-upper d-flex flex-column justify-content-center align-items-center text-center">
+                            <div class="month p-text-white my-2">${data[0].month}</div>
+                            <div class="day p-text-white bold my-2">${data[0].day}</div>
+                            <div class="year p-text-white my-2">${data[0].year}</div>
+                        </div>
+                    </div>
+                    <div class="box d-flex flex-column justify-content-around">
+                        <h1 class="tekst-h1 w-100 text-left  "> ${data[0].title}</h1>
+                        <p class="mt-5 ">${data[0].description}</p>
+                        <div class="button-transparent border-black mt-5">
+                            <a href="" class="d-flex justify-content-around align-items-center">Pročitaj<svg
+                                    xmlns="http://www.w3.org/2000/svg" width="17.07" height="12" viewBox="0 0 17.07 12">
+                                    <defs>
+                                        <style>
+                                            .cls-1 {
+                                                fill: #ffffff
+                                            }
+                                        </style>
+                                    </defs>
+                                    <path id="left-arrow_2_"
+                                        d="M5.567 4.856a.605.605 0 1 1 .86.851l-4.361 4.362h14.392a.606.606 0 0 1 .611.6.613.613 0 0 1-.611.611H2.066l4.361 4.353a.617.617 0 0 1 0 .86.6.6 0 0 1-.86 0L.174 11.1a.607.607 0 0 1 0-.851z"
+                                        class="cls-1 black" data-name="left-arrow (2)"
+                                        transform="rotate(180 8.534 8.338)" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>`);
+
+            },
+            error: function () {
+                console.log("Error");
+            },
+        });
+
+        // function getAktuelnost(postObject) {
+        //     return;
+        // }
+        // Aktuelnosti
+        $.ajax({
+            url: "http://localhost:3000/aktuelno",
             type: "GET",
             success: function (data) {
                 console.log(data[0].id);
-                for (var i = 0; i < 4; i++) {
-                    var card = getAktuelnost(data[i]);
-                    $(".aktuelnosti").append(card);
+                for (var i = 1; i < 9; i++) {
+                    var card = getAktuelnosti(data[i]);
+                    $(".cards-aktuelnosti").append(card);
                 }
             },
             error: function () {
@@ -315,73 +400,39 @@
             },
         });
 
-        function getAktuelnost(postObject) {
-            return `<div class="card-aktuelnosti opacity-0 w-100 d-flex flex-row mt-5 mb-5" id="${postObject.id}">
-                        <div class="aktuelno-img ">
-                            <img src="${postObject.picture}" alt="" srcset=""  class="w-100"/>
-                            <div
-                                class="actuelno-date text-upper d-flex flex-column justify-content-center align-items-center text-center">
-                                <div class="month p-text-white my-2">${postObject.month}</div>
-                                <div class="day p-text-white bold my-2">${postObject.day}</div>
-                                <div class="year p-text-white my-2">${postObject.year}</div>
-                            </div>
-                        </div>
-                        <div class="box d-flex flex-column justify-content-around" >
-                            <h1 class="tekst-h1 w-100 text-left  "> ${postObject.title}</h1>
-                            <p class="mt-5 ">${postObject.description}</p>
-                             <div class="button-transparent border-black mt-5">
-                                 <a href="" class="d-flex justify-content-around align-items-center">Pročitaj<svg
-                                         xmlns="http://www.w3.org/2000/svg" width="17.07" height="12"
-                                         viewBox="0 0 17.07 12">
-                                         <defs>
-                                             <style>
-                                                 .cls-1 {
-                                                     fill: #ffffff
-                                                 }
-                                             </style>
-                                         </defs>
-                                         <path id="left-arrow_2_"
-                                             d="M5.567 4.856a.605.605 0 1 1 .86.851l-4.361 4.362h14.392a.606.606 0 0 1 .611.6.613.613 0 0 1-.611.611H2.066l4.361 4.353a.617.617 0 0 1 0 .86.6.6 0 0 1-.86 0L.174 11.1a.607.607 0 0 1 0-.851z"
-                                             class="cls-1 black" data-name="left-arrow (2)"
-                                             transform="rotate(180 8.534 8.338)" />
-                                     </svg>
-                                 </a>
-                             </div>
-                        </div>
-                    </div>`;
+        function getAktuelnosti(postObject) {
+            return ` <div
+         class="card-aktuelnosti w-100">
+         <div class="aktuelno-img">
+             <img src="${postObject.picture}" alt="" srcset="" class="" />
+             <div
+                 class="actuelno-date text-upper d-flex flex-column justify-content-center align-items-center text-center">
+                 <div class="month p-text-white my-2">${postObject.month}</div>
+                 <div class="day p-text-white bold my-2">${postObject.day}</div>
+                 <div class="year p-text-white my-2">${postObject.year}</div>
+             </div>
+         </div>
+         <p class="description-aktuelno w-100 text-left mt-2 bold"> ${postObject.description}</p>
+         <div class="button-transparent border-black ">
+             <a href="" class="d-flex justify-content-around align-items-center">Pročitaj<svg
+                     xmlns="http://www.w3.org/2000/svg" width="17.07" height="12" viewBox="0 0 17.07 12">
+                     <defs>
+                         <style>
+                             .cls-1 {
+                                 fill: #ffffff
+                             }
+                         </style>
+                     </defs>
+                     <path id="left-arrow_2_"
+                         d="M5.567 4.856a.605.605 0 1 1 .86.851l-4.361 4.362h14.392a.606.606 0 0 1 .611.6.613.613 0 0 1-.611.611H2.066l4.361 4.353a.617.617 0 0 1 0 .86.6.6 0 0 1-.86 0L.174 11.1a.607.607 0 0 1 0-.851z"
+                         class="cls-1 black" data-name="left-arrow (2)" transform="rotate(180 8.534 8.338)" />
+                 </svg>
+             </a>
+         </div>
+         </div>
+
+         `;
         }
-
-        $(window).scroll(function () {
-            var scrollBottom = $(window).scrollTop() + $(window).height();
-            let first = $("#1").offset().top;
-
-            if (scrollBottom > first) {
-                $("#1").addClass("animate-left");
-
-                executed = true;
-            }
-        });
-
-        $(window).scroll(function () {
-            var scrollBottom = $(window).scrollTop() + $(window).height();
-            let second = $("#2").offset().top;
-
-            if (scrollBottom > second) {
-                $("#2").addClass("animate-right");
-
-                executed = true;
-            }
-        });
-        $(window).scroll(function () {
-            var scrollBottom = $(window).scrollTop() + $(window).height();
-            let thrid = $("#3").offset().top;
-
-            if (scrollBottom > thrid) {
-                $("#3").addClass("animate-left");
-
-                executed = true;
-            }
-        });
     </script>
 
 </body>

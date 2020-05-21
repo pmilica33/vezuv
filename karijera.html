@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karijera</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nice-select.css" />
+</head>
+
+<style>
+    .cover-o-nama {
+        background-image: url("images/cover-karijera.png"), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0,
+                    0.3));
+        background-blend-mode: overlay;
+        height: 80vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .citat {
+        color: #b98757
+    }
+
+    hr {
+        width: 70%;
+        height: .5px;
+        background-color: rgba(0, 0, 0, 0.096);
+    }
+
+    .rounded-circle {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+
+    }
+
+    .message-1,
+    .message-2 {
+        box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        position: relative;
+        border-radius: .4em;
+
+    }
+
+    .message-2::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 20%;
+        width: 0;
+        height: 0;
+        border: 8px solid transparent;
+        border-left-color: #fff;
+        border-right: 0;
+        margin-top: -8px;
+        margin-right: -8px;
+    }
+
+    .message-1::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 20%;
+        width: 0;
+        height: 0;
+        /* box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1); */
+        /* border: 5px solid hsl(0, 27%, 96%); */
+
+        border: 8px solid transparent;
+        border-right-color: #fff;
+        border-left: 0;
+        margin-top: -8px;
+        margin-left: -8px;
+    }
+
+    .red {
+        color: #b70019;
+    }
+
+    .pozicije {
+        padding: 2rem 2rem 1rem 2rem;
+        border-radius: 8px;
+        box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
+        border-bottom: 7px solid #b70019;
+        margin-bottom: 1rem;
+        cursor: pointer;
+
+    }
+
+    h2 {
+        color: #4f4f62;
+        font-size: 1.5em;
+
+    }
+
+    h1,
+    hr {
+        margin: 2rem 0px;
+    }
+
+    .naziv {
+        margin-bottom: 0px !important;
+    }
+
+    @media (min-width: 992px) {
+        .padding-lg {
+            padding-right: 2rem;
+        }
+
+    }
+
+    .modal-backdrop.show {
+        opacity: 0 !important;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .modal-open .modal {
+        overflow-y: scroll;
+    }
+
+    @media (min-width: 576px) {
+        .modal-dialog {
+            max-width: 800px;
+            margin: 1.75rem auto;
+        }
+    }
+
+    .modal {
+        padding-top: 10px;
+    }
+</style>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-xl navbar-light bg-transparent " id="navbar">
+        <a class="navbar-brand" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="166.173"
+                height="46.684" viewBox="0 0 166.173 46.684">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: #fff
+                        }
+
+                        .cls-2 {
+                            fill: #b98757
+                        }
+
+                        .cls-3 {
+                            fill: #b70019
+                        }
+                    </style>
+                </defs>
+                <g id="Vezuv_logo" data-name="Vezuv logo" transform="translate(-141 -22)">
+                    <g id="Group_2" data-name="Group 2" transform="translate(205.847 34.64)">
+                        <path id="Path_5"
+                            d="M184.923 462.752q-.214-.625-1.781-4.787l-4.842-11.984a17.043 17.043 0 0 0-1.04-2.329q-.213-.279-1.709-.379l-.129-.128v-.654l.129-.128q2.179.113 3.7.114 1.425 0 3.776-.114l.114.114v.783l-.114.115a10.529 10.529 0 0 0-2.059.106.409.409 0 0 0-.335.406 10.8 10.8 0 0 0 .456 1.517q.456 1.347.812 2.272l4.46 11.272 3.719-9.347q.386-.955 1.126-3.077a13.066 13.066 0 0 0 .74-2.55.433.433 0 0 0-.348-.456 16.9 16.9 0 0 0-2.088-.243l-.128-.113v-.684l.128-.114q2.493.113 3.177.114.556 0 2.879-.114l.114.114v.684l-.114.113a4.1 4.1 0 0 0-1.239.157.965.965 0 0 0-.378.442q-.164.328-1.02 2.251l-4.445 10.943q-1.5 3.664-2.123 5.685z"
+                            class="cls-1" data-name="Path 5" transform="translate(-175.419 -442.363)" />
+                        <path id="Path_6"
+                            d="M223.447 442.462l.114-.1q4.889.084 6.256.085 4.675 0 8.322-.085l.071.1a24.185 24.185 0 0 0-.528 4.289l-.085.114h-.7l-.128-.114a2.153 2.153 0 0 0 .014-.227 13.9 13.9 0 0 0-.184-2.309 7.727 7.727 0 0 0-2.487-.521q-1.588-.119-2.386-.121-1.126 0-2.879.157l-.057 2.28-.043 2.608-.043 2.891q1.54.087 2.836.087 1.312 0 2.2-.087a3.719 3.719 0 0 0 1.033-.177.6.6 0 0 0 .227-.357 5.319 5.319 0 0 0 .135-.932l.057-.884.115-.114h.654l.115.114q-.029 1.553-.071 3.12l.071 3.207-.115.113h-.661l-.115-.113-.1-.857a12 12 0 0 0-.186-1.188.63.63 0 0 0-.263-.336 2.823 2.823 0 0 0-1.061-.227q-.855-.087-2.351-.087-.827 0-2.523.072-.07 1.2-.071 3.99 0 2.992.071 4.4h2.623q3.463 0 4.331-.086a5.686 5.686 0 0 0 1.654-.413q.127-.327.419-1.517c.2-.794.307-1.289.336-1.49l.143-.1h.684l.114.1a19.865 19.865 0 0 0-.25 2.138q-.119 1.525-.121 2.608l-.1.114q-2.722-.085-7.125-.085l-3.875-.029q-1.354 0-2.822.114l-.114-.114v-.471l.114-.143a7.531 7.531 0 0 0 .962-.534 11.1 11.1 0 0 0 .2-2.492c.052-1.593.078-2.8.078-3.642v-5.229l-.014-3.235q0-1.055-.028-1.717a5.341 5.341 0 0 0-.1-.947 1.075 1.075 0 0 0-.164-.4.7.7 0 0 0-.3-.191 3.315 3.315 0 0 0-.706-.135l-1.083-.087-.114-.1z"
+                            class="cls-1" data-name="Path 6" transform="translate(-201.632 -442.363)" />
+                        <path id="Path_7"
+                            d="M261.532 462.481v-.681l3.434-4.245 8.136-10.473q1.854-2.367 2.494-3.393h-.585l-2.293-.012q-3.022 0-4.866.092t-2.437.191a1.24 1.24 0 0 0-.727.28 2.089 2.089 0 0 0-.22.848l-.2 1.879-.128.128h-.669l-.128-.128c.046-.722.07-1.3.07-1.725q0-1.737-.07-2.748l.128-.128q5.087.113 7.11.114 3.364 0 8.837-.114l.128.128v.727q-1.566 1.851-2.194 2.65l-11.871 15.29 5.77.1q1.724 0 3.477-.086c1.169-.056 1.94-.113 2.311-.169a1.7 1.7 0 0 0 .76-.251.91.91 0 0 0 .279-.327 6.845 6.845 0 0 0 .229-.977l.312-1.909.129-.113h.67l.114.113q-.1.912-.2 4.959l-.129.114q-6.017-.114-9.492-.114-2.436 0-8.05.114z"
+                            class="cls-1" data-name="Path 7" transform="translate(-222.419 -442.363)" />
+                        <path id="Path_8"
+                            d="M304.2 442.462l.113-.1q3.535.113 4.076.114.484 0 4.09-.114l.113.1v.712l-.113.1c-.656.02-1.165.049-1.521.087a1.842 1.842 0 0 0-.775.213 1.013 1.013 0 0 0-.323.734 12.73 12.73 0 0 0-.075 1.6l-.029 3.278v4.531q0 2.237.091 3.285a5.826 5.826 0 0 0 .4 1.766 3.272 3.272 0 0 0 .936 1.241 4.873 4.873 0 0 0 1.8.848 9.816 9.816 0 0 0 2.649.327 9.557 9.557 0 0 0 2.926-.435 4.442 4.442 0 0 0 2.076-1.261 4.331 4.331 0 0 0 .931-2.172 24.328 24.328 0 0 0 .224-3.741v-4.388q0-1.112-.038-3.058a9.732 9.732 0 0 0-.172-2.236.887.887 0 0 0-.5-.442 7.94 7.94 0 0 0-2.013-.179l-.115-.113v-.669l.115-.128q2.109.113 3.376.114 1.084 0 3.363-.114l.129.114v.684l-.129.113a13.468 13.468 0 0 0-1.748.108 1.146 1.146 0 0 0-.57.235.965.965 0 0 0-.243.484 13.635 13.635 0 0 0-.1 1.881l-.042 3.207v4.33a32.655 32.655 0 0 1-.2 4.089 5.364 5.364 0 0 1-.893 2.458 6.59 6.59 0 0 1-1.638 1.611 7.2 7.2 0 0 1-2.427 1 13.394 13.394 0 0 1-3.078.348 12.723 12.723 0 0 1-3.529-.442 6.7 6.7 0 0 1-2.413-1.167 4.593 4.593 0 0 1-1.267-1.533 5.751 5.751 0 0 1-.5-1.894q-.113-1.091-.114-3.328v-5.47l-.029-2.779c-.009-1.082-.038-1.78-.08-2.095a1.311 1.311 0 0 0-.2-.628 1.028 1.028 0 0 0-.518-.256 12.078 12.078 0 0 0-1.9-.157l-.113-.1z"
+                            class="cls-1" data-name="Path 8" transform="translate(-245.708 -442.363)" />
+                        <path id="Path_9"
+                            d="M363.4 462.752q-.214-.625-1.781-4.787l-4.844-11.984a16.88 16.88 0 0 0-1.041-2.329q-.213-.279-1.709-.379l-.128-.128v-.654l.128-.128q2.18.113 3.7.114 1.426 0 3.776-.114l.114.114v.783l-.114.115a10.55 10.55 0 0 0-2.061.106.406.406 0 0 0-.332.406 10.59 10.59 0 0 0 .456 1.517q.454 1.347.811 2.272l4.461 11.272 3.718-9.347q.385-.955 1.127-3.077a13.139 13.139 0 0 0 .74-2.55.436.436 0 0 0-.351-.456 16.793 16.793 0 0 0-2.085-.243l-.129-.113v-.684l.129-.114q2.494.113 3.177.114.556 0 2.879-.114l.113.114v.684l-.113.113a4.116 4.116 0 0 0-1.241.157.973.973 0 0 0-.38.442c-.11.219-.446.969-1.016 2.251l-4.446 10.943q-1.495 3.664-2.122 5.685z"
+                            class="cls-1" data-name="Path 9" transform="translate(-272.829 -442.363)" />
+                    </g>
+                    <g id="Group_1" data-name="Group 1" transform="translate(141 22)">
+                        <path id="Path_1" d="M251.211 340.814l6.068 10.51 6.067-10.51z" class="cls-2" data-name="Path 1"
+                            transform="translate(-230.304 -304.639)" />
+                        <path id="Path_2" d="M123.046 119.054l6.068 10.509 6.069-10.509z" class="cls-2"
+                            data-name="Path 2" transform="translate(-123.046 -119.054)" />
+                        <path id="Path_3" d="M379.252 119.054l6.068 10.509 6.068-10.509z" class="cls-2"
+                            data-name="Path 3" transform="translate(-337.458 -119.054)" />
+                        <path id="Path_4"
+                            d="M205.844 131.112l-6.069 10.509H171.93l-6.068-10.509zm-13.031 22.568l6.069-10.509h-26.059l6.067 10.509zm6.069-34.626h-26.1l-6.052 10.509h38.2z"
+                            class="cls-3" data-name="Path 4" transform="translate(-158.878 -119.054)" />
+                    </g>
+                </g>
+            </svg>
+        </a>
+
+        <button class="navbar-toggler bg-white" type="button" id="toggler-button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item hoverLink ">
+                    <a class="nav-link" href="index.html">POČETNA</a>
+                </li>
+                <li class="nav-item hoverLink">
+                    <a class="nav-link" href="o_nama.html">O NAMA</a>
+                </li>
+                <li class="nav-item  hoverLink">
+                    <a class="nav-link" href="volcano.html">VOLCANO </a>
+                </li>
+                <li class="nav-item hoverLink">
+                    <a class="nav-link" href="sport-support.html">SPORT SUPPORT</a>
+                </li>
+                <li class="nav-item   hoverLink">
+                    <a class="nav-link" href="drustvena-odgovornost.html">DRUŠTVENA ODGOVORNOST</a>
+                </li>
+                <li class="nav-item hoverLink">
+                    <a class="nav-link" href="aktuelno.html">AKTUELNO</a>
+                </li>
+                <li class="nav-item  active">
+                    <a class="nav-link" href="karijera.html">KARIJERA<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item hoverLink">
+                    <a class="nav-link" href="kontakt.html">KONTAKT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cover  -->
+    <div class="cover-o-nama">
+        <div class="path d-flex justify-content-center flex-column  pt-5">
+            <div class="auto-85 animate-left grid-text">
+                <div class="grid-text-section">
+                    <div class="natpis-white mb-5 text-white mt-3">KARIJERA</div>
+                    <h1 class=" my-5  bold bold-500 text-white max-width-naslov pr-4">PRIDRUŽITE SE NAŠEM
+                        TIMU!</h1>
+                    <p class=" citat ">“Uspjeh nije slučajnost. To je težak rad, istrajnost, učenje,
+                        obrazovanje, požrtvovanost i najvažnije - ljubav prema onome što radim ili učimo!”
+                    </p>
+                    <p class="text-white mt-2 opacity-7 ">
+                        Pale
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="auto-85 mt-5 text-align-center-sm">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 padding-lg">
+                <h1>Zašto kompanija Vezuv?</h1>
+                <p>Odgovor je jednostavan. Zato što smo renomirani poslodavac, sa tradicijom za pružanja vrhunske usluge
+                    koja
+                    traje 20 godina.
+                    U svom stalnom razvoju, usavršavanju i mondernizovanju sistema kontinuirano unapređujemo kvalitet
+                    svojih
+                    usluga. Zahvaljujući tome, postali smo najveći koncesionar i lider u oblasti priređivanja igara na
+                    sreću
+                    u
+                    Crnoj Gori.</p>
+                <p>Zato što smo društveno odgovorna kompanija, a zaposleni su nam na prvom mjestu. Zato što imamo jak
+                    brend.
+                    Zato što postoji mogućnost napredovanja, putovanja u inostranstvo ili bilo kojih drugih benefita
+                    poput,
+                    dodatnog obrazovanja, teambuildinga i još mnogo toga. Zapošljavamo ljude koji su na početku svoje
+                    karijere,
+                    poštujemo različitost, nudimo bolju budućnost, ostvarujemo ambicije itd.</p>
+                <p>Vezuv danas ima više od 150 poslovnica u cijeloj Crnoj Gori. Razvoj je stabilan i kontinuiran, a
+                    glavnu
+                    snagu čine više stotina zaposlenih. Da bi uspjeli Vaša želja za uspjehom mora biti veća od Vašeg
+                    straha
+                    od
+                    neuspjeha. Vezuv znači pouzdanost!</p>
+
+
+                <p>Cijena uspjeha je težak rad, posvećenost poslu i odlučnost, da bilo pobijedili ili izgubili, date sve
+                    od
+                    sebe zadatku koji Vam
+                    je u rukama.
+                </p>
+
+                <h1>Razvoj karijere</h1>
+                <p class="citat " style="font-size: 1.2em;">
+                    Promašio sam više od 9.000 šuteva u svojoj karijeri. Izgubio sam skoro 300 utakmica. 26 puta mi je
+                    bilo
+                    povjereno da šutiram za pobjedu, ali sam promašio. Doživjeo sam neuspjeh nebrojeno mnogo puta, ali
+                    upravo
+                    zbog toga sam uspjeo.
+                </p>
+                <p class="bold mt-2  ">
+                    Michael Jordan
+                </p>
+                <p>Vezuv omogućava zaposlenima da napreduju u svojim profesijama. Ništa nije nemoguće za onoga ko ima
+                    volju
+                    pokušati,
+                    pa tako smo izdvojili dvoje kolega sa snažnom voljom, da se uvjerite na našim djelima:</p>
+                <hr>
+                <div class="row flex-column-titula d-flex">
+                    <div class="col-lg-4 d-flex align-items-center flex-column col-sm-12">
+                        <img src="images/a11e19e02b83f13167342d783b56a526.png" alt="" srcset="" class="rounded-circle">
+                        <p class="bold naziv">Vesna Popovic</p>
+                        <p class="citat">Titula</p>
+
+                    </div>
+                    <div class="col-lg-8 col-sm-12">
+                        <p class="citat message-1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                            nonumy
+                            eirmod
+                            tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                            voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="row mt-5 flex-column-titula d-flex">
+                    <div class="col-lg-8 col-sm-12">
+                        <p class="citat message-2 ">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                            sed diam
+                            nonumy
+                            eirmod
+                            tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                            accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                            voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="col-lg-4 d-flex align-items-center flex-column col-sm-12">
+                        <img src="images/5a2164878f3ba4.1875659315121378635867.png" alt="" srcset=""
+                            class="rounded-circle">
+                        <p class="bold naziv">Bojan Jovanovic</p>
+                        <p class="citat">Titula</p>
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <h1>Otvorene pozicije</h1>
+                <div class="d-flex flex-column pozicije" data-toggle="modal" data-target="#myModal">
+                    <div class="d-flex">
+                        <h2 class="bold">Operater u kladionici</h2>
+                        <img src="images/001-man.svg" alt="" class="ml-auto pr-2">
+                        <img src="images/002-woman.svg" alt="">
+
+                    </div>
+                    <div class="d-flex mt-2">
+                        <img src="images/maps-and-flags (2).svg" alt="" class="my-auto">
+                        <p class="opacity-7 my-auto pl-2">PODGORICA, NIKŠIČ, BUDVA</p>
+                    </div>
+                    <div class="d-flex mt-2">
+                        <p class="opacity-7">Radnih mjesta:</p>
+                        <p class="red bold pl-2">4</p>
+                    </div>
+
+                </div>
+                <div class="d-flex flex-column pozicije" data-toggle="modal" data-target=".bd-example-modal-lg">
+                    <div class="d-flex">
+                        <h2 class="bold">Operater u kladionici</h2>
+                        <img src="images/001-man.svg" alt="" class="ml-auto pr-2">
+                        <img src="images/002-woman.svg" alt="">
+
+                    </div>
+                    <div class="d-flex mt-2">
+                        <img src="images/maps-and-flags (2).svg" alt="" class="my-auto">
+                        <p class="opacity-7 my-auto pl-2">PODGORICA, NIKŠIČ, BUDVA</p>
+                    </div>
+                    <div class="d-flex mt-2">
+                        <p class="opacity-7">Radnih mjesta:</p>
+                        <p class="red bold pl-2">1</p>
+                    </div>
+
+                </div>
+                <div class="d-flex flex-column pozicije" data-toggle="modal" data-target=".bd-example-modal-lg">
+                    <div class="d-flex">
+                        <h2 class="bold">Operater u kladionici</h2>
+                        <img src="images/001-man.svg" alt="" class="ml-auto pr-2">
+                        <img src="images/002-woman.svg" alt="">
+
+                    </div>
+                    <div class="d-flex mt-2">
+                        <img src="images/maps-and-flags (2).svg" alt="" class="my-auto">
+                        <p class="opacity-7 my-auto pl-2">PODGORICA, NIKŠIČ, BUDVA</p>
+                    </div>
+                    <div class="d-flex mt-2">
+                        <p class="opacity-7">Radnih mjesta:</p>
+                        <p class="red bold pl-2">1</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalKarijera" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body p-5">
+
+                    <hr>
+                    <h2 class="mt-3 mb-2">Opis posla</h2>
+                    <hr>
+                    <p class="opacity-7">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                        justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                        ipsum dolor sit amet.
+
+                        Beneficije:
+
+                        • Sistem nagrađivanja
+                        • Razvoj karijere
+                        • Teambuilding
+                        • Treninzi i obuke
+                        • Putovanja
+
+                        Napomena
+                        Biće kontaktirani samo kandidati užeg izbora, ostale prijave čuvamo u Vezuv bazi kandidata.
+                    </p>
+                    <hr class="mt-2">
+                    <h2 class="mt-2">Popuni formu i apliciraj za ovo radno mjesto!</h2>
+                    <form class="col-lg-7 col-md-12">
+                        <div class="form-group col-md-6">
+                            <label for="name-surname">Ime i prezime</label>
+                            <input type="text" class="form-control" id="name-surname">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">eMmail</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Broj telefona</label>
+                            <input type="tel" class="form-control" id="telephone">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" style="color: black;">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <hr>
+                    <h2 class="mt-3 mb-2">Opis posla</h2>
+                    <hr>
+                    <p class="opacity-7">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                        eirmod
+                        tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                        duo
+                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor
+                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                        justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                        ipsum dolor sit amet.
+
+                        Beneficije:
+
+                        • Sistem nagrađivanja
+                        • Razvoj karijere
+                        • Teambuilding
+                        • Treninzi i obuke
+                        • Putovanja
+
+                        Napomena
+                        Biće kontaktirani samo kandidati užeg izbora, ostale prijave čuvamo u Vezuv bazi kandidata.
+                    </p>
+                    <hr class="mt-2">
+                    <h2 class="mt-2">Popuni formu i apliciraj za ovo radno mjesto!</h2>
+                    <form class="col-lg-7 col-md-12">
+                        <div class="form-group col-md-6">
+                            <label for="name-surname">Ime i prezime</label>
+                            <input type="text" class="form-control" id="name-surname">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">eMmail</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Broj telefona</label>
+                            <input type="tel" class="form-control" id="telephone">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <div class="w-100 footer-vezuv d-flex flex-row justify-content-between mt-5">
+        <div class="img">
+            <img src="images/footer-logo.png" alt="" srcset="" class="left" />
+        </div>
+        <div class="text-center kontakt d-fex flex-column my-auto justify-content-between" style="width: 40%;">
+            <img src="images\Group 39.png" alt="" class="align-self-center footer-logo" />
+            <div class="kontakt-text mt-3">
+                <div class="mt-2 bold">VEZUV DOO</div>
+                <div>Trg Nezavisnosti bb</div>
+                <div>81000, Podgorica, Crna Gora</div>
+                <div>+382 20 210 146</div>
+            </div>
+        </div>
+        <div class="img d-flex">
+            <img src="images/footer-logo.png" alt="" srcset="" class="right ml-auto" />
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div>© Copyright Vezuv d.o.o. 2019</div>
+        <div class="d-flex">
+            <div>Designed by</div>
+            <a href="https://amplitudo.me" target="_blank">
+                <img src="images/AmplitudoLogo.svg" style="max-width: 95px;" class=" mb-3 pb-1 w-100"
+                    alt="Amplitudo Logo">
+            </a>
+        </div>
+    </div>
+
+
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+
+    </script>
+
+
+</body>
+
+
+</html>

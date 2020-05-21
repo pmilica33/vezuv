@@ -40,6 +40,17 @@
       @content;
     }
   }
+
+  @else if $media==md {
+    @media only screen and (max-width: 992px) {
+      @content;
+    }
+  }
+}
+
+.aktuelno-img img {
+  object-fit: cover;
+  width: 100%;
 }
 
 .p-text-white {
@@ -116,6 +127,19 @@
   grid-gap: 10px;
 }
 
+.text-align-center-sm {
+
+  @include respond-to(handhelds) {
+    text-align: center;
+  }
+}
+
+.text-align-center-md {
+  @include respond-to(md) {
+    text-align: center;
+  }
+}
+
 p {
   font-size: .9rem;
 
@@ -145,6 +169,24 @@ h1 {
 
   @include respond-to(navbar) {
     font-size: 2em !important;
+  }
+}
+
+h2 {
+  @include respond-to(handhelds) {
+    font-size: .7em !important;
+  }
+
+  @include respond-to(wide-handhelds) {
+    font-size: .8em !important;
+  }
+
+  @include respond-to(tablets) {
+    font-size: .9em !important;
+  }
+
+  @include respond-to(navbar) {
+    font-size: 1em !important;
   }
 }
 
@@ -232,12 +274,29 @@ font-size-p-76 {
   }
 }
 
-.flex-column-volcano {
+@mixin flex-column-mixin() {
 
   @include respond-to(max-navbar) {
-    flex-direction: column;
+    flex-direction: column !important;
 
   }
+}
+
+// .flex-column-titula {
+//   align-items: center !important;
+
+//   @include respond-to(max-navbar) {
+//     flex-direction: column !important;
+
+//   }
+// }
+
+
+
+
+.flex-column-volcano {
+
+  @include flex-column-mixin();
 
   .lijeve-slike {
     @include respond-to(max-navbar) {
@@ -248,7 +307,7 @@ font-size-p-76 {
 
   .grid-3 {
     @include respond-to(max-navbar) {
-      grid-template-columns: (minmax(80px, 15vw))(minmax(80px, 15vw)) (minmax(80px, 15vw));
+      grid-template-columns: 1fr 1fr 1fr;
       width: 100%;
     }
   }
@@ -295,6 +354,7 @@ font-size-p-76 {
   margin-right: 6px;
 
 }
+
 
 .natpis-white,
 .natpis {

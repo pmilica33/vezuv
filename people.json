@@ -1,54 +1,54 @@
 {
   "people": [{
-      "id": "3",
+      "id": "1",
       "name": "Jovan Jovanovic",
       "picture": "./images/45dd9f8dc35843eab5ac527b644548ed.png",
       "description": "Direktor operacija"
     },
     {
-      "id": "1",
+      "id": "2",
       "name": "Marko Marković",
       "picture": "./images/5a2164878f3ba4.1875659315121378635867.png",
       "description": "Izvrsni direktor"
     },
     {
-      "id": "2",
+      "id": "3",
       "name": "Tamara Petrovic",
       "picture": "./images/a11e19e02b83f13167342d783b56a526.png",
       "description": "Finansijski direktor"
     },
     {
-      "id": "2",
+      "id": "4",
       "name": "Tamara Petrovic",
       "picture": "./images/a11e19e02b83f13167342d783b56a526.png",
       "description": "Finansijski direktor"
     },
     {
-      "id": "1",
+      "id": "5",
       "name": "Marko Marković",
       "picture": "./images/5a2164878f3ba4.1875659315121378635867.png",
       "description": "Izvrsni direktor"
     },
     {
-      "id": "3",
+      "id": "6",
       "name": "Jovan Jovanovic",
       "picture": "./images/45dd9f8dc35843eab5ac527b644548ed.png",
       "description": "Direktor operacija"
     },
     {
-      "id": "3",
+      "id": "7",
       "name": "Jovan Jovanovic",
       "picture": "./images/45dd9f8dc35843eab5ac527b644548ed.png",
       "description": "Direktor operacija"
     },
     {
-      "id": "1",
+      "id": "8",
       "name": "Marko Marković",
       "picture": "./images/5a2164878f3ba4.1875659315121378635867.png",
       "description": "Izvrsni direktor"
     },
     {
-      "id": "2",
+      "id": "9",
       "name": "Tamara Petrovic",
       "picture": "./images/a11e19e02b83f13167342d783b56a526.png",
       "description": "Finansijski direktor"
@@ -115,6 +115,134 @@
       "picture": "./images/nedelja.png",
       "title": "Ekipa Nervno šampion FIBA U18  3 x3 turnira(VIDEO) ",
       "description": "Košarkaški klub All Star 2014 iz Podgorice, zajedno sa Volcanom u sklopu kampanje   Volcano Sport Support organizuje prvi FIBA U18 turnir 3 x3.</br></br>Dan košarke biće organizovan na Trgu Nezavisnosti sa početkom od 12 sati kada će biti i održan javni trening košarkaškog kluba All Star 2014. "
+    }
+  ],
+  "donacije": [{
+      "month": "jul",
+      "day": "12",
+      "year": "2018",
+      "id": "1",
+      "picture": "./images/novosti-07-12-2018-5c0a8ac034fa7.png",
+      "description": "Kompanija Vezuv zasadila je 16 novih sadnica preko aplikacije Moje Drvo "
+    },
+    {
+      "month": "jul",
+      "day": "24",
+      "year": "2018",
+      "id": "2",
+      "picture": "./images/novosti-21-11-2018-5bf534a4f30ec.png",
+      "description": "Fondacija „Budi human“: platili liječenje za šest mališana u vrijedn..."
+    },
+    {
+      "month": "jul",
+      "day": "09",
+      "year": "2018",
+      "id": "3",
+      "picture": "./images/novosti-21-11-2018-5bf532b3bcc8d.png",
+      "description": "Stipendija Nini Bošković za master studije na Oksfordu 16.000 eura "
+    },
+    {
+      "month": "jun",
+      "day": "09",
+      "year": "2018",
+      "id": "4",
+      "picture": "./images/novosti-22-10-2018-5bce0e351d785.png",
+      "description": "Kompanija Vezuv donirala 7.000 eura Kliničkom centru "
+    }
+  ],
+  "sponzorstva": [{
+      "month": "jul",
+      "day": "12",
+      "year": "2018",
+      "id": "1",
+      "picture": "./images/novosti-07-12-2018-5c0a8ac034fa7.png",
+      "description": "Kompanija Vezuv zasadila je 16 novih sadnica preko aplikacije Moje Drvo "
+    },
+    {
+      "month": "jul",
+      "day": "24",
+      "year": "2018",
+      "id": "2",
+      "picture": "./images/novosti-21-11-2018-5bf534a4f30ec.png",
+      "description": "Fondacija „Budi human“: platili liječenje za šest mališana u vrijedn..."
+    },
+    {
+      "month": "jul",
+      "day": "09",
+      "year": "2018",
+      "id": "3",
+      "picture": "./images/novosti-21-11-2018-5bf532b3bcc8d.png",
+      "description": "Stipendija Nini Bošković za master studije na Oksfordu 16.000 eura "
+    }
+  ],
+  "aktuelno": [{
+      "month": "apr",
+      "day": "02",
+      "year": "2019",
+      "id": "1",
+      "picture": "./images/174.png",
+      "title": "KK Volcano All Star na turniru u Atini ",
+      "description": "Mladi košarkaši našeg kluba “Volcano All Star” učestvovaće na međunarodnom turniru koji se od 4. do 7. aprila igra u Atini.  Oni će imati priliku da igraju protiv bivših prvaka Evrope i jednim od najboljih Evropskih klubova Olimpijakosom i Panatinaikosom... "
+    }, {
+      "month": "mar",
+      "day": "30",
+      "year": "2019",
+      "id": "1",
+      "picture": "./images/16e06955d91671615475d960f70371af.png",
+      "description": "Authentic Gaming potpisuje ugovor da postane Volcano bet ekskluzivni..."
+    },
+    {
+      "month": "jul",
+      "day": "12",
+      "year": "2018",
+      "id": "2",
+      "picture": "./images/novosti-07-12-2018-5c0a8ac034fa7.png",
+      "description": "Kompanija Vezuv zasadila je 16 novih sadnica preko aplikacije Moje Drvo "
+    },
+    {
+      "month": "jul",
+      "day": "24",
+      "year": "2018",
+      "id": "3",
+      "picture": "./images/novosti-21-11-2018-5bf534a4f30ec.png",
+      "description": "Fondacija „Budi human“: platili liječenje za šest mališana u vrijedn..."
+    },
+    {
+      "month": "jul",
+      "day": "09",
+      "year": "2018",
+      "id": "4",
+      "picture": "./images/novosti-21-11-2018-5bf532b3bcc8d.png",
+      "description": "Stipendija Nini Bošković za master studije na Oksfordu 16.000 eura "
+    },
+    {
+      "month": "jun",
+      "day": "09",
+      "year": "2018",
+      "id": "5",
+      "picture": "./images/novosti-22-10-2018-5bce0e351d785.png",
+      "description": "Kompanija Vezuv donirala 7.000 eura Kliničkom centru "
+    }, {
+      "month": "jun",
+      "day": "01",
+      "year": "2018",
+      "id": "6",
+      "picture": "./images/b65cc98d499d10dcf2f1436ccce56956.png",
+      "description": "Bijelu listu predvode Trebjesa, Vezuv,EPCG, Telekom..."
+    }, {
+      "month": "apr",
+      "day": "09",
+      "year": "2018",
+      "id": "7",
+      "picture": "./images/ee912ebf183b6311b2c8d1728060e193.png",
+      "description": "Društveno odgovorna akcija - Sajam knjiga: Promocija knjige Proble..."
+    }, {
+      "month": "feb",
+      "day": "22",
+      "year": "2018",
+      "id": "8",
+      "picture": "./images/d235d9b8fe813b848963e6c53a16c0ed.png ",
+      "description": "Na Sajmu knjiga promovisana knjiga Elvire Koić o patološkom kockanju "
     }
   ]
 

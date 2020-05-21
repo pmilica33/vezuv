@@ -59,9 +59,55 @@
 
         }
 
-        .lijeve-slike img {
+        .lijeve-slike img,
+        .mySlides {
             cursor: pointer;
         }
+
+        .kompanija {
+            width: 50%;
+        }
+
+        .actuelno-date {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.4);
+            width: 20%;
+            top: 5%;
+            left: 5%;
+            line-height: 1;
+            height: auto;
+            font-size: 0.81em;
+        }
+
+        .day {
+            font-size: 1.25em;
+        }
+
+        .aktuelno-img {
+            position: relative;
+        }
+
+        .description-aktuelno {
+            color: #222222;
+            line-height: 1.37;
+        }
+
+        @media only screen and (max-width: 1199px) {
+            .kompanija {
+                width: 100%;
+            }
+        }
+
+        /* .card-aktuelnosti {
+            transition: transform .6s ease;
+            cursor: pointer;
+
+
+        }
+
+        .card-aktuelnosti:hover {
+            transform: scale(1.1);
+        } */
     </style>
 
 </head>
@@ -144,19 +190,21 @@
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item hoverLink">
-                    <a class="nav-link" href="#">AKTUELNO</a>
+                    <a class="nav-link" href="aktuelno.html">AKTUELNO</a>
                 </li>
                 <li class="nav-item hoverLink">
-                    <a class="nav-link" href="#">KARIJERA</a>
+                    <a class="nav-link" href="karijera.html">KARIJERA</a>
                 </li>
                 <li class="nav-item hoverLink">
-                    <a class="nav-link" href="#">KONTAKT</a>
+                    <a class="nav-link" href="kontakt.html">KONTAKT</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Cover o nama -->
+
+
+    <!-- Cover  -->
     <div class="cover-o-nama">
         <div class="path d-flex justify-content-center flex-column  pt-5">
             <div class="auto-70 animate-left grid-text">
@@ -186,69 +234,55 @@
 
     <!-- Left-right -->
 
-    <div class="d-flex align-items-center mt-5 container flex-column-volcano">
+    <div class="d-flex align-items-center mt-5 auto-85 flex-column-volcano">
 
         <!-- Gallary images -->
         <div class="lijeve-slike grid-3 pr-5 gap-10">
-            <img src="images/146@3x.png" alt="" onclick="openModal();currentSlide(1)">
-            <img src="images/179.png" alt="" onclick="openModal();currentSlide(1)">
-            <img src="images/300.png" alt="" onclick="openModal();currentSlide(1)">
-            <img src="images/365.png" alt="" onclick="openModal();currentSlide(1)">
-            <img src="images/386.png" alt="" onclick="openModal();currentSlide(1)">
-            <img src="images/408.png" alt="" onclick="openModal();currentSlide(1)">
+            <img src="images/146@3x.png" alt="" onclick="openModal();currentSlide(1)" class="open">
+            <img src="images/179.png" alt="" onclick="openModal();currentSlide(2)" class="open">
+            <img src="images/300.png" alt="" onclick="openModal();currentSlide(3)" class="open">
+            <img src="images/365.png" alt="" onclick="openModal();currentSlide(4)" class="open">
+            <img src="images/386.png" alt="" onclick="openModal();currentSlide(5)" class="open">
+            <img src="images/408.png" alt="" onclick="openModal();currentSlide(6)" class="open">
+        </div>
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content" id="modal-content">
 
-            <div id="myModal" class="modal">
-                <span class="close cursor" onclick="closeModal()">&times;</span>
-                <div class="modal-content">
-
-                    <div class="mySlides">
-                        <div class="numbertext">1 / 4</div>
-                        <img src="img1_wide.jpg" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">2 / 4</div>
-                        <img src="img2_wide.jpg" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">3 / 4</div>
-                        <img src="img3_wide.jpg" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">4 / 4</div>
-                        <img src="img4_wide.jpg" style="width:100%">
-                    </div>
-
-                    <!-- Next/previous controls -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                    <!-- Caption text -->
-                    <div class="caption-container">
-                        <p id="caption"></p>
-                    </div>
-
-                    <!-- Thumbnail image controls -->
-                    <div class="column">
-                        <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
-                    </div>
-
-                    <div class="column">
-                        <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow">
-                    </div>
-
-                    <div class="column">
-                        <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
-                    </div>
-
-                    <div class="column">
-                        <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
-                    </div>
+                <div class="mySlides" onclick="plusSlides(1)">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="images/146@3x.png" style="width:100%">
                 </div>
-            </div>
 
+                <div class="mySlides" onclick="plusSlides(1)">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="images/179.png" style="width:100%">
+                </div>
+
+                <div class="mySlides" onclick="plusSlides(1)">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="images/300.png" style="width:100%">
+                </div>
+
+                <div class="mySlides" onclick="plusSlides(1)">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="images/365.png" style="width:100%">
+                </div>
+                <div class="mySlides" onclick="plusSlides(1)">
+                    <div class="numbertext">5 / 4</div>
+                    <img src="images/386.png" style="width:100%">
+                </div>
+                <div class="mySlides" onclick="plusSlides(1)">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="images/408.png" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+            </div>
         </div>
         <div class=" opacity-7 pl-5 text-lorem  grid-text">
             <div class="grid-text-section">
@@ -283,13 +317,45 @@
     </div>
 
 
+    <!-- Donacije -->
+
+    <div class="auto-85 d-flex flex-column mt-5">
+        <h1>Donacije</h1>
+        <p class="text-lorem kompanija opacity-7">Kompanija Vezuv je proteklih goidina iskazala svoju društvenu
+            odgovornost kroz
+            podršku
+            velikog
+            broja
+            humanitarnih
+            projekata od velikog društvenog značaja:
+        </p>
+
+    </div>
+    <div class="cards-aktuelnosti mt-5 grid-4 auto-85 gap-20 grid-media"></div>
+
+    <!-- Sponzorstva -->
+
+    <div class="auto-85 d-flex flex-column mt-5">
+        <h1>Sponzorstva</h1>
+        <p class="text-lorem kompanija opacity-7">Kompanija Vezuv je proteklih goidina iskazala svoju društvenu
+            odgovornost kroz
+            podršku
+            velikog
+            broja
+            humanitarnih
+            projekata od velikog društvenog značaja:
+        </p>
+
+    </div>
+
+    <div class="sponzorstva  mt-5 grid-4 auto-85 gap-20 grid-media"></div>
 
 
 
 
 
     <!-- Footer -->
-    <div class="w-100 footer-vezuv d-flex flex-row justify-content-between">
+    <div class="w-100 footer-vezuv d-flex flex-row justify-content-between mt-5">
         <div class="img">
             <img src="images/footer-logo.png" alt="" srcset="" class="left" />
         </div>
@@ -323,15 +389,124 @@
 
 
 
-    <!-- Script
-                -->
-
+    <!-- Script -->
+    <script src="js/modal.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script src="js/jquery.nice-select.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+
+
+
+
+    <script>
+        // Aktuelnosti
+        $.ajax({
+            url: "http://localhost:3000/donacije",
+            type: "GET",
+            success: function (data) {
+                console.log(data[0].id);
+                for (var i = 0; i < 5; i++) {
+                    var card = getAktuelnost(data[i]);
+                    $(".cards-aktuelnosti").append(card);
+                }
+            },
+            error: function () {
+                console.log("Error");
+            },
+        });
+
+        function getAktuelnost(postObject) {
+            return ` 
+                <div class="card-aktuelnosti w-100">
+                    <div class="aktuelno-img">
+                        <img src="${postObject.picture}" alt="" srcset="" class="img-fluid" />
+                        <div
+                            class="actuelno-date text-upper d-flex flex-column justify-content-center align-items-center text-center">
+                            <div class="month p-text-white my-2">${postObject.month}</div>
+                            <div class="day p-text-white bold my-2">${postObject.day}</div>
+                            <div class="year p-text-white my-2">${postObject.year}</div>
+                        </div>
+                    </div>
+                    <p class="description-aktuelno w-100 text-left mt-2 bold"> ${postObject.description}</p>    
+                    <div class="button-transparent border-black ">
+                        <a href="" class="d-flex justify-content-around align-items-center">Pročitaj<svg
+                                xmlns="http://www.w3.org/2000/svg" width="17.07" height="12" viewBox="0 0 17.07 12">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #ffffff
+                                        }
+                                    </style>
+                                </defs>
+                                <path id="left-arrow_2_"
+                                    d="M5.567 4.856a.605.605 0 1 1 .86.851l-4.361 4.362h14.392a.606.606 0 0 1 .611.6.613.613 0 0 1-.611.611H2.066l4.361 4.353a.617.617 0 0 1 0 .86.6.6 0 0 1-.86 0L.174 11.1a.607.607 0 0 1 0-.851z"
+                                    class="cls-1 black" data-name="left-arrow (2)"
+                                    transform="rotate(180 8.534 8.338)" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                `;
+        }
+
+
+
+        //Sponzorstva
+
+
+        $.ajax({
+            url: "http://localhost:3000/sponzorstva",
+            type: "GET",
+            success: function (data) {
+                console.log(data[0].id);
+                for (var i = 0; i < 5; i++) {
+                    var card = getAktuelnost(data[i]);
+                    $(".sponzorstva").append(card);
+                }
+            },
+            error: function () {
+                console.log("Error");
+            },
+        });
+
+        function getAktuelnost(postObject) {
+            return ` <div
+            class="card-aktuelnosti w-100">
+            <div class="aktuelno-img">
+                <img src="${postObject.picture}" alt="" srcset="" class="img-fluid" />
+                <div
+                    class="actuelno-date text-upper d-flex flex-column justify-content-center align-items-center text-center">
+                    <div class="month p-text-white my-2">${postObject.month}</div>
+                    <div class="day p-text-white bold my-2">${postObject.day}</div>
+                    <div class="year p-text-white my-2">${postObject.year}</div>
+                </div>
+            </div>
+            <p class="description-aktuelno w-100 text-left bold"> ${postObject.description}</p>
+            <div class="button-transparent border-black mt-2">
+                <a href="" class="d-flex justify-content-around align-items-center">Pročitaj<svg
+                        xmlns="http://www.w3.org/2000/svg" width="17.07" height="12" viewBox="0 0 17.07 12">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #ffffff
+                                }
+                            </style>
+                        </defs>
+                        <path id="left-arrow_2_"
+                            d="M5.567 4.856a.605.605 0 1 1 .86.851l-4.361 4.362h14.392a.606.606 0 0 1 .611.6.613.613 0 0 1-.611.611H2.066l4.361 4.353a.617.617 0 0 1 0 .86.6.6 0 0 1-.86 0L.174 11.1a.607.607 0 0 1 0-.851z"
+                            class="cls-1 black" data-name="left-arrow (2)" transform="rotate(180 8.534 8.338)" />
+                    </svg>
+                </a>
+            </div>
+            </div>
+
+            `;
+        }
+    </script>
 
 </body>
 

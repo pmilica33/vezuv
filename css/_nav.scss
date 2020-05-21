@@ -141,3 +141,18 @@ nav {
     }
 
 }
+
+.white-nav {
+    background-color: white !important;
+    border-bottom: 1px solid rgb(182, 178, 178);
+    position: relative;
+
+    .navbar-brand svg .cls-1 {
+        fill: black;
+    }
+
+    .navbar-collapse .nav-item .nav-link {
+        color: $colorBlack !important;
+    }
+
+}

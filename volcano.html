@@ -7,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/nice-select.css" />
     <style>
         .cover-volcano {
             background-image: url("images/pozadina.png"), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0,
@@ -360,51 +359,24 @@
 
     <script src="js/popper.min.js"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.nice-select.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script>
         $(window).scroll(function () {
+
             var scrollBottom = $(window).scrollTop() + $(window).height();
+
             let first = $("#first-card").offset().top;
-
-            if (scrollBottom > first) {
-                $("#first-card").addClass("animate-left");
-
-                executed = true;
-            }
-        });
-
-        $(window).scroll(function () {
-            var scrollBottom = $(window).scrollTop() + $(window).height();
             let second = $("#second-card").offset().top;
-
-            if (scrollBottom > second) {
-                $("#second-card").addClass("animate-right");
-
-                executed = true;
-            }
-        });
-        $(window).scroll(function () {
-            var scrollBottom = $(window).scrollTop() + $(window).height();
+            let four = $("#four-card").offset().top;
             let thrid = $("#thrid-card").offset().top;
 
-            if (scrollBottom > thrid) {
-                $("#thrid-card").addClass("animate-left");
+            if (scrollBottom > first) $("#first-card").addClass("animate-left");
+            if (scrollBottom > second) $("#second-card").addClass("animate-right");
+            if (scrollBottom > thrid) $("#thrid-card").addClass("animate-left");
+            if (scrollBottom > four) $("#four-card").addClass("animate-right");
 
-                executed = true;
-            }
-        });
-        $(window).scroll(function () {
-            var scrollBottom = $(window).scrollTop() + $(window).height();
-            let four = $("#four-card").offset().top;
 
-            if (scrollBottom > four) {
-                $("#four-card").addClass("animate-right");
-
-                executed = true;
-            }
         });
     </script>
 

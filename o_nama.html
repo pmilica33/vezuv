@@ -7,7 +7,6 @@
     <title>O nama</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/nice-select.css" />
     <style>
         .cover-o-nama {
             background-image: url("images/montenegro.jpg"), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0,
@@ -258,9 +257,32 @@
     <script src="js/popper.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.nice-select.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        let execute = true;
+        $(window).scroll(function () {
+            var scrollBottom = $(window).scrollTop() + $(window).height();
+            let first = $(".number").offset().top;
+
+            if (execute == true && scrollBottom > first) {
+                $(".number").each(function () {
+                    $(this)
+                        .prop("Counter", 0)
+                        .animate({
+                            Counter: $(this).text(),
+                        }, {
+                            duration: 4000,
+                            easing: "swing",
+                            step: function (now) {
+                                $(this).text(Math.ceil(now));
+                            },
+                        });
+                });
+                execute = false;
+            }
+        });
+    </script>
 </body>
 
 </html>

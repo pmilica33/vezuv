@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/nice-select.css" />
     <style>
         .cover-sport-support {
             background-image: url("images/sport.png"), linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0,
@@ -293,8 +292,6 @@
 
     <script src="js/popper.min.js"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.nice-select.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 
@@ -351,35 +348,18 @@
         }
 
         $(window).scroll(function () {
+
             var scrollBottom = $(window).scrollTop() + $(window).height();
+
             let first = $("#1").offset().top;
-
-            if (scrollBottom > first) {
-                $("#1").addClass("animate-left");
-
-                executed = true;
-            }
-        });
-
-        $(window).scroll(function () {
-            var scrollBottom = $(window).scrollTop() + $(window).height();
             let second = $("#2").offset().top;
-
-            if (scrollBottom > second) {
-                $("#2").addClass("animate-right");
-
-                executed = true;
-            }
-        });
-        $(window).scroll(function () {
-            var scrollBottom = $(window).scrollTop() + $(window).height();
             let thrid = $("#3").offset().top;
 
-            if (scrollBottom > thrid) {
-                $("#3").addClass("animate-left");
+            if (scrollBottom > first) $("#1").addClass("animate-left");
+            if (scrollBottom > second) $("#2").addClass("animate-right");
+            if (scrollBottom > thrid) $("#3").addClass("animate-left");
 
-                executed = true;
-            }
+
         });
     </script>
 

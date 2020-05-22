@@ -293,7 +293,7 @@
         <div class="absolute sa-nama"><span> 20 GODINA UŽIVO SA VAMA</span> </div>
       </div>
       <div class="item-video " data-merge="2">
-        <iframe src="" frameborder="0" class=""><a href="https://www.youtube.com/watch?v=Nj2U6rhnucI"></a></iframe>
+        <iframe src="https://www.youtube.com/watch?v=Nj2U6rhnucI" frameborder="0" class=""></iframe>
       </div>
       <div class="prev d-flex flex-column "><span>P</span><span>R</span><span>E</span><span>V</span>
       </div>
@@ -490,7 +490,6 @@
     <script src="js/popper.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.nice-select.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 
@@ -519,8 +518,36 @@
           current.find('video').get(0).play();
         }
       });
+      //  Numbers
+
+      let execute = true;
+      $(window).scroll(function () {
+        var scrollBottom = $(window).scrollTop() + $(window).height();
+        let first = $(".number").offset().top;
+
+        if (execute == true && scrollBottom > first) {
+          $(".number").each(function () {
+            $(this)
+              .prop("Counter", 0)
+              .animate({
+                Counter: $(this).text(),
+              }, {
+                duration: 4000,
+                easing: "swing",
+                step: function (now) {
+                  $(this).text(Math.ceil(now));
+                },
+              });
+          });
+          execute = false;
+        }
+      });
 
 
+
+
+
+      // Json fake
 
 
       $(document).ready(() => {

@@ -7,6 +7,8 @@
     <title>Karijera</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/nice-select.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <style>
@@ -80,7 +82,8 @@
     }
 
     .red {
-        color: #b70019;
+        color: #b70019 !important;
+
     }
 
     .pozicije {
@@ -115,16 +118,20 @@
 
     }
 
+
     .modal-backdrop.show {
         opacity: 0 !important;
     }
 
     .modal-content {
         width: 100%;
+        padding: 2rem;
     }
+
 
     .modal-open .modal {
         overflow-y: scroll;
+        background: rgba(34, 34, 34, 0.75) !important;
     }
 
     @media (min-width: 576px) {
@@ -135,7 +142,71 @@
     }
 
     .modal {
-        padding-top: 10px;
+        padding: 15px !important;
+
+    }
+
+    .modal-header {
+        border: none !important;
+    }
+
+    .border-bottom {
+        border-bottom: 2px solid rgba(189, 181, 181, 0.856);
+    }
+
+    .close {
+        font-size: 1.2em !important;
+        width: 28px;
+        height: 28px;
+        border: 2px solid #b70019 !important;
+        border-radius: 50%;
+        padding-top: 1px !important;
+    }
+
+    .button-transparent {
+        background-color: #b98757;
+        transition: transform .6s ease;
+
+    }
+
+    .button-transparent:hover {
+        background-color: #b98757;
+        box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.178);
+
+    }
+
+
+    .button-transparent:hover a {
+        color: white !important;
+    }
+
+    .button-transparent:hover a svg path {
+        fill: white !important;
+    }
+
+    .lijevo-dugme {
+        background: white !important;
+        border: none !important;
+        box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.178);
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .error {
+        right: 0px;
+        top: 10%;
+        transform: translateX(120%);
+    }
+
+    .error-text {
+        display: flex;
+        margin-left: auto;
+        font-size: .8em;
+        color: #b70019;
+        height: 20px;
     }
 </style>
 
@@ -226,6 +297,7 @@
         </div>
     </nav>
 
+
     <!-- Cover  -->
     <div class="cover-o-nama">
         <div class="path d-flex justify-content-center flex-column  pt-5">
@@ -245,6 +317,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Main -->
     <div class="auto-85 mt-5 text-align-center-sm">
         <div class="row">
             <div class="col-lg-7 col-md-12 padding-lg">
@@ -271,14 +345,11 @@
                     straha
                     od
                     neuspjeha. Vezuv znači pouzdanost!</p>
-
-
                 <p>Cijena uspjeha je težak rad, posvećenost poslu i odlučnost, da bilo pobijedili ili izgubili, date sve
                     od
                     sebe zadatku koji Vam
                     je u rukama.
                 </p>
-
                 <h1>Razvoj karijere</h1>
                 <p class="citat " style="font-size: 1.2em;">
                     Promašio sam više od 9.000 šuteva u svojoj karijeri. Izgubio sam skoro 300 utakmica. 26 puta mi je
@@ -337,63 +408,65 @@
                         <p class="citat">Titula</p>
 
                     </div>
-
                 </div>
-
-
-
-
             </div>
+
+            <!-- Desna strana -->
             <div class="col-lg-5 col-md-12">
                 <h1>Otvorene pozicije</h1>
-                <div class="d-flex flex-column pozicije" data-toggle="modal" data-target="#myModal">
+
+                <div class="d-flex flex-column pozicije" id="1" data-toggle="modal" data-target="#karijera-modal"
+                    id="1">
                     <div class="d-flex">
-                        <h2 class="bold">Operater u kladionici</h2>
-                        <img src="images/001-man.svg" alt="" class="ml-auto pr-2">
-                        <img src="images/002-woman.svg" alt="">
+                        <h2 class="bold position">Operater u kladionici</h2>
+                        <img src="images/001-man.svg" alt="" class="ml-auto pr-2 man">
+                        <img src="images/002-woman.svg" alt="" class="woman">
 
                     </div>
                     <div class="d-flex mt-2">
                         <img src="images/maps-and-flags (2).svg" alt="" class="my-auto">
-                        <p class="opacity-7 my-auto pl-2">PODGORICA, NIKŠIČ, BUDVA</p>
+                        <p class="opacity-7 my-auto pl-2 city">PODGORICA, NIKŠIČ, BUDVA</p>
                     </div>
                     <div class="d-flex mt-2">
                         <p class="opacity-7">Radnih mjesta:</p>
-                        <p class="red bold pl-2">4</p>
+                        <p class="red bold pl-2 number-available">4</p>
                     </div>
 
                 </div>
-                <div class="d-flex flex-column pozicije" data-toggle="modal" data-target=".bd-example-modal-lg">
+
+                <!-- Drugi -->
+                <div class="d-flex flex-column pozicije" id="2" data-toggle="modal" data-target="#karijera-modal">
                     <div class="d-flex">
-                        <h2 class="bold">Operater u kladionici</h2>
-                        <img src="images/001-man.svg" alt="" class="ml-auto pr-2">
-                        <img src="images/002-woman.svg" alt="">
+                        <h2 class="bold position">Šanker u automat klubu</h2>
+                        <img src="images/001-man.svg" alt="" class="ml-auto pr-2 man">
+                        <img src="images/002-woman.svg" alt="" class="woman">
 
                     </div>
                     <div class="d-flex mt-2">
                         <img src="images/maps-and-flags (2).svg" alt="" class="my-auto">
-                        <p class="opacity-7 my-auto pl-2">PODGORICA, NIKŠIČ, BUDVA</p>
+                        <p class="opacity-7 my-auto pl-2 city">PODGORICA, NIKŠIČ, BUDVA</p>
                     </div>
                     <div class="d-flex mt-2">
                         <p class="opacity-7">Radnih mjesta:</p>
-                        <p class="red bold pl-2">1</p>
+                        <p class="red bold pl-2 number-available">1</p>
                     </div>
 
                 </div>
-                <div class="d-flex flex-column pozicije" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <!-- Treci -->
+                <div class="d-flex flex-column pozicije" data-toggle="modal" data-target="#karijera-modal" id="3">
                     <div class="d-flex">
-                        <h2 class="bold">Operater u kladionici</h2>
-                        <img src="images/001-man.svg" alt="" class="ml-auto pr-2">
-                        <img src="images/002-woman.svg" alt="">
+                        <h2 class="bold position">Šef računovodstva</h2>
+                        <img src="images/001-man.svg" alt="" class="ml-auto pr-2 man">
+                        <img src="images/002-woman.svg" alt="" class="woman">
 
                     </div>
                     <div class="d-flex mt-2">
                         <img src="images/maps-and-flags (2).svg" alt="" class="my-auto">
-                        <p class="opacity-7 my-auto pl-2">PODGORICA, NIKŠIČ, BUDVA</p>
+                        <p class="opacity-7 my-auto pl-2 city">PODGORICA, NIKŠIČ, BUDVA</p>
                     </div>
                     <div class="d-flex mt-2">
                         <p class="opacity-7">Radnih mjesta:</p>
-                        <p class="red bold pl-2">1</p>
+                        <p class="red bold pl-2 number-available">1</p>
                     </div>
 
                 </div>
@@ -401,74 +474,35 @@
         </div>
     </div>
     </div>
+    <!-- Modal -->
 
-    <div class="modal fade" id="exampleModalKarijera" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-
-                <div class="modal-body p-5">
-
-                    <hr>
-                    <h2 class="mt-3 mb-2">Opis posla</h2>
-                    <hr>
-                    <p class="opacity-7">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                        tempor invidunt
-                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                        justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                        ipsum dolor sit amet.
-
-                        Beneficije:
-
-                        • Sistem nagrađivanja
-                        • Razvoj karijere
-                        • Teambuilding
-                        • Treninzi i obuke
-                        • Putovanja
-
-                        Napomena
-                        Biće kontaktirani samo kandidati užeg izbora, ostale prijave čuvamo u Vezuv bazi kandidata.
-                    </p>
-                    <hr class="mt-2">
-                    <h2 class="mt-2">Popuni formu i apliciraj za ovo radno mjesto!</h2>
-                    <form class="col-lg-7 col-md-12">
-                        <div class="form-group col-md-6">
-                            <label for="name-surname">Ime i prezime</label>
-                            <input type="text" class="form-control" id="name-surname">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">eMmail</label>
-                            <input type="email" class="form-control" id="inputEmail4">
-                        </div>
-                        <div class="form-group">
-                            <label for="telephone">Broj telefona</label>
-                            <input type="tel" class="form-control" id="telephone">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-                <hr>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="myModal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLongTitle"
+    <div class="modal fade" id="karijera-modal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLongTitle"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
 
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" style="color: black;">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
-                </div>
+
                 <div class="modal-body">
-                    <hr>
-                    <h2 class="mt-3 mb-2">Opis posla</h2>
-                    <hr>
+                    <button type="button" class="close red" data-dismiss="modal">&times;</button>
+                    <div class="d-flex justify-content-between">
+                        <h1 class="modal-title text-dark">Modal Header</h1>
+                        <div class="d-flex" style="margin-top: 2rem;">
+                            <img src="" alt="" class="ml-auto pr-2 manModal">
+                            <img src="" alt="" class="womanModal">
+                        </div>
+                    </div>
+
+                    <div class="d-flex mt-2">
+                        <img src="images/maps-and-flags (2).svg" alt="" class="my-auto">
+                        <p class="opacity-7 my-auto pl-2 cityModal"></p>
+                    </div>
+                    <div class="d-flex mt-2 border-bottom">
+                        <p class="opacity-7">Radnih mjesta:</p>
+                        <p class="red bold pl-2 number-available-modal"></p>
+                    </div>
+
+                    <h2 class="mt-5 mb-2 text-dark">Opis posla</h2>
                     <p class="opacity-7">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
                         eirmod
                         tempor invidunt
@@ -480,39 +514,84 @@
                         invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
                         justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
                         ipsum dolor sit amet.
-
-                        Beneficije:
-
-                        • Sistem nagrađivanja
-                        • Razvoj karijere
-                        • Teambuilding
-                        • Treninzi i obuke
-                        • Putovanja
-
-                        Napomena
-                        Biće kontaktirani samo kandidati užeg izbora, ostale prijave čuvamo u Vezuv bazi kandidata.
                     </p>
-                    <hr class="mt-2">
-                    <h2 class="mt-2">Popuni formu i apliciraj za ovo radno mjesto!</h2>
-                    <form class="col-lg-7 col-md-12">
-                        <div class="form-group col-md-6">
-                            <label for="name-surname">Ime i prezime</label>
-                            <input type="text" class="form-control" id="name-surname">
+                    <h2>Beneficije:</h2>
+
+                    <p class="opacity-7"> • Sistem nagrađivanja <br>
+                        • Razvoj karijere<br>
+                        • Teambuilding<br>
+                        • Treninzi i obuke<br>
+                        • Putovanja</p>
+                    <h2> Napomena
+                    </h2>
+                    <p class="opacity-7 border-bottom"> Biće kontaktirani samo kandidati užeg izbora, ostale
+                        prijave
+                        čuvamo u Vezuv
+                        bazi kandidata.
+                    </p>
+                    </p>
+                    <h2 class="mt-2 text-dark mt-5">Popuni formu i apliciraj za ovo radno mjesto!</h2>
+                    <form class="col-lg-7 col-md-12 mt-5 ">
+                        <div class="form-group ">
+                            <label for="name-surname-apliciranje">Ime i prezime</label>
+                            <div class="d-flex align-items-center relative d-flex flex-column"> <input type="text"
+                                    class="form-control" id="name-surname-apliciranje"><span id="name"
+                                    class="ml-2 position-absolute error"></span>
+                                <div class="error-text"></div>
+                            </div>
+
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">eMmail</label>
-                            <input type="email" class="form-control" id="inputEmail4">
+                        <div class="form-group ">
+                            <label for="inputEmail4-apliciranje">eMmail</label>
+                            <div class="d-flex align-items-center relative d-flex flex-column"><input type="email"
+                                    class="form-control" id="inputEmail4-apliciranje"><span id="em"
+                                    class="ml-2 position-absolute error"></span>
+                                <div class="error-text"></div>
+                            </div>
+
                         </div>
                         <div class="form-group">
                             <label for="telephone">Broj telefona</label>
-                            <input type="tel" class="form-control" id="telephone">
+                            <div class="d-flex align-items-center relative d-flex flex-column">
+                                <input type="tel" class="form-control" id="telephone"><span id="tel"
+                                    class="ml-2 position-absolute error"></span>
+                                <div class="error-text"></div>
+
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="d-flex mt-3">
+
+                            <label class="button-transparent border-black lijevo-dugme" for="upload">
+                                <img src="images/ic_cloud_upload_24px.svg" alt="" srcset="" class="mr-2">
+                                Upload CV
+                                <input type="file" id="upload" style="display:none">
+
+                            </label>
+
+
+                            <button class="button-transparent ml-auto" id="apliciraj" type="button">
+                                <a href="#" class="d-flex justify-content-around align-items-center">Apliciraj<svg
+                                        xmlns="http://www.w3.org/2000/svg" width="17.07" height="12"
+                                        viewBox="0 0 17.07 12">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #fff
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path id="left-arrow_2_"
+                                            d="M5.567 4.856a.605.605 0 1 1 .86.851l-4.361 4.362h14.392a.606.606 0 0 1 .611.6.613.613 0 0 1-.611.611H2.066l4.361 4.353a.617.617 0 0 1 0 .86.6.6 0 0 1-.86 0L.174 11.1a.607.607 0 0 1 0-.851z"
+                                            class="cls-1" data-name="left-arrow (2)"
+                                            transform="rotate(180 8.534 8.338)" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </div>
+
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+
             </div>
 
         </div>
@@ -561,12 +640,45 @@
 
 
 
+
+
+    <!-- Script -->
     <script src="js/popper.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
+
+
+
+
+    <script>
+        $(document).on("click", ".pozicije", function () {
+
+            const position = $(this).find('.position').text();
+            $(".modal-title").html(position);
+
+            if ($(this).children().children().hasClass('man')) {
+
+                const man = $(this).find('.man').attr('src');
+                $(".manModal").attr('src', man);
+
+            }
+            if ($(this).children().children().hasClass('woman')) {
+
+                const woman = $(this).find('.woman').attr('src');
+                $(".womanModal").attr('src', woman);
+
+            }
+
+            const city = $(this).find('.city').text();
+            $(".cityModal").html(city);
+
+            const available = $(this).find('.number-available').text();
+            $(".number-available-modal").html(available);
+
+        });
     </script>
 
 

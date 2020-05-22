@@ -1,8 +1,4 @@
-@font-face {
-  font-family: "Avenir Medium";
-  src: url("../font/Avenir/Avenir-Medium.woff");
-}
-
+@import url(//db.onlinewebfonts.com/c/2090551770be22b09600a40b0b4673b7?family=Avenir+Medium);
 .aktuelno-img img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -12670,7 +12666,7 @@ font-size-p-76 {
   top: 50%;
   margin-left: -40px;
   margin-top: -40px;
-  background: url("owl.video.play.png") no-repeat;
+  background: url("../node_modules/owl.carousel/src/img/owl.video.play.png") no-repeat;
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;
@@ -12823,6 +12819,11 @@ font-size-p-76 {
 
 .border-black:hover a svg path {
   fill: #000000 !important;
+}
+
+.button-transparent a svg {
+  -webkit-transition: all .5 ease;
+  transition: all .5 ease;
 }
 
 .aktuelno-img img {

@@ -18,8 +18,7 @@
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    padding-top: 100px;
+    z-index: 7;
     left: 0;
     top: 0;
     width: 100%;
@@ -33,10 +32,11 @@
     position: relative;
     background-color: #fefefe;
     margin: auto;
-    padding: 0;
-    width: 30%;
-    max-width: 1200px;
-    border: 3px solid #fff !important;
+    width: 40%;
+    min-width: 310px;
+    border: 10px solid #fff !important;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* The Close Button */
@@ -89,6 +89,10 @@
 .prev:hover,
 .next:hover {
     color: white;
+}
+
+.prev {
+    left: 0;
 }
 
 /* Number text (1/3 etc) */

@@ -115,13 +115,13 @@
     }
 
     .description {
-      font-size: 0.8em;
       color: #909090;
     }
 
     .name {
       font-size: 1.25em;
       color: #222222;
+      margin-bottom: 0 !important;
     }
 
     .actuelno-date {
@@ -176,9 +176,6 @@
       line-height: 1.35;
     }
 
-    .volcano img {
-      width: 10vw !important;
-    }
 
     .card-aktuelnosti {
       transition: transform .6s ease;
@@ -186,6 +183,35 @@
 
     .card-aktuelnosti:hover {
       transform: scale(1.1);
+    }
+
+    .ratio-16-9 {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-top: 56.35%;
+    }
+
+    .ratio-inner {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slicica {
+      position: absolute;
+      bottom: 6vh;
+      width: 10vw;
+      left: 50%;
+      right: 0;
+      transform: translateX(-50%);
+      max-width: 6%;
     }
   </style>
 </head>
@@ -287,18 +313,36 @@
         <div class="relative cover">
           <img src="images/Vezuv-cover3.png" alt="" srcset="" class="w-100">
         </div>
-        <div class="absolute volcano d-flex
+        <!-- <div class="absolute volcano d-flex
     justify-content-center"> <img src="images/volcano.png" alt="" class="w-100">
-        </div>
+        </div> -->
+        <img src="images/volcano.png" class="slicica" alt="">
+
         <div class="absolute sa-nama"><span> 20 GODINA UŽIVO SA VAMA</span> </div>
       </div>
-      <div class="item-video " data-merge="2">
-        <iframe src="https://www.youtube.com/watch?v=Nj2U6rhnucI" frameborder="0" class=""></iframe>
+      <div class="item-video" data-merge="2">
+        <div class="ratio-16-9 relative">
+          <iframe class="ratio-inner" frameborder="0" width="100%" height="100%" allowfullscreen mozallowfullscreen
+            webkitallowfullscreen
+            src="https://www.youtube.com/embed/hX3souQA-mA?controls=0&autoplay=1&loop=1&mute=1&showinfo=0&playlist=hX3souQA-mA"
+            frameborder="0"></iframe>
+          <img src="images/volcano.png" class="slicica" alt="">
+        </div>
       </div>
-      <div class="prev d-flex flex-column "><span>P</span><span>R</span><span>E</span><span>V</span>
+      <div class="item-video relative" data-merge="3">
+        <div class="ratio-16-9">
+          <iframe class="ratio-inner" frameborder="0" width="100%" height="100%" allowfullscreen mozallowfullscreen
+            webkitallowfullscreen
+            src="https://www.youtube.com/embed/1Eyc9HdUcMY?controls=0&autoplay=1&loop=1&mute=1&showinfo=0&playlist=1Eyc9HdUcMY"
+            frameborder="0"></iframe>
+          <img src="images/volcano.png" class="slicica" alt="">
+
+        </div>
       </div>
-      <div class="next d-flex flex-column "><span>N</span><span>E</span><span>X</span><span>T</span>
-      </div>
+    </div>
+    <div class="prev d-flex flex-column "><span>P</span><span>R</span><span>E</span><span>V</span>
+    </div>
+    <div class="next d-flex flex-column "><span>N</span><span>E</span><span>X</span><span>T</span>
     </div>
 
     <!-- Title and text -->
@@ -349,7 +393,7 @@
     <div class="misija mx-auto text-center">
       <h1 class="title">Misija & Vizija</h1>
       <div class="button-transparent">
-        <a href="" class="d-flex justify-content-around align-items-center">Procitaj<svg
+        <a href="o_nama.html" class="d-flex justify-content-around align-items-center">Procitaj<svg
             xmlns="http://www.w3.org/2000/svg" width="17.07" height="12" viewBox="0 0 17.07 12">
             <defs>
               <style>
@@ -377,7 +421,7 @@
     <div class="odgovornost mx-auto text-center mt-5">
       <h1 class="title">Društvena odgovornost</h1>
       <div class="button-transparent">
-        <a href="" class="d-flex justify-content-around align-items-center">Deteljnije<svg
+        <a href="drustvena-odgovornost.html" class="d-flex justify-content-around align-items-center">Deteljnije<svg
             xmlns="http://www.w3.org/2000/svg" width="17.07" height="12" viewBox="0 0 17.07 12">
             <defs>
               <style>
@@ -435,7 +479,7 @@
 
         </div>
         <div class="button-transparent border-black mt-3">
-          <a href="" class="d-flex justify-content-around align-items-center">Saznaj više<svg
+          <a href="volcano.html" class="d-flex justify-content-around align-items-center">Saznaj više<svg
               xmlns="http://www.w3.org/2000/svg" width="17.07" height="12" viewBox="0 0 17.07 12">
               <defs>
                 <style>
@@ -509,9 +553,9 @@
         responsiveRefreshRate: 200,
         responsiveBaseWidth: window,
 
-        // autoplay: true,
-        // autoplayTimeout: 4000,
-        // autoplayHoverPause: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
         nav: true,
         navText: [$(".prev"), $(".next")],
         afterAction: function (current) {
@@ -594,7 +638,7 @@
 
         function getAktuelnost(postObject) {
           return `
-          <a href="">
+          <a href="clanak.html">
       <div class="card-aktuelnosti w-100">
         <div class="aktuelno-img">
           <img src="${postObject.picture}" alt="" srcset="" class="img-fluid" />

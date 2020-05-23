@@ -86,7 +86,7 @@ $("#apliciraj").on('click', (e) => {
           'Vaši podaci biće proslijeđeni!',
           'success'
         )
-        $("#karijera-modal").modal('hide');
+        reset();
 
       }
     }
@@ -95,6 +95,15 @@ $("#apliciraj").on('click', (e) => {
 
 
 // Functions
+
+reset = () => {
+  $("#karijera-modal").modal('hide');
+  $('#form-apliciraj').trigger("reset");
+  $('#name').html("");
+  $('#em').html("");
+  $('#tel').html("");
+  $(":input").css('border-color', '#ced4da');
+}
 
 function isValidNameSurname(name) {
   const patternName = /^[a-z ,.'-]+$/i;

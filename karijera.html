@@ -573,7 +573,8 @@
                         <div class="form-group">
                             <label for="telephone">Broj telefona</label>
                             <div class="d-flex align-items-center relative d-flex flex-column">
-                                <input type="tel" class="form-control" id="telephone"><span id="tel"
+                                <input type="tel" class="form-control" id="telephone"
+                                    onkeypress="return /[0-9+ -/]/i.test(event.key)"><span id="tel"
                                     class="ml-2 position-absolute error"></span>
                                 <div class="error-text"></div>
 

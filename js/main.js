@@ -13,12 +13,15 @@ $("#send-contact").on('click', (e) => {
   let isValidName = false;
   let isValidEmail = false;
   let isValidMessage = false;
+  let isTwo = false;
 
 
 
   //Name and surname
   const nameSurname = $("#name-surname").val();
   isValidName = isValidNameSurname(nameSurname);
+
+  isTwo = isTwoString(nameSurname);
 
   //email
   const email = $("#inputEmail4").val();
@@ -29,9 +32,15 @@ $("#send-contact").on('click', (e) => {
 
   const message = $("#message").val();
   isValidMessage = message.length !== 0;
+  if (!isTwo) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Morate unijeti i ime i prezime!',
+
+    })
 
 
-  if (!isValidName) {
+  } else if (!isValidName) {
     Swal.fire({
       icon: 'error',
       title: 'Morate unijeti ime i prezime!',
@@ -92,6 +101,11 @@ function isValidNameSurname(name) {
   return isValidName = name.length > 2 && name.match(patternName);
 }
 
+function isTwoString(name) {
+  const regex = /^[a-zA-Z]+[ ]+[a-zA-Z]+$/;
+  return regex.test(name);
+}
+
 function isValidEmailF(email) {
   const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return isValidEmail = emailRegex.test(email);
@@ -107,12 +121,15 @@ $('#telephone').on('keyup', () => tel());
 // Name and surname
 function name() {
   let isValidName = false;
+  let isTwo = false;
   const nameSurnameInput = $("#name-surname-apliciranje");
   const nameSurname = nameSurnameInput.val();
   const name = $("#name");
 
   isValidName = isValidNameSurname(nameSurname);
+  isTwo = isTwoString(nameSurname);
   displayError(isValidName, nameSurnameInput, name, "Nije pravilno ime i prezime");
+  displayError(isTwo, nameSurnameInput, name, "Nije upisano i ime i prezime");
 
 
   return isValidName;

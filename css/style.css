@@ -502,8 +502,48 @@ font-size-p-76 {
 
 @media only screen and (max-width: 904px) {
   .dugmad .lijevo-dugme {
-    margin-left: auto;
     margin-bottom: 7px;
+  }
+}
+
+@media only screen and (max-width: 904px) {
+  .dugmad .lijevo-dugme:after {
+    content: attr(data-after);
+    bottom: 0;
+    left: 105%;
+    /* right: 200px; */
+    top: 10%;
+    position: absolute;
+    font-size: .5em;
+    word-break: break-word;
+    height: 100%;
+    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .dugmad .lijevo-dugme:after {
+    content: attr(data-after);
+    bottom: 0;
+    left: 105%;
+    top: 10%;
+    position: absolute;
+    font-size: .4em;
+    word-break: break-word;
+    height: 100%;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -11800,8 +11840,48 @@ font-size-p-76 {
 
 @media only screen and (max-width: 904px) {
   .dugmad .lijevo-dugme {
-    margin-left: auto;
     margin-bottom: 7px;
+  }
+}
+
+@media only screen and (max-width: 904px) {
+  .dugmad .lijevo-dugme:after {
+    content: attr(data-after);
+    bottom: 0;
+    left: 105%;
+    /* right: 200px; */
+    top: 10%;
+    position: absolute;
+    font-size: .5em;
+    word-break: break-word;
+    height: 100%;
+    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .dugmad .lijevo-dugme:after {
+    content: attr(data-after);
+    bottom: 0;
+    left: 105%;
+    top: 10%;
+    position: absolute;
+    font-size: .4em;
+    word-break: break-word;
+    height: 100%;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -12461,8 +12541,48 @@ font-size-p-76 {
 
 @media only screen and (max-width: 904px) {
   .dugmad .lijevo-dugme {
-    margin-left: auto;
     margin-bottom: 7px;
+  }
+}
+
+@media only screen and (max-width: 904px) {
+  .dugmad .lijevo-dugme:after {
+    content: attr(data-after);
+    bottom: 0;
+    left: 105%;
+    /* right: 200px; */
+    top: 10%;
+    position: absolute;
+    font-size: .5em;
+    word-break: break-word;
+    height: 100%;
+    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .dugmad .lijevo-dugme:after {
+    content: attr(data-after);
+    bottom: 0;
+    left: 105%;
+    top: 10%;
+    position: absolute;
+    font-size: .4em;
+    word-break: break-word;
+    height: 100%;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -13453,8 +13573,48 @@ font-size-p-76 {
 
 @media only screen and (max-width: 904px) {
   .dugmad .lijevo-dugme {
-    margin-left: auto;
     margin-bottom: 7px;
+  }
+}
+
+@media only screen and (max-width: 904px) {
+  .dugmad .lijevo-dugme:after {
+    content: attr(data-after);
+    bottom: 0;
+    left: 105%;
+    /* right: 200px; */
+    top: 10%;
+    position: absolute;
+    font-size: .5em;
+    word-break: break-word;
+    height: 100%;
+    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .dugmad .lijevo-dugme:after {
+    content: attr(data-after);
+    bottom: 0;
+    left: 105%;
+    top: 10%;
+    position: absolute;
+    font-size: .4em;
+    word-break: break-word;
+    height: 100%;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -14066,8 +14226,48 @@ font-size-p-76 {
 
 @media only screen and (max-width: 904px) {
   .dugmad .lijevo-dugme {
-    margin-left: auto;
     margin-bottom: 7px;
+  }
+}
+
+@media only screen and (max-width: 904px) {
+  .dugmad .lijevo-dugme:after {
+    content: attr(data-after);
+    bottom: 0;
+    left: 105%;
+    /* right: 200px; */
+    top: 10%;
+    position: absolute;
+    font-size: .5em;
+    word-break: break-word;
+    height: 100%;
+    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .dugmad .lijevo-dugme:after {
+    content: attr(data-after);
+    bottom: 0;
+    left: 105%;
+    top: 10%;
+    position: absolute;
+    font-size: .4em;
+    word-break: break-word;
+    height: 100%;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -14640,8 +14840,48 @@ font-size-p-76 {
 
 @media only screen and (max-width: 904px) {
   .dugmad .lijevo-dugme {
-    margin-left: auto;
     margin-bottom: 7px;
+  }
+}
+
+@media only screen and (max-width: 904px) {
+  .dugmad .lijevo-dugme:after {
+    content: attr(data-after);
+    bottom: 0;
+    left: 105%;
+    /* right: 200px; */
+    top: 10%;
+    position: absolute;
+    font-size: .5em;
+    word-break: break-word;
+    height: 100%;
+    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .dugmad .lijevo-dugme:after {
+    content: attr(data-after);
+    bottom: 0;
+    left: 105%;
+    top: 10%;
+    position: absolute;
+    font-size: .4em;
+    word-break: break-word;
+    height: 100%;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 

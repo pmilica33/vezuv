@@ -32,18 +32,19 @@ $("#send-contact").on('click', (e) => {
 
   const message = $("#message").val();
   isValidMessage = message.length !== 0;
-  if (!isTwo) {
+
+  if (!isValidName) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Morate unijeti slova!',
+
+    })
+    return;
+
+  } else if (!isTwo) {
     Swal.fire({
       icon: 'error',
       title: 'Morate unijeti i ime i prezime!',
-
-    })
-
-
-  } else if (!isValidName) {
-    Swal.fire({
-      icon: 'error',
-      title: 'Morate unijeti ime i prezime!',
 
     })
 
@@ -81,13 +82,14 @@ $("#apliciraj").on('click', (e) => {
   if (name()) {
     if (email()) {
       if (tel()) {
-        Swal.fire(
-          'Uspješno poslato!',
-          'Vaši podaci biće proslijeđeni!',
-          'success'
-        )
-        reset();
-
+        if (isEmptyFile() && file()) {
+          Swal.fire(
+            'Uspješno poslato!',
+            'Vaši podaci biće proslijeđeni!',
+            'success'
+          )
+          reset();
+        }
       }
     }
   }
@@ -100,9 +102,17 @@ reset = () => {
   $("#karijera-modal").modal('hide');
   $('#form-apliciraj').trigger("reset");
   $('#name').html("");
+  $('#error-text').html("");
   $('#em').html("");
   $('#tel').html("");
   $(":input").css('border-color', '#ced4da');
+  $(".lijevo-dugme").attr("data-after", "");
+  $("#file-image").attr('src', './images/ic_cloud_upload_24px.svg');
+  $(".lijevo-dugme").css("color", "#4f4f62");
+
+
+
+
 }
 
 function isValidNameSurname(name) {
@@ -125,6 +135,8 @@ function isValidEmailF(email) {
 $('#name-surname-apliciranje').on('keyup', () => name());
 $('#inputEmail4-apliciranje').on('keyup', () => email());
 $('#telephone').on('keyup', () => tel());
+$('#upload').on("change", () => file());
+
 
 
 // Name and surname
@@ -137,11 +149,11 @@ function name() {
 
   isValidName = isValidNameSurname(nameSurname);
   isTwo = isTwoString(nameSurname);
-  displayError(isValidName, nameSurnameInput, name, "Nije pravilno ime i prezime");
   displayError(isTwo, nameSurnameInput, name, "Nije upisano i ime i prezime");
 
 
-  return isValidName;
+
+  return isValidName && isTwo;
 }
 
 
@@ -179,23 +191,43 @@ function tel() {
 
 // File
 
-$('#upload').on("change", function () {
-  const file = this.files[0];
-  console.log(this.files[0]);
+
+function file() {
+
+  const file = document.getElementById("upload").files[0];
+  console.log(file);
 
   if (file) {
     if (file.size < 2097152) {
-      let isExtensionOk = true;
-      if (file.type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document" || file.type === "application/pdf") {
-        isExtensionOk = true;
-      } else {
-        isExtensionOk = false;
+      if (file.type ===
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document" || file.type === 'application/msword') {
+
+        $("#file-image").attr('src', './images/doc.png');
+
+      } else if (file.type === "application/pdf") {
+
+        $("#file-image").attr('src', './images/pdf.png');
       }
+
+      $(".lijevo-dugme").attr("data-after", file.name).css('color', '#009900');
+      return true;
+
+    } else {
+
+      $(".lijevo-dugme").attr("data-after", "Maksimalna velicina: 2MB").css('color', '#b70019');
+      return false;
+
+
     }
+  } else {
+    $(".lijevo-dugme").attr("data-after", "Unesi CV").css('color', '#b70019');
+    return false;
+
   }
-});
+}
 
 // Error function
+
 
 function displayError(isValid, element, error, message) {
   if (isValid) {
@@ -209,4 +241,16 @@ function displayError(isValid, element, error, message) {
     error.next().html(message);
 
   }
+}
+
+function isEmptyFile() {
+  if ($('#upload').get(0).files.length === 0) {
+    Swal.fire(
+      'Unesite CV!',
+      'Niste unijeli CV!',
+      'error'
+    )
+    return false;
+  }
+  return true;
 }

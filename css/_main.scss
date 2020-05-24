@@ -477,10 +477,46 @@ font-size-p-76 {
     margin-top: 10px;
   }
 
+
+
   .lijevo-dugme {
     @include respond-to(max-tablet) {
-      margin-left: auto;
       margin-bottom: 7px;
+    }
+
+    &:after {
+      @include respond-to(max-tablet) {
+
+        content: attr(data-after);
+        bottom: 0;
+        left: 105%;
+        /* right: 200px; */
+        top: 10%;
+        position: absolute;
+        font-size: .5em;
+        word-break: break-word;
+        height: 100%;
+        width: 75%;
+        display: flex;
+        align-items: center;
+      }
+
+      @include respond-to(handhelds) {
+        content: attr(data-after);
+        bottom: 0;
+        left: 105%;
+        top: 10%;
+        position: absolute;
+        font-size: .4em;
+        word-break: break-word;
+        height: 100%;
+        width: 40%;
+        display: flex;
+        align-items: center;
+
+
+      }
+
 
     }
   }

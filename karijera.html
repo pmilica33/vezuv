@@ -25,6 +25,10 @@
         position: relative;
     }
 
+    body {
+        padding-right: 0 !important;
+    }
+
     .citat {
         color: #b98757;
         font-family: 'Comic Neue', cursive;
@@ -121,6 +125,10 @@
 
     }
 
+    .modal {
+        padding: 0 !important;
+    }
+
 
     .modal-backdrop.show {
         opacity: 0 !important;
@@ -138,11 +146,19 @@
         background: rgba(34, 34, 34, 0.75) !important;
     }
 
-    @media (min-width: 576px) {
+    .modal-dialog {
+        margin: 1.75rem auto;
+        max-width: 800px;
+
+    }
+
+    @media (min-width: 576px) and (max-width: 858px) {
         .modal-dialog {
             max-width: 800px;
-            margin: 1.75rem auto;
+            padding: 15px !important;
         }
+
+
     }
 
     @media (max-width: 576px) {
@@ -154,12 +170,13 @@
         .modal-content {
             padding: 0rem;
         }
+
+        .modal-dialog {
+            margin: .2rem !important;
+        }
     }
 
-    .modal {
-        padding: 15px;
 
-    }
 
     .modal-header {
         border: none !important;
@@ -176,6 +193,7 @@
         border: 2px solid #b70019 !important;
         border-radius: 50%;
         padding-top: 1px !important;
+        outline: none !important;
     }
 
     .button-transparent {
@@ -210,6 +228,11 @@
 
     }
 
+    .lijevo-dugme img {
+        width: 2vw;
+        min-width: 30px;
+    }
+
     .error {
         right: 0px;
         top: 10%;
@@ -226,6 +249,20 @@
 
     .navbar {
         position: absolute;
+    }
+
+    .lijevo-dugme::after {
+        content: attr(data-after);
+        bottom: -120%;
+        left: 0;
+        position: absolute;
+        font-size: .6em;
+        word-break: break-word;
+        height: 100%;
+    }
+
+    .dugmad {
+        justify-content: space-around;
     }
 </style>
 
@@ -581,16 +618,17 @@
                             </div>
                         </div>
                         <div class="d-flex mt-3 dugmad">
-
-                            <label class="button-transparent border-black lijevo-dugme" for="upload">
-                                <img src="images/ic_cloud_upload_24px.svg" alt="" srcset="" class="mr-2">
+                            <label class="button-transparent border-black lijevo-dugme relative" for="upload">
+                                <img src="images/ic_cloud_upload_24px.svg" alt="" srcset="" class="mr-2"
+                                    id="file-image">
                                 Upload CV
-                                <input type="file" id="upload" style="display:none">
-
+                                <input type="file" id="upload" style="display:none" accept="application/msword,
+                                                    application/vnd.openxmlformats-officedocument.wordprocessingml.document,
+                                                    application/pdf">
                             </label>
 
 
-                            <button class="button-transparent ml-auto" id="apliciraj" type="button">
+                            <button class="button-transparent " id="apliciraj" type="button">
                                 <a href="#" class="d-flex justify-content-around align-items-center">Apliciraj<svg
                                         xmlns="http://www.w3.org/2000/svg" width="17.07" height="12"
                                         viewBox="0 0 17.07 12">
@@ -609,6 +647,7 @@
                                 </a>
                             </button>
                         </div>
+
 
                     </form>
                 </div>

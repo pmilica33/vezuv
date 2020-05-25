@@ -43,7 +43,7 @@
 .suitcase {
     transform: scale(1);
     animation: pulse;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-iteration-count: 4;

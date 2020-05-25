@@ -32,11 +32,12 @@
     position: relative;
     background-color: #fefefe;
     margin: auto;
-    width: 40%;
+    width: 60%;
     min-width: 310px;
     border: 10px solid #fff !important;
     top: 50%;
     transform: translateY(-50%);
+    max-width: 600px;
 }
 
 /* The Close Button */

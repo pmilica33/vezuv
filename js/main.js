@@ -4,21 +4,10 @@ $("#toggler-button").click(() => {
   $('#navbar')[0].classList.toggle("bg-transparent");
 })
 
-// // if ($(window).scrollTop() > 0) {
-// //   window.setTimeout(function () {
-// //     $("#navbar").addClass("white-nav");
-// //     $("#navbar").addClass("navbar-fixed-top");
-// //   }, 1000);
-// // } else {
-// //   window.setTimeout(function () {
-// //     $("#navbar").removeClass("white-nav");
-// //   }, 1000);
 
-// }
 $(function () {
   $(window).scroll(function () {
     var top_offset = $(window).scrollTop();
-    console.log(top_offset == 0 && $('#navbar').hasClass("bg-transparent"));
     if (top_offset == 0 && $('#navbar').hasClass("bg-transparent")) {
       $('#navbar').removeClass('white-nav animatedFadeNav');
 
@@ -92,6 +81,8 @@ $("#send-contact").on('click', (e) => {
       'Vaši podaci biće proslijeđeni!',
       'success'
     )
+    $('#contact-form').trigger("reset");
+
   }
 
 });
@@ -132,6 +123,9 @@ reset = () => {
   $(".lijevo-dugme").attr("data-after", "");
   $("#file-image").attr('src', './images/ic_cloud_upload_24px.svg');
   $(".lijevo-dugme").css("color", "#4f4f62");
+
+
+
 
 
 

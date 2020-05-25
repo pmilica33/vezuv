@@ -267,6 +267,8 @@
 
             if (execute == true && scrollBottom > first) {
                 $(".number").each(function () {
+                    $(this).prev().addClass('suitcase');
+
                     $(this)
                         .prop("Counter", 0)
                         .animate({

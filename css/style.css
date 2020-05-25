@@ -12020,18 +12020,19 @@ nav .active {
     border-bottom: 1px solid;
   }
   .navbar-toggler-clicked .navbar-brand svg .cls-1 {
-    fill: black;
+    fill: #4f4f62;
   }
 }
 
 .white-nav {
   background-color: white !important;
   border-bottom: 1px solid #b6b2b2;
-  position: relative;
+  position: fixed !important;
+  top: 0;
 }
 
 .white-nav .navbar-brand svg .cls-1 {
-  fill: black;
+  fill: #4f4f62;
 }
 
 .white-nav .navbar-collapse .nav-item .nav-link {
@@ -15062,6 +15063,76 @@ font-size-p-76 {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+}
+
+.suitcase {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: pulse;
+          animation: pulse;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: 4;
+          animation-iteration-count: 4;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes myAnimation {
+  from {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  to {
+    background-color: white;
+  }
+}
+
+@keyframes myAnimation {
+  from {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  to {
+    background-color: white;
+  }
+}
+
+.animatedFadeNav {
+  -webkit-animation: myAnimation 1.5s;
+          animation: myAnimation 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 /* The Modal (background) */

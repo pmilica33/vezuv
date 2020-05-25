@@ -129,7 +129,7 @@ nav {
         border-bottom: 1px solid;
 
         .navbar-brand svg .cls-1 {
-            fill: black;
+            fill: $colorBlack;
         }
 
     }
@@ -139,10 +139,11 @@ nav {
 .white-nav {
     background-color: white !important;
     border-bottom: 1px solid rgb(182, 178, 178);
-    position: relative;
+    position: fixed !important;
+    top: 0;
 
     .navbar-brand svg .cls-1 {
-        fill: black;
+        fill: $colorBlack;
     }
 
     .navbar-collapse .nav-item .nav-link {

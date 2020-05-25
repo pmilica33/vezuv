@@ -39,3 +39,44 @@
         transform: translateX(0);
     }
 }
+
+.suitcase {
+    transform: scale(1);
+    animation: pulse;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 4;
+
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.75);
+
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes myAnimation {
+    from {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    to {
+        background-color: white;
+    }
+}
+
+.animatedFadeNav {
+    animation: myAnimation 1.5s;
+    animation-fill-mode: forwards;
+}

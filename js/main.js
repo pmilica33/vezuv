@@ -4,6 +4,29 @@ $("#toggler-button").click(() => {
   $('#navbar')[0].classList.toggle("bg-transparent");
 })
 
+// // if ($(window).scrollTop() > 0) {
+// //   window.setTimeout(function () {
+// //     $("#navbar").addClass("white-nav");
+// //     $("#navbar").addClass("navbar-fixed-top");
+// //   }, 1000);
+// // } else {
+// //   window.setTimeout(function () {
+// //     $("#navbar").removeClass("white-nav");
+// //   }, 1000);
+
+// }
+$(function () {
+  $(window).scroll(function () {
+    var top_offset = $(window).scrollTop();
+    console.log(top_offset == 0 && $('#navbar').hasClass("bg-transparent"));
+    if (top_offset == 0 && $('#navbar').hasClass("bg-transparent")) {
+      $('#navbar').removeClass('white-nav animatedFadeNav');
+
+    } else {
+      $('#navbar').addClass('animatedFadeNav white-nav ');
+    }
+  })
+});
 
 //Validation contact
 

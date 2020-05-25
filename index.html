@@ -370,24 +370,32 @@
     <div class="text-center mt-5" id="numbers">
       <div class="numbers justify-content-center grid-4 grid-media">
         <div class="card-number">
-          <img src="images/suitcase (1).png" class="pt-5 pb-3 suitcase" alt="" srcset="" />
-          <h1 class="number">967</h1>
-          <p class="pb-5 pt-1">ZAPOSLENIH</p>
+          <div>
+            <img src="images/suitcase (1).png" class="pt-5 pb-3 " alt="" srcset="" />
+            <h1 class="number">967</h1>
+            <p class="pb-5 pt-1">ZAPOSLENIH</p>
+          </div>
         </div>
         <div class="card-number">
-          <img src="images/suitcase (1).png" class="pt-5 pb-3 suitcase" alt="" srcset="" />
-          <h1 class="number">450</h1>
-          <p class="pb-5 pt-1">UPLATNIH MJESTA</p>
+          <div>
+            <img src="images/suitcase (1).png" class="pt-5 pb-3 " alt="" srcset="" />
+            <h1 class="number">450</h1>
+            <p class="pb-5 pt-1">UPLATNIH MJESTA</p>
+          </div>
         </div>
         <div class="card-number">
-          <img src="images/suitcase (1).png" class="pt-5 pb-3 suitcase" alt="" srcset="" />
-          <h1 class="number">34</h1>
-          <p class="pb-5 pt-1">LOKALA</p>
+          <div>
+            <img src="images/suitcase (1).png" class="pt-5 pb-3 " alt="" srcset="" />
+            <h1 class="number">34</h1>
+            <p class="pb-5 pt-1">LOKALA</p>
+          </div>
         </div>
         <div class="card-number">
-          <img src="images/suitcase (1).png" class="pt-5 pb-3 suitcase" alt="" srcset="" />
-          <h1 class="number">680</h1>
-          <p class="pb-5 pt-1">TERMINALA</p>
+          <div>
+            <img src="images/suitcase (1).png" class="pt-5 pb-3 " alt="" srcset="" />
+            <h1 class="number">680</h1>
+            <p class="pb-5 pt-1">TERMINALA</p>
+          </div>
         </div>
       </div>
     </div>
@@ -573,6 +581,7 @@
 
         if (execute == true && scrollBottom > first) {
           $(".number").each(function () {
+            $(this).prev().addClass('suitcase');
             $(this)
               .prop("Counter", 0)
               .animate({

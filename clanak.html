@@ -49,9 +49,10 @@
             min-width: 30px;
         }
 
-        .navbar {
+        .none {
             border-bottom: none !important;
         }
+
 
         .slika {
             background-image: url(images/sport.png);
@@ -67,7 +68,7 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-xl navbar-light white-nav " id="navbar">
+    <nav class="navbar navbar-expand-xl navbar-light white-nav none" id="navbar">
         <a class="navbar-brand" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="166.173"
                 height="46.684" viewBox="0 0 166.173 46.684">
                 <defs>
@@ -249,11 +250,20 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+
     <script>
-        FB.ui({
-            method: 'share',
-            href: 'https://developers.facebook.com/docs/',
-        }, function (response) {});
+        $(function () {
+            $(window).scroll(function () {
+                var top_offset = $(window).scrollTop();
+                if (top_offset == 0) {
+                    $('#navbar').addClass('none');
+
+                } else {
+                    $('#navbar').removeClass('none');
+
+                }
+            })
+        });
     </script>
 </body>
 

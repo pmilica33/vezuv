@@ -546,30 +546,30 @@
     <script src="js/owl.carousel.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/navigation-animate.js"></script>
 
     <script>
       // Owl
       $(".owl-carousel").owlCarousel({
         navigation: true, // Show next and prev buttons
-        slideSpeed: 300,
+        slideSpeed: 400,
         paginationSpeed: 400,
         singleItem: true,
         items: 1,
         video: true,
         loop: true,
-        merge: true,
+        // merge: true,
         autoHeight: true,
         // responsive: true,
         responsiveRefreshRate: 200,
-        responsiveBaseWidth: window,
 
         autoplay: true,
         autoplayTimeout: 4000,
         nav: true,
         navText: [$(".prev"), $(".next")],
-        afterAction: function (current) {
-          current.find('video').get(0).play();
-        }
+        // afterAction: function (current) {
+        //   current.find('video').get(0).play();
+        // }
       });
       //  Numbers
 

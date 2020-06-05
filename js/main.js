@@ -5,17 +5,6 @@ $("#toggler-button").click(() => {
 })
 
 
-$(function () {
-  $(window).scroll(function () {
-    var top_offset = $(window).scrollTop();
-    if (top_offset == 0 && $('#navbar').hasClass("bg-transparent")) {
-      $('#navbar').removeClass('white-nav animatedFadeNav');
-
-    } else {
-      $('#navbar').addClass('animatedFadeNav white-nav ');
-    }
-  })
-});
 
 //Validation contact
 
@@ -92,6 +81,8 @@ $("#send-contact").on('click', (e) => {
 
 // Apliciranje za posao
 
+
+//Button apliciraj
 $("#apliciraj").on('click', (e) => {
   if (name()) {
     if (email()) {
@@ -124,13 +115,10 @@ reset = () => {
   $("#file-image").attr('src', './images/ic_cloud_upload_24px.svg');
   $(".lijevo-dugme").css("color", "#4f4f62");
 
-
-
-
-
-
-
 }
+
+
+//Regex
 
 function isValidNameSurname(name) {
   const patternName = /^[a-z ,.'-]+$/i;
@@ -147,7 +135,7 @@ function isValidEmailF(email) {
   return isValidEmail = emailRegex.test(email);
 }
 
-
+//Onkeyup function
 
 $('#name-surname-apliciranje').on('keyup', () => name());
 $('#inputEmail4-apliciranje').on('keyup', () => email());

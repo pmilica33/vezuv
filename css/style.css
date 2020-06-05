@@ -549,7 +549,7 @@ font-size-p-76 {
 
 @media only screen and (max-width: 479px) {
   .slika {
-    min-height: 200px !important;
+    min-height: 150px !important;
   }
 }
 
@@ -11887,7 +11887,7 @@ font-size-p-76 {
 
 @media only screen and (max-width: 479px) {
   .slika {
-    min-height: 200px !important;
+    min-height: 150px !important;
   }
 }
 
@@ -12025,7 +12025,6 @@ nav .active {
 }
 
 .white-nav {
-  background-color: white !important;
   border-bottom: 1px solid #b6b2b2;
   position: fixed !important;
   top: 0;
@@ -12589,7 +12588,7 @@ font-size-p-76 {
 
 @media only screen and (max-width: 479px) {
   .slika {
-    min-height: 200px !important;
+    min-height: 150px !important;
   }
 }
 
@@ -13621,7 +13620,7 @@ font-size-p-76 {
 
 @media only screen and (max-width: 479px) {
   .slika {
-    min-height: 200px !important;
+    min-height: 150px !important;
   }
 }
 
@@ -14274,7 +14273,7 @@ font-size-p-76 {
 
 @media only screen and (max-width: 479px) {
   .slika {
-    min-height: 200px !important;
+    min-height: 150px !important;
   }
 }
 
@@ -14888,7 +14887,7 @@ font-size-p-76 {
 
 @media only screen and (max-width: 479px) {
   .slika {
-    min-height: 200px !important;
+    min-height: 150px !important;
   }
 }
 
@@ -15070,8 +15069,8 @@ font-size-p-76 {
           transform: scale(1);
   -webkit-animation: pulse;
           animation: pulse;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -15154,7 +15153,7 @@ font-size-p-76 {
   position: relative;
   background-color: #fefefe;
   margin: auto;
-  width: 40%;
+  width: 60%;
   min-width: 310px;
   border: 10px solid #fff !important;
   top: 50%;

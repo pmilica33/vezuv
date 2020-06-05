@@ -1,9 +1,7 @@
-// Open the Modal
 function openModal() {
     document.getElementById("myModal").style.display = "block";
 }
 
-// Close the Modal
 function closeModal() {
     document.getElementById("myModal").style.display = "none";
 }
@@ -11,17 +9,13 @@ function closeModal() {
 var slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
 function showSlides(n) {
     var i;
-    //In this case six
     var slides = document.getElementsByClassName("mySlides");
-    var captionText = document.getElementById("caption");
-    //return on 1
     if (n > slides.length) {
         slideIndex = 1
     }
